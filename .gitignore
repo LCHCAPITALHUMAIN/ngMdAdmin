@@ -8,3 +8,6 @@ src/styles/*.css
 build/require
 src/css
 examples/blog/build
+/nbproject/private/
+/nbproject/project.xml
+/nbproject/project.properties
