@@ -17,7 +17,7 @@ define(function () {
             },
             template:
 '<a class="btn btn-default" ng-class="size ? \'btn-\' + size : \'\'" ng-click="gotoCreate()">' +
-    '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Create' +
+    '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>' + trans("create") +
 '</a>'
         };
     }
