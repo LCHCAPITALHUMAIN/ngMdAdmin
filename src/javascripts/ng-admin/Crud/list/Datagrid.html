@@ -15,13 +15,16 @@
     </thead>
 
     <tbody>
-        <tr ng-repeat="entry in entries track by $index">
+        <tr ng-repeat-start="entry in entries track by $index" ng-click="entry.collapseRows = !entry.collapseRows">
             <td ng-repeat="field in fields() track by $index" ng-class="field.getCssClasses(entry)">
                 <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
             </td>
             <td ng-if="listActions()" class="ng-admin-column-actions">
                 <list-actions entry="::entry" entity="::entity" buttons="listActions()"></list-actions>
             </td>
+        </tr>
+        <tr ng-repeat-end ng-show="entry.collapseRows">
+            <td>Here edit row</td>
         </tr>
     </tbody>
 </table>
