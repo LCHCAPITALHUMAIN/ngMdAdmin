@@ -1,7 +1,7 @@
 <div ng-if="paginationCtrl.displayPagination">
     <div class="grid-detail">
         <span class="total">
-            {{ "pager.title"|trans ({'%1$d': "<strong>{{ paginationCtrl.offsetBegin }}</strong>",'%2$d': "<strong>{{ paginationCtrl.offsetEnd }}</strong>",'%3$d': "<strong>{{ paginationCtrl.totalItems }}</strong>"})}} 
+            {{ "pager.title"|trans ({'%offsetBegin%': "<strong>{{ paginationCtrl.offsetBegin }}</strong>",'%offsetEnd%': "<strong>{{ paginationCtrl.offsetEnd }}</strong>",'%totalItems%': "<strong>{{ paginationCtrl.totalItems }}</strong>"})}} 
             <!--<strong>{{ paginationCtrl.offsetBegin }}</strong> - <strong>{{ paginationCtrl.offsetEnd }}</strong> on <strong>{{ paginationCtrl.totalItems }}</strong>-->
         </span>
         <div class="btn-group btn-group-sm" role="group" aria-label="pagination">
