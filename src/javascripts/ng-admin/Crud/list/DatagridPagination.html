@@ -2,7 +2,7 @@
     <div class="grid-detail">
         <span class="total">
             {{ 
-                "pager.title"|trans|replace({
+                "pager.title"|trans ({
                 '%1$d': "<strong>{{ paginationCtrl.offsetBegin }}</strong>",
                 '%2$d': "<strong>{{ paginationCtrl.offsetEnd }}</strong>",
                 '%3$d': "<strong>{{ paginationCtrl.totalItems }}</strong>"
