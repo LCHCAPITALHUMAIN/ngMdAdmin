@@ -19,7 +19,7 @@ define(function () {
             },
             template:
 '<a class="btn btn-default" ng-class="size ? \'btn-\' + size : \'\'" ng-click="gotoShow()">' +
-    '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;Show' +
+    '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>{{"Show" | trans}}' +
 '</a>'
         };
     }
