@@ -7,8 +7,7 @@
     </div>
 </md-toolbar>
 
-<span ng-controller="SidebarController as sidebarController">
-<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
+<md-sidenav ng-controller="SidebarController as sidebarController" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
     <md-content class="md-padding" ng-controller="LeftCtrl">
       <md-button ng-click="close()" class="md-primary" hide-gt-md>
         Close Sidenav Left
@@ -22,10 +21,7 @@
       </p>
     </md-content>
 </md-sidenav>
-</span>
 
-<md-content flex class="md-padding">
-    <div layout="column" ui-view></div>
-</md-content>
+<md-content ui-view></md-content>
 
 <div id="loader"></div>
