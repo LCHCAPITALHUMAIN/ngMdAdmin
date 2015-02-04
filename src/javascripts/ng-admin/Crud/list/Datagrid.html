@@ -15,7 +15,7 @@
     </thead>
 
     <tbody>
-        <tr ng-repeat-start="entry in entries track by $index" ng-click="entry.collapseRows = !entry.collapseRows">
+        <tr ng-repeat-start="entry in entries track by $index" ng-click="entry.collapseRows = !entry.collapseRows" style="cursor:pointer">
             <td ng-repeat="field in fields() track by $index" ng-class="field.getCssClasses(entry)">
                 <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
             </td>
@@ -23,7 +23,7 @@
                 <list-actions entry="::entry" entity="::entity" buttons="listActions()"></list-actions>
             </td>
         </tr>
-        <tr ng-repeat-end ng-show="entry.collapseRows" style="cursor:pointer">
+        <tr ng-repeat-end ng-show="entry.collapseRows">
             <td colspan="{{fields().length}}">
                 <div class="row" id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
                     <form class="col-lg-12 form-horizontal" name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
