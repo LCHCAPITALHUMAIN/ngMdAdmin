@@ -7,11 +7,8 @@ define(function (require) {
 
     require('angular-ui-router');
     require('restangular');
-    require('ngAnimate');
-    require('ngAria');
-    require('ngMaterial');
 
-    var MainModule = angular.module('main', ['ui.router', 'restangular', 'ngAnimate', 'ngAria', 'ngMaterial']);
+    var MainModule = angular.module('main', ['ui.router', 'restangular']);
 
     MainModule.controller('AppController', require('ng-admin/Main/component/controller/AppController'));
     MainModule.controller('DashboardController', require('ng-admin/Main/component/controller/DashboardController'));

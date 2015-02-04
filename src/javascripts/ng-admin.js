@@ -22,9 +22,6 @@ require.config({
         'nprogress': 'bower_components/nprogress/nprogress',
         'textangular': 'bower_components/textAngular/dist/textAngular.min',
         'angular-ui-codemirror': 'bower_components/angular-ui-codemirror/ui-codemirror.min',
-        ngAnimate: 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular-animate.min',
-        ngAria: 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular-aria.min',
-        ngMaterial: 'https://rawgit.com/angular/bower-material/master/angular-material',
         'MainModule': 'ng-admin/Main/MainModule',
         'CrudModule': 'ng-admin/Crud/CrudModule'
     },
@@ -40,10 +37,7 @@ require.config({
         },
         'angular-bootstrap-tpls': {
             deps: ['angular', 'angular-bootstrap']
-        },
-        ngAnimate: ['angular'],
-        ngAria: ['angular'],
-        ngMaterial: ['angular']
+        }
     }
 });
 
