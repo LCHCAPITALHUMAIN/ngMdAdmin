@@ -1,29 +1,21 @@
-<div id="wrapper">
-<!--    <nav id="header-nav" class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="navbar-header">
-            
-        </div>
-
-        
-    </nav>-->
-    <md-toolbar md-scroll-shrink>
-        <div class="md-toolbar-tools">
-          <h3>
-            <a href="#" ng-click="appController.displayHome()" class="navbar-brand">{{ appController.applicationName }}</a>
-          </h3>
-          <md-button ng-click="toggleLeft()"
-            class="md-primary" hide-gt-md>
-            Toggle left
-          </md-button>
-        </div>
-    </md-toolbar>
-    
-    <span ng-controller="SidebarController as sidebarController">
-            <menu></menu>
-        </span>
-
-    <div id="page-wrapper">
-        <div ui-view></div>
+<md-toolbar md-scroll-shrink>
+    <div class="md-toolbar-tools">
+      <h3>
+        <a href="#" ng-click="appController.displayHome()" class="navbar-brand">{{ appController.applicationName }}</a>
+      </h3>
+      <md-button ng-click="toggleLeft()"
+        class="md-primary" hide-gt-md>
+        Toggle left
+      </md-button>
     </div>
-    <div id="loader"></div>
-</div>
+</md-toolbar>
+
+<span ng-controller="SidebarController as sidebarController">
+        <menu></menu>
+</span>
+
+<md-content flex class="md-padding">
+    <div layout="column" layout-fill ui-view></div>
+</md-content>
+
+<div id="loader"></div>
