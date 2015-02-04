@@ -23,7 +23,7 @@
                 <list-actions entry="::entry" entity="::entity" buttons="listActions()"></list-actions>
             </td>
         </tr>
-        <tr ng-repeat-end ng-show="entry.collapseRows">
+        <tr ng-repeat-end ng-show="entry.collapseRows" style="cursor:pointer">
             <td colspan="{{fields().length}}">
                 <div class="row" id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
                     <form class="col-lg-12 form-horizontal" name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
