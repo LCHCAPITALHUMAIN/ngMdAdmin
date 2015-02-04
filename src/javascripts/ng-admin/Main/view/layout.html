@@ -3,27 +3,13 @@
       <h3>
         <a href="#" ng-click="appController.displayHome()" class="navbar-brand">{{ appController.applicationName }}</a>
       </h3>
-      <md-button ng-click="toggleLeft()"
-        class="md-primary" hide-gt-md>
-        Toggle left
-      </md-button>
+      <md-button ng-click="toggleLeft()" hide-gt-md>Toggle left</md-button>
     </div>
 </md-toolbar>
 
-<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')" ng-controller="SidebarController as sidebarController">
-    <md-content class="md-padding" ng-controller="LeftCtrl">
-      <md-button ng-click="close()" class="md-primary" hide-gt-md>
-        Close Sidenav Left
-      </md-button>
-      <p hide-md show-gt-md>
-        <ul class="nav" id="side-menu">
-            <li class="entities-repeat" ng-repeat="(key, entity) in sidebarController.entities">
-                <a ng-click="sidebarController.displayList(entity, $event)" ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</a>
-            </li>
-        </ul>
-      </p>
-    </md-content>
-</md-sidenav>
+<span ng-controller="SidebarController as sidebarController">
+        <menu></menu>
+</span>
 
 <md-content flex class="md-padding">
     <div layout="column" layout-fill ui-view></div>
