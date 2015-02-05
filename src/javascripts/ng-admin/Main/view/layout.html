@@ -1,31 +1,23 @@
-<md-toolbar md-scroll-shrink>
-    <div class="md-toolbar-tools">
-      <h3>
-        <a href="#" ng-click="appController.displayHome()" class="navbar-brand">{{ appController.applicationName }}</a>
-      </h3>
-      <md-button ng-click="toggleLeft()" hide-gt-md>Toggle left</md-button>
-    </div>
-</md-toolbar>
-
-<span ng-controller="SidebarController as sidebarController">
-<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
-    <md-content class="md-padding" ng-controller="LeftCtrl">
+<md-sidenav layout="column"
+              style="overflow: hidden; display: flex"
+              class="site-sidenav md-sidenav-left md-whiteframe-z2"
+              md-component-id="left"
+              md-is-locked-open="$media('gt-sm')">
+    <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools"><a href="#" ng-click="appController.displayHome()">{{ appController.applicationName }}</a></h1>
+    </md-toolbar>
+    <md-content class="md-default-theme" ng-controller="LeftCtrl" style="overflow: auto">
       <md-button ng-click="close()" class="md-primary" hide-gt-md>
         Close Sidenav Left
       </md-button>
-      <p hide-md show-gt-md>
-        <ul class="nav" id="side-menu">
+        <ul class="docs-menu" ng-controller="SidebarController as sidebarController">
             <li class="entities-repeat" ng-repeat="(key, entity) in sidebarController.entities">
-                <a ng-click="sidebarController.displayList(entity, $event)" ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</a>
+                <a ng-click="sidebarController.displayList(entity, $event)" class="md-button md-default-theme" ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</a>
             </li>
         </ul>
-      </p>
     </md-content>
 </md-sidenav>
-</span>
 
-<md-content flex class="md-padding">
-    <div layout="column" ui-view></div>
-</md-content>
+<div layout="column" style="width:100%" ui-view></div>
 
 <div id="loader"></div>

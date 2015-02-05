@@ -1,38 +1,44 @@
-<div class="row list-header">
-    <div class="col-lg-12">
-        <ma-view-actions override="listController.actions" entity="listController.entity">
-            <ma-create-button ng-if="!entity.isReadOnly" entity="entity"></ma-create-button>
-        </ma-view-actions>
+<md-toolbar class="md-default-theme">
 
-        <div class="page-header">
-            <h1 compile="listController.title">
+      <div class="md-toolbar-tools" tabindex="0">
+        <md-button ng-click="toggleLeft()" hide-gt-md>Toggle left</md-button>
+
+        <div layout="row" flex="" class="fill-height">
+          <div class="md-toolbar-item md-breadcrumb">
+            <h1 compile="listController.title" class="md-toolbar-tools">
                 {{ listController.view.entity.name() | humanize | pluralize }} list
             </h1>
             <p class="lead" ng-if="listController.description">{{ listController.description }}</p>
+          </div>
+
+          <span flex=""></span> <!-- use up the empty space -->
+
+          <div class="md-toolbar-item md-tools" layout="row">
+           <ma-view-actions override="listController.actions" entity="listController.entity">
+                <ma-create-button ng-if="!entity.isReadOnly" entity="entity"></ma-create-button>
+            </ma-view-actions>
+          </div>
         </div>
+      </div>
 
-        <ma-filter ng-if="listController.hasFilters" filters="::listController.filters"></ma-filter>
-    </div>
-</div>
+    </md-toolbar>
 
-<div class="row list-view" ng-class="'ng-admin-entity-' + listController.entity.name()">
-    <div class="col-lg-12">
+<md-content md-scroll-y flex class="md-padding">
+<ma-filter ng-if="listController.hasFilters" filters="::listController.filters"></ma-filter>
+
+<div ng-class="'ng-admin-entity-' + listController.entity.name()">
         <ma-datagrid name="{{ listController.view.name() }}"
                   entries="listController.entries"
                   fields="::listController.fields"
                   list-actions="::listController.listActions"
                   entity="::listController.entity">
         </ma-datagrid>
-    </div>
 </div>
 
-<div class="row">
-    <div class="col-lg-12">
         <ma-datagrid-pagination
                 infinite="listController.infinitePagination"
                 next-page="listController.nextPageCallback"
                 per-page="listController.itemsPerPage"
                 total-items="{{ listController.totalItems }}">
         </ma-datagrid-pagination>
-    </div>
-</div>
+</md-content>

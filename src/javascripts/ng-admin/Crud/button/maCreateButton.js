@@ -16,8 +16,8 @@ define(function () {
                 };
             },
             template:
-'<a class="btn btn-default" ng-class="size ? \'btn-\' + size : \'\'" ng-click="gotoCreate()">' +
-    '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{"Create" | trans}}' +
+'<a class="md-raised md-button md-default-theme" ng-click="gotoCreate()">' +
+    '{{"Create" | trans}}' +
 '</a>'
         };
     }
