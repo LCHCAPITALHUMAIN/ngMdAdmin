@@ -7,18 +7,7 @@
 </md-toolbar>
 
 <md-sidenav ng-controller="SidebarController as sidebarController" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
-    <md-content class="md-padding" ng-controller="LeftCtrl">
-      <md-button ng-click="close()" class="md-primary" hide-gt-md>
-        Close Sidenav Left
-      </md-button>
-      <p hide-md show-gt-md>
-        <ul class="nav" id="side-menu">
-            <li class="entities-repeat" ng-repeat="(key, entity) in sidebarController.entities">
-                <a ng-click="sidebarController.displayList(entity, $event)" ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</a>
-            </li>
-        </ul>
-      </p>
-    </md-content>
+    <menu></menu>
 </md-sidenav>
 
 <md-content ui-view></md-content>
