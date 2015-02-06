@@ -33,7 +33,7 @@ define(function () {
                 };
             },
             template:
-            '<a class="btn btn-default" ng-click="toggle()" id="{{ name }}" ng-class="{active: isActive()}" >{{ label }}</a>'
+            '<md-button class="md-raised" ng-click="toggle()" id="{{ name }}" ng-class="{active: isActive()}" >{{ label }}</md-button>'
         };
     }
 
