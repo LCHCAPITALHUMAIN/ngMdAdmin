@@ -18,9 +18,9 @@ define(function () {
                 };
             },
             template:
-'<a class="md-raised md-button md-default-theme" ng-click="gotoEdit()">' +
+'<md-button class="md-raised md-button md-default-theme" ng-click="gotoEdit()">' +
     '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>{{"Edit" | trans}}' +
-'</a>'
+'</md-button>'
         };
     }
 

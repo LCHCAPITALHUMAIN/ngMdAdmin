@@ -18,9 +18,9 @@ define(function () {
                 };
             },
             template:
-'<a class="md-raised md-button md-default-theme" ng-click="gotoDelete()">' +
+'<md-button class="md-raised md-button md-default-theme" ng-click="gotoDelete()">' +
     '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>{{"Delete" | trans}}' +
-'</a>'
+'</md-button>'
 
         };
     }

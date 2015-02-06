@@ -16,9 +16,9 @@ define(function () {
                 };
             },
             template:
-'<a class="md-raised md-button md-default-theme" ng-click="gotoCreate()">' +
+'<md-button class="md-raised md-button md-default-theme" ng-click="gotoCreate()">' +
     '{{"Create" | trans}}' +
-'</a>'
+'</md-button>'
         };
     }
 
