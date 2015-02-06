@@ -3,10 +3,11 @@
         <span class="total">
             {{ 'pager.begin'|trans}} <strong>{{ paginationCtrl.offsetBegin }}</strong> {{ 'pager.in'|trans}} <strong>{{ paginationCtrl.offsetEnd }}</strong> {{ 'pager.end'|trans}} <strong>{{ paginationCtrl.totalItems }}</strong>
         </span>
-        <div class="btn-group btn-group-sm" role="group" aria-label="pagination">
+<!--        <div class="btn-group btn-group-sm" role="group" aria-label="pagination">
             <a href class="btn btn-default" ng-if="paginationCtrl.currentPage != 1" ng-click="paginationCtrl.setPage(paginationCtrl.currentPage - 1)">« {{ 'pager.prev'|trans}}</a>
             <a href class="btn btn-default" ng-if="paginationCtrl.nbPages > 1" ng-repeat="n in paginationCtrl.range(1, paginationCtrl.nbPages)" ng-class="{'active': n == paginationCtrl.currentPage}" ng-click="paginationCtrl.setPage(n)">{{ n }}</a>
             <a href class="btn btn-default" ng-if="paginationCtrl.currentPage != paginationCtrl.nbPages" ng-click="paginationCtrl.setPage(paginationCtrl.currentPage + 1)">{{ 'pager.next'|trans}} »</a>
-        </div>
+        </div>-->
+        <md-slider md-discrete step="1" ng-model="paginationCtrl.currentPage" min="1" max="{{paginationCtrl.nbPages}}" aria-label="currentPage" ng-change="paginationCtrl.setPage(paginationCtrl.currentPage)"></md-slider>
     </div>
 </div>
