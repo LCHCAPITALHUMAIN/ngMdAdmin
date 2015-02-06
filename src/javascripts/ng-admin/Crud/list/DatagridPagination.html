@@ -8,6 +8,6 @@
             <a href class="btn btn-default" ng-if="paginationCtrl.nbPages > 1" ng-repeat="n in paginationCtrl.range(1, paginationCtrl.nbPages)" ng-class="{'active': n == paginationCtrl.currentPage}" ng-click="paginationCtrl.setPage(n)">{{ n }}</a>
             <a href class="btn btn-default" ng-if="paginationCtrl.currentPage != paginationCtrl.nbPages" ng-click="paginationCtrl.setPage(paginationCtrl.currentPage + 1)">{{ 'pager.next'|trans}} »</a>
         </div>-->
-        <md-slider md-discrete step="1" ng-model="paginationCtrl.currentPage" min="1" max="{{paginationCtrl.nbPages}}" aria-label="currentPage" ng-change="paginationCtrl.setPage(paginationCtrl.currentPage)"></md-slider>
+        <md-slider md-discrete ng-if="paginationCtrl.nbPages > 1" step="1" ng-model="paginationCtrl.currentPage" min="1" max="{{paginationCtrl.nbPages}}" aria-label="currentPage" ng-change="paginationCtrl.setPage(paginationCtrl.currentPage)"></md-slider>
     </div>
 </div>
