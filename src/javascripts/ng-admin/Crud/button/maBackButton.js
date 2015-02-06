@@ -15,7 +15,7 @@ define(function () {
                 };
             },
             template:
-'<a class="btn btn-default" ng-class="size ? \'btn-\' + size : \'\'" ng-click="back()">' +
+'<a class="md-raised md-button md-default-theme" ng-click="back()">' +
     '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>{{"Back" | trans}}' + 
 '</a>'
         };

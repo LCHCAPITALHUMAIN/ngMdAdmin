@@ -18,7 +18,7 @@ define(function () {
                 };
             },
             template:
-'<a class="btn btn-default" ng-class="size ? \'btn-\' + size : \'\'" ng-click="gotoEdit()">' +
+'<a class="md-raised md-button md-default-theme" ng-click="gotoEdit()">' +
     '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>{{"Edit" | trans}}' +
 '</a>'
         };
