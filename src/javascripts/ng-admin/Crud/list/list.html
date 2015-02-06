@@ -1,27 +1,25 @@
 <md-toolbar class="md-default-theme">
+    <div class="md-toolbar-tools" tabindex="0">
+      <md-button ng-click="toggleLeft()" hide-gt-md>Toggle left</md-button>
 
-      <div class="md-toolbar-tools" tabindex="0">
-        <md-button ng-click="toggleLeft()" hide-gt-md>Toggle left</md-button>
+      <div layout="row" flex="" class="fill-height">
+        <div class="md-toolbar-item md-breadcrumb">
+          <h1 compile="listController.title" class="md-toolbar-tools">
+              {{ listController.view.entity.name() | humanize | pluralize }} list
+          </h1>
+          <p class="lead" ng-if="listController.description">{{ listController.description }}</p>
+        </div>
 
-        <div layout="row" flex="" class="fill-height">
-          <div class="md-toolbar-item md-breadcrumb">
-            <h1 compile="listController.title" class="md-toolbar-tools">
-                {{ listController.view.entity.name() | humanize | pluralize }} list
-            </h1>
-            <p class="lead" ng-if="listController.description">{{ listController.description }}</p>
-          </div>
+        <span flex=""></span> <!-- use up the empty space -->
 
-          <span flex=""></span> <!-- use up the empty space -->
-
-          <div class="md-toolbar-item md-tools" layout="row">
-           <ma-view-actions override="listController.actions" entity="listController.entity">
-                <ma-create-button ng-if="!entity.isReadOnly" entity="entity"></ma-create-button>
-            </ma-view-actions>
-          </div>
+        <div class="md-toolbar-item md-tools" layout="row">
+         <ma-view-actions override="listController.actions" entity="listController.entity">
+              <ma-create-button ng-if="!entity.isReadOnly" entity="entity"></ma-create-button>
+          </ma-view-actions>
         </div>
       </div>
-
-    </md-toolbar>
+    </div>
+</md-toolbar>
 
 <md-content md-scroll-y flex class="md-padding">
 <ma-filter ng-if="listController.hasFilters" filters="::listController.filters"></ma-filter>
