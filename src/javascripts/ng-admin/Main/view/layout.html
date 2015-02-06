@@ -12,7 +12,7 @@
       </md-button>
         <ul class="docs-menu" ng-controller="SidebarController as sidebarController">
             <li ng-repeat="(key, entity) in sidebarController.entities">
-                <a ng-click="sidebarController.displayList(entity, $event)" class="md-button md-default-theme" ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</a>
+                <md-button ng-click="sidebarController.displayList(entity, $event)" class="md-button md-default-theme" ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</md-button>
             </li>
         </ul>
     </md-content>
