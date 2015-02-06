@@ -11,7 +11,7 @@
         Close Sidenav Left
       </md-button>
         <ul class="docs-menu" ng-controller="SidebarController as sidebarController">
-            <li class="entities-repeat" ng-repeat="(key, entity) in sidebarController.entities">
+            <li ng-repeat="(key, entity) in sidebarController.entities">
                 <a ng-click="sidebarController.displayList(entity, $event)" class="md-button md-default-theme" ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</a>
             </li>
         </ul>

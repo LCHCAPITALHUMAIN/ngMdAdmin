@@ -1,9 +1,9 @@
-<div id="row-{{ field.name() }}" class="has-feedback" ng-class="formController.getValidationClassForField({{ formController.name }}.{{ field.name() }})">
-    <label for="{{ field.name() }}" class="col-sm-2 control-label">
+<md-input-container flex id="row-{{ field.name() }}" ng-class="formController.getValidationClassForField({{ formController.name }}.{{ field.name() }})">
+    <label for="{{ field.name() }}">
         {{ field.label() }}<span ng-if="field.validation().required">&nbsp;*</span>&nbsp;
     </label>
 
-    <div ng-if="field.editable()" ng-class="'ng-admin-field-' + field.name() + ' ' + (field.getCssClasses(entry) || 'col-sm-10 col-md-8 col-lg-7')" ng-switch="field.type()">
+    <div ng-if="field.editable()" ng-class="'ng-admin-field-' + field.name()" ng-switch="field.type()">
         <ma-input-field ng-switch-when="string" field="::field" value="entry.values[field.name()]"></ma-input-field>
 
         <ma-input-field ng-switch-when="password" type="password" field="::field" value="entry.values[field.name()]"></ma-input-field>
@@ -45,7 +45,7 @@
         <span ng-if="!view.showAttributeSuccess()" class="glyphicon glyphicon-remove form-control-feedback" ng-show="false === {{ formController.name }}.{{ field.name() }}.$valid"></span>
     </div>
 
-    <div ng-if="!field.editable()" ng-class="field.getCssClasses(entry)||'col-sm-10'">
+    <div ng-if="!field.editable()" ng-class="field.getCssClasses(entry)">
         <p class="form-control-static">{{ entry.values[field.name()] }}</p>
     </div>
-</div>
+</md-input-container>
