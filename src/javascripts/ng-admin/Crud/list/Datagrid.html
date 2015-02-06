@@ -1,6 +1,9 @@
 <table class="grid table table-condensed table-hover table-striped">
     <thead>
         <tr>
+            <th>
+                <md-checkbox checkbox-all="entries.isSelected" class="md-primary" aria-label="selectAll"></md-checkbox>
+            </th>
             <th ng-repeat="field in fields() track by $index" ng-class="'ng-admin-column-' + field.name()">
                 <a ng-click="datagrid.sort(field)">
                     <span class="glyphicon {{ datagrid.sortDir === 'DESC' ? 'glyphicon-chevron-down': 'glyphicon-chevron-up' }}" ng-if="datagrid.isSorting(field)"></span>
@@ -15,25 +18,24 @@
     </thead>
 
     <tbody>
-        <tr ng-repeat-start="entry in entries track by $index" ng-click="entry.collapseRows = !entry.collapseRows" style="cursor:pointer">
-            <td ng-repeat="field in fields() track by $index" ng-class="field.getCssClasses(entry)">
+        <tr ng-repeat-start="entry in entries track by $index">
+            <td><md-checkbox type="checkbox" ng-model="entry.isSelected" aria-label="entry.id"></md-checkbox></td>
+            <td ng-repeat="field in fields() track by $index" ng-class="field.getCssClasses(entry)"  ng-click="entry.collapseRows = !entry.collapseRows" style="cursor:pointer">
                 <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
             </td>
-            <td ng-if="listActions()" class="ng-admin-column-actions">
+            <td ng-if="listActions()" class="ng-admin-column-actions"  ng-click="entry.collapseRows = !entry.collapseRows" style="cursor:pointer">
                 <list-actions entry="::entry" entity="::entity" buttons="listActions()"></list-actions>
             </td>
         </tr>
         <tr ng-repeat-end ng-show="entry.collapseRows">
-            <td colspan="{{fields().length}}">
-                <div class="row" id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
-                    <form class="col-lg-12 form-horizontal" name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
-                        <div class="form-field form-group" ng-include="'ng-admin/Crud/form/edit-attribute.html'" ng-repeat="field in formController.fields track by $index"></div>
+            <td colspan="{{fields().length + 1}}">
+                <div id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
+                    <form name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
+                        <div ng-include="'ng-admin/Crud/form/edit-attribute.html'" ng-repeat="field in formController.fields track by $index"></div>
 
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> {{"Save changes" | trans}}</button>
-                            </div>
-                        </div>
+                        <md-input-container flex>
+                            <md-button type="submit" class="md-raised"><span class="glyphicon glyphicon-ok"></span> {{"Save.changes" | trans}}</md-button>
+                        </md-input-container>
                     </form>
                 </div>
             </td>
