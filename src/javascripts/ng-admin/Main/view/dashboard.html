@@ -1,32 +1,16 @@
-<div class="row">
-    <div class="col-lg-12">
-        <div class="page-header">
-            <h1>Dashboard</h1>
-        </div>
-    </div>
-</div>
+<md-toolbar class="md-default-theme">
+    <div class="md-toolbar-tools" tabindex="0">
+      <md-button ng-click="toggleLeft()" hide-gt-md>Toggle left</md-button>
 
-<div class="row dashboard-content">
-    <div class="col-lg-6">
-        <div class="panel panel-default" ng-repeat="panel in dashboardController.panels" ng-if="$even">
-            <ma-dashboard-panel label="{{ panel.label }}"
-                             view-name="{{ panel.viewName }}"
-                             fields="panel.fields"
-                             entries="panel.entries"
-                             entity="panel.entity"
-                             per-page="panel.perPage">
-            </ma-dashboard-panel>
+      <div layout="row" flex="" class="fill-height">
+        <div class="md-toolbar-item md-breadcrumb">
+          <h1 class="md-toolbar-tools">
+              {{ 'dashboard'|trans }}
+          </h1>
         </div>
+      </div>
     </div>
-    <div class="col-lg-6">
-        <div class="panel panel-default" ng-repeat="panel in dashboardController.panels" ng-if="$odd">
-            <ma-dashboard-panel label="{{ panel.label }}"
-                             view-name="{{ panel.viewName }}"
-                             fields="panel.fields"
-                             entries="panel.entries"
-                             entity="panel.entity"
-                             per-page="panel.perPage">
-            </ma-dashboard-panel>
-        </div>
-    </div>
-</div>
+</md-toolbar>
+
+<md-content md-scroll-y flex class="md-padding">
+</md-content>
