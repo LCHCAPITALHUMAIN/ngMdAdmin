@@ -4,7 +4,9 @@
               md-component-id="left"
               md-is-locked-open="$media('gt-sm')">
     <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools"><a href="#" ng-click="appController.displayHome()">{{ appController.applicationName }}</a></h1>
+        <md-button ng-click="appController.displayHome()" aria-label="{{ appController.applicationName }}">
+            <img src="img/logo.png" style="max-width:240px" alt="{{ appController.applicationName }}"/>
+        </md-button>
     </md-toolbar>
     <md-content class="md-default-theme" ng-controller="LeftCtrl" style="overflow: auto">
       <md-button ng-click="close()" class="md-primary" hide-gt-md>
