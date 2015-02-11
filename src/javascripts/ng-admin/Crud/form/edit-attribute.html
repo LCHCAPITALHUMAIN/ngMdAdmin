@@ -1,9 +1,12 @@
 <md-input-container flex id="row-{{ field.name() }}" ng-class="formController.getValidationClassForField({{ formController.name }}.{{ field.name() }})">
-    <label for="{{ field.name() }}">
-        {{ field.label() }}<span ng-if="field.validation().required">&nbsp;*</span>&nbsp;
-    </label>
+    
 
     <div ng-if="field.editable()" ng-class="'ng-admin-field-' + field.name()" ng-switch="field.type()">
+        
+        <label for="{{ field.name() }}">
+            {{ field.label() }}<span ng-if="field.validation().required">&nbsp;*</span>&nbsp;
+        </label>
+        
         <ma-input-field ng-switch-when="string" field="::field" value="entry.values[field.name()]"></ma-input-field>
 
         <ma-input-field ng-switch-when="password" type="password" field="::field" value="entry.values[field.name()]"></ma-input-field>
