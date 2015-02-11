@@ -2,12 +2,11 @@
 <form ng-if="filterCtrl.shouldFilter()" ng-submit="filterCtrl.filter()" layout layout-sm="column">
     <md-content class="md-padding" layout="row" layout-sm="column">
     <md-input-container ng-repeat="field in filters track by $index" ng-class="{'input-group':field.label()}" flex>
-
-        <label ng-if="field.label() && field.type() != 'boolean'">
-            {{ field.label() }}<span ng-if="field.validation().required">&nbsp;*</span>&nbsp;
-        </label>
-
         <div ng-switch="field.type()" ng-class="field.getCssClasses(entry)">
+             <label ng-if="field.label() && field.type() != 'boolean'">
+                {{ field.label() }}<span ng-if="field.validation().required">&nbsp;*</span>&nbsp;
+            </label>
+            
             <ma-input-field ng-switch-when="string" field="::field" value="filterCtrl.values[field.name()]"></ma-input-field>
 
             <ma-input-field ng-switch-when="password" type="password" field="::field" value="filterCtrl.values[field.name()]"></ma-input-field>
