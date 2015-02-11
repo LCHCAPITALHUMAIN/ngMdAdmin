@@ -121,7 +121,7 @@ define(function (require) {
 
         $stateProvider
             .state('edit', {
-                parent: 'main',
+                parent: 'list',
                 url: '/edit/:entity/:id?sortField&sortDir',
                 controller: 'FormController',
                 controllerAs: 'formController',
