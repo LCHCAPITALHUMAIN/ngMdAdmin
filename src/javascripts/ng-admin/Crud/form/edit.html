@@ -1,33 +1,9 @@
-<md-toolbar class="md-default-theme">
-    <div class="md-toolbar-tools" tabindex="0">
-      <md-button ng-click="toggleLeft()" hide-gt-md>Toggle left</md-button>
-
-      <div layout="row" flex="" class="fill-height">
-        <div class="md-toolbar-item md-breadcrumb">
-          <h1 compile="formController.title" class="md-toolbar-tools">
-                Edit {{ formController.entity.name() | humanize:true | singularize }}  #{{ entry.identifierValue }}
-            </h1>
-            <p class="lead" ng-if="formController.description">{{ formController.description }}</p>
-        </div>
-
-        <span flex=""></span> <!-- use up the empty space -->
-
-        <div class="md-toolbar-item md-tools" layout="row">
-            <ma-view-actions override="formController.actions" entry="entry" entity="formController.entity">
-                <ma-list-button entity="entity"></ma-list-button>
-                <ma-delete-button entry="entry" entity="entity"></ma-delete-button>
-            </ma-view-actions>
-        </div>
-      </div>
-    </div>
-</md-toolbar>
-
-<div id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
-    <form name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
+<md-content class="md-padding" layout="row" layout-sm="column" style="font-size:1.2em" id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
+    <form layout name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
         <div ng-include="'ng-admin/Crud/form/edit-attribute.html'" ng-repeat="field in formController.fields track by $index"></div>
 
         <md-input-container flex>
             <md-button type="submit" class="md-raised"><span class="glyphicon glyphicon-ok"></span> {{"Save.changes" | trans}}</md-button>
         </md-input-container>
     </form>
-</div>
+</md-content>
