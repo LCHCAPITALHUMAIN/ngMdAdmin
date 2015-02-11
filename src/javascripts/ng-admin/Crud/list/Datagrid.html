@@ -19,8 +19,8 @@
 
     <tbody>
         <tr ng-repeat-start="entry in entries track by $index">
-            <td><md-checkbox type="checkbox" ng-model="entry.isSelected" aria-label="entry.id"></md-checkbox></td>
-            <td ng-repeat="field in fields() track by $index" ng-class="field.getCssClasses(entry)"  ng-click="entry.collapseRows = !entry.collapseRows" style="cursor:pointer">
+            <td><md-checkbox type="checkbox" ng-model="entry.isSelected" aria-label="entry.identifierValue"></md-checkbox></td>
+            <td ng-repeat="field in fields() track by $index" ng-class="field.getCssClasses(entry)"  ui-sref="edit({id:entry.identifierValue})" ng-click="entry.collapseRows = !entry.collapseRows" style="cursor:pointer">
                 <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
             </td>
             <td ng-if="listActions()" class="ng-admin-column-actions"  ng-click="entry.collapseRows = !entry.collapseRows" style="cursor:pointer">
@@ -29,15 +29,7 @@
         </tr>
         <tr ng-repeat-end ng-show="entry.collapseRows">
             <td colspan="{{fields().length + 1}}">
-                <div id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
-                    <form name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
-                        <div ng-include="'ng-admin/Crud/form/edit-attribute.html'" ng-repeat="field in formController.fields track by $index"></div>
-
-                        <md-input-container flex>
-                            <md-button type="submit" md-no-ink class="md-primary"><span class="glyphicon glyphicon-ok"></span> {{"Save.changes" | trans}}</md-button>
-                        </md-input-container>
-                    </form>
-                </div>
+                <md-whiteframe layout class="md-whiteframe-z5" ui-view></md-whiteframe>
             </td>
         </tr>
     </tbody>
