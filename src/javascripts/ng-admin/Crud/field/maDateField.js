@@ -34,11 +34,11 @@ define(function (require) {
             },
             template:
 '<div class="input-group datepicker">' +
-    '<input type="text" ng-model="value" id="{{ name }}" name="{{ name }}" class="form-control" ' +
+    '<input type="text" ng-model="value" id="{{ name }}" name="{{ name }}" class="md-input" ' +
            'datepicker-popup="{{ format }}" is-open="isOpen" close-text="Close" ' +
            'ng-required="v.required" />' +
     '<span class="input-group-btn">' +
-        '<button type="button" class="btn btn-default" ng-click="toggleDatePicker($event)"><i class="glyphicon glyphicon-calendar"></i></button>' +
+        '<md-button type="button" class="md-button" ng-click="toggleDatePicker($event)"><i class="glyphicon glyphicon-calendar"></i></md-button>' +
     '</span>' +
 '</div>'
         };
