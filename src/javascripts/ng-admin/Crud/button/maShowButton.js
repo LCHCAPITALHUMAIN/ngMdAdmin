@@ -18,8 +18,8 @@ define(function () {
                 };
             },
             template:
-'<md-button class="md-raised md-button md-default-theme" ng-click="gotoShow()">' +
-    '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>{{"Show" | trans}}' +
+'<md-button class="md-fab" ng-click="gotoShow()">' +
+    '{{"Show" | trans}}' +
 '</md-button>'
         };
     }

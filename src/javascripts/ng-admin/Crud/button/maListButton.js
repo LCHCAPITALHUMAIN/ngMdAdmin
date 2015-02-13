@@ -16,8 +16,8 @@ define(function () {
                 };
             },
             template:
-'<md-button class="md-raised md-button md-default-theme" ng-click="gotoList()">' +
-    '<span class="glyphicon glyphicon-list" aria-hidden="true"></span>{{"List" | trans}}' +
+'<md-button class="md-fab" ng-click="gotoList()">' +
+    '{{"List" | trans}}' +
 '</md-button>'
         };
     }

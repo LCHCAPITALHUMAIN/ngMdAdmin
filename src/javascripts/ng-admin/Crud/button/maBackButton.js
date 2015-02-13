@@ -15,8 +15,8 @@ define(function () {
                 };
             },
             template:
-'<md-button class="md-raised md-button md-default-theme" ng-click="back()">' +
-    '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>{{"Back" | trans}}' + 
+'<md-button class="md-fab" ng-click="back()">' +
+    '{{"Back" | trans}}' + 
 '</md-button>'
         };
     }

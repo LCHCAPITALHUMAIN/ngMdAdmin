@@ -18,8 +18,8 @@ define(function () {
                 };
             },
             template:
-'<md-button class="md-raised md-button md-default-theme" ng-click="gotoDelete()">' +
-    '<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>{{"Delete" | trans}}' +
+'<md-button class="md-fab" ng-click="gotoDelete()">' +
+    '{{"Delete" | trans}}' +
 '</md-button>'
 
         };

@@ -16,8 +16,8 @@ define(function () {
                 };
             },
             template:
-'<md-button class="md-raised md-button md-default-theme" ng-click="gotoCreate()">' +
-    '{{"Create" | trans}}' +
+'<md-button class="md-fab" ng-click="gotoCreate()">' +
+    '+' +
 '</md-button>'
         };
     }
