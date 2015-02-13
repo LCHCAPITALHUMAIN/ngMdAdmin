@@ -17,7 +17,7 @@
         </tr>
     </thead>
 
-    <tbody>
+<!--    <tbody>
         <tr ng-repeat-start="entry in entries track by $index" class="md-table-content-row">
             <td class="md-table-content-thumbs"><md-checkbox type="checkbox" ng-model="entry.isSelected" aria-label="entry.identifierValue"></md-checkbox></td>
             <td ng-repeat="field in fields() track by $index" ng-class="field.getCssClasses(entry)"  ui-sref="edit({id:entry.identifierValue})" ng-click="entry.collapseRows = !entry.collapseRows" class="md-table-content">
@@ -28,6 +28,23 @@
             </td>
         </tr>
         <tr ng-repeat-end ng-show="entry.collapseRows" class="md-table-content-row">
+            <td colspan="{{fields().length + 1}}" class="md-table-content">
+                <md-whiteframe layout class="md-whiteframe-z5" ui-view></md-whiteframe>
+            </td>
+        </tr>
+    </tbody>-->
+    
+    <tbody ng-repeat="entry in entries track by $index">
+        <tr class="md-table-content-row">
+            <td class="md-table-content-thumbs"><md-checkbox type="checkbox" ng-model="entry.isSelected" aria-label="entry.identifierValue"></md-checkbox></td>
+            <td ng-repeat="field in fields() track by $index" ng-class="field.getCssClasses(entry)"  ui-sref="edit({id:entry.identifierValue})" ng-click="datagrid.editRow(entry.identifierValue)" class="md-table-content">
+                <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
+            </td>
+            <td ng-if="listActions()" class="ng-admin-column-actions"  ng-click="datagrid.editRow(entry.identifierValue)" class="md-table-content">
+                <list-actions entry="::entry" entity="::entity" buttons="listActions()"></list-actions>
+            </td>
+        </tr>
+        <tr ng-show="activeEdit == entry.identifierValue" class="md-table-content-row">
             <td colspan="{{fields().length + 1}}" class="md-table-content">
                 <md-whiteframe layout class="md-whiteframe-z5" ui-view></md-whiteframe>
             </td>
