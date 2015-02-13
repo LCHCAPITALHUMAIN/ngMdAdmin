@@ -1,6 +1,6 @@
 
-<form ng-if="filterCtrl.shouldFilter()" ng-submit="filterCtrl.filter()" layout layout-sm="column">
-    <md-content class="md-padding" layout="row" layout-sm="column">
+<form ng-if="filterCtrl.shouldFilter()" ng-keyup="filterCtrl.filter()" layout layout-sm="column">
+    <md-content layout="row">
     <md-input-container ng-repeat="field in filters track by $index" ng-class="{'input-group':field.label()}" flex>
         <div ng-switch="field.type()" ng-class="field.getCssClasses(entry)">
              <label ng-if="field.label() && field.type() != 'boolean'">
@@ -18,6 +18,8 @@
             <ma-button-field ng-switch-when="boolean" field="::field" value="filterCtrl.values[field.name()]"></ma-button-field>
 
             <ma-text-field ng-switch-when="text" field="::field" value="filterCtrl.values[field.name()]"></ma-text-field>
+            
+            <ma-input-field ng-switch-when="json" field="::field" value="filterCtrl.values[field.name()]"></ma-input-field>
 
             <ma-date-field ng-switch-when="date" field="::field" value="filterCtrl.values[field.name()]"></ma-date-field>
 
@@ -26,12 +28,19 @@
             <ma-choice-field ng-switch-when="Reference" field="::field" value="filterCtrl.values[field.name()]"></ma-choice-field>
 
             <ma-choices-field ng-switch-when="choices" field="::field" value="filterCtrl.values[field.name()]"></ma-choices-field>
+            
+            <ma-choices-field ng-switch-when="ReferenceMany" field="::field" value="filterCtrl.values[field.name()]"></ma-choices-field>
+
+            <ma-input-field ng-switch-when="wysiwyg" field="::field" value="filterCtrl.values[field.name()]"></ma-input-field>
+
+            <template-field ng-switch-when="template"></template-field>
+            
         </div>
+        <md-button ng-if="!filterCtrl.isFilterEmpty" type="button" ng-click="filterCtrl.clearFilters()">X</md-button>
     </md-input-container>
     </md-content>
 
-    <md-button class="md-raised md-button md-default-theme" type="submit"><span class="glyphicon glyphicon-search"></span> {{"Filter" | trans}}</md-button>
-    <md-button ng-if="!filterCtrl.isFilterEmpty" class="md-raised md-button md-default-theme" type="button" ng-click="filterCtrl.clearFilters()"><span class="glyphicon glyphicon-remove"></span> {{"Clear" | trans}}</md-button>
+    
 
 </form>
 
