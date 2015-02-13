@@ -95,7 +95,7 @@ define(function () {
             .then(function (response) {
                 progression.done();
                 notification.log('Changes successfully saved.', {addnCls: 'humane-flatty-success'});
-                $location.path('/edit/' + entity.name() + '/' + response.identifierValue);
+                $location.path('/list/' + entity.name());
             }, this.handleError.bind(this));
     };
 
@@ -118,7 +118,9 @@ define(function () {
     FormController.prototype.submitEdition = function (form, $event) {
         var progression = this.progression,
             notification = this.notification,
-            object = this.validate(form, $event);
+            object = this.validate(form, $event),
+            entity = this.entity,
+            $location = this.$location;
 
         if (!object) {
             return;
@@ -129,6 +131,7 @@ define(function () {
             .then(function () {
                 progression.done();
                 notification.log('Changes successfully saved.', {addnCls: 'humane-flatty-success'});
+                $location.path('/list/' + entity.name());
             }, this.handleError.bind(this));
     };
 
