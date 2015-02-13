@@ -3,7 +3,8 @@
         <div ng-include="'ng-admin/Crud/form/edit-attribute.html'" ng-repeat="field in formController.fields track by $index"></div>
 
         <md-input-container flex>
-            <md-button type="submit" class="md-raised"><span class="glyphicon glyphicon-ok"></span> {{"Save.changes" | trans}}</md-button>
+            <md-button type="submit" class="md-raised">{{"save.changes" | trans}}</md-button>
+            <md-button class="md-raised" ui-sref="delete({id:entry.identifierValue})">{{"delete" | trans}}</md-button>
         </md-input-container>
     </form>
 </md-content>
