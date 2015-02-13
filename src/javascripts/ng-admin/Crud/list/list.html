@@ -1,3 +1,8 @@
+<div class="main-fab">
+    <ma-view-actions override="listController.actions" entity="listController.entity">
+         <ma-create-button ng-if="!entity.isReadOnly" entity="entity"></ma-create-button>
+     </ma-view-actions>
+</div>
 <md-toolbar class="md-default-theme">
     <div class="md-toolbar-tools" tabindex="0">
       <md-button ng-click="toggleLeft()" hide-gt-md>Toggle left</md-button>
@@ -11,18 +16,20 @@
         </div>
 
         <span flex=""></span> <!-- use up the empty space -->
-
+        
+        <ma-filter ng-if="listController.hasFilters" filters="::listController.filters" ng-show="toggleSearch"></ma-filter
         <div class="md-toolbar-item md-tools" layout="row">
-         <ma-view-actions override="listController.actions" entity="listController.entity">
-              <ma-create-button ng-if="!entity.isReadOnly" entity="entity"></ma-create-button>
-          </ma-view-actions>
-        </div>
+            <a ng-click="toggleSearch = !toggleSearch" class="md-button md-default-theme" tabindex="0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+            </a>
+          </div>
+
+        
       </div>
     </div>
 </md-toolbar>
 
 <md-content md-scroll-y flex class="md-padding">
-<ma-filter ng-if="listController.hasFilters" filters="::listController.filters"></ma-filter>
 
 <div ng-class="'ng-admin-entity-' + listController.entity.name()">
         <ma-datagrid name="{{ listController.view.name() }}"
