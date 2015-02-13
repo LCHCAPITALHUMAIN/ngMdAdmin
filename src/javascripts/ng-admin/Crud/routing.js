@@ -151,7 +151,7 @@ define(function (require) {
 
         $stateProvider
             .state('delete', {
-                parent: 'main',
+                parent: 'list',
                 url: '/delete/:entity/:id',
                 controller: 'DeleteController',
                 controllerAs: 'deleteController',
