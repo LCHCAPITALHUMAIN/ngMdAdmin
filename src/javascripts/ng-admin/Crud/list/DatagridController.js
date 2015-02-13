@@ -93,6 +93,11 @@ define(function () {
     DatagridController.prototype.getSortName = function (field) {
         return this.$scope.name + '.' + field.name();
     };
+    
+    
+    DatagridController.prototype.editRow = function (id) {
+        this.$scope.activeEdit = this.$scope.activeEdit == id ? -1 : id;        
+    };
 
     DatagridController.$inject = ['$scope', '$location', '$anchorScroll'];
 
