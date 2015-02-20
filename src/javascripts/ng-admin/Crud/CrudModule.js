@@ -12,8 +12,9 @@ define(function (require) {
     require('textangular');
     require('ngInflection');
     require('angular-ui-codemirror');
+    require('angular-material');
 
-    var CrudModule = angular.module('crud', ['ui.router', 'ui.bootstrap', 'ngSanitize', 'textAngular', 'ngInflection', 'ui.codemirror']);
+    var CrudModule = angular.module('crud', ['ui.router', 'ui.bootstrap', 'ngSanitize', 'textAngular', 'ngInflection', 'ui.codemirror', 'ngMaterial']);
 
     CrudModule.controller('ListController', require('ng-admin/Crud/list/ListController'));
     CrudModule.controller('ShowController', require('ng-admin/Crud/show/ShowController'));
