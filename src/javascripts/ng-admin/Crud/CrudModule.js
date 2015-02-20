@@ -66,6 +66,13 @@ define(function (require) {
     CrudModule.directive('maViewActions', require('ng-admin/Crud/misc/ViewActions'));
     CrudModule.directive('compile', require('ng-admin/Crud/misc/Compile'));
     CrudModule.run(require('ng-admin/Crud/misc/cacheTemplate'));
+    
+    // Translation
+    CrudModule.filter('trans', function () {
+        return function (input) {
+            return Translator.trans(input);
+        };
+    });
 
     CrudModule.config(require('ng-admin/Crud/routing'));
 
