@@ -58,6 +58,12 @@
 
             return value.length > 50 ? value.substr(0, 50) + '...' : value;
         }
+        
+        // translation function
+        // @param word
+        function trans(word) {
+            return Translator.trans(word);
+        }
 
         // use the custom query parameters function to format the API request correctly
         RestangularProvider.addFullRequestInterceptor(function(element, operation, what, url, headers, params) {
