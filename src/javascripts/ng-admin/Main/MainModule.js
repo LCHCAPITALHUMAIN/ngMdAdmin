@@ -14,6 +14,20 @@ define(function (require) {
     MainModule.controller('AppController', require('ng-admin/Main/component/controller/AppController'));
     MainModule.controller('DashboardController', require('ng-admin/Main/component/controller/DashboardController'));
     MainModule.controller('SidebarController', require('ng-admin/Main/component/controller/SidebarController'));
+    
+    MainModule.controller('main', function ($scope, $rootScope, $timeout, $mdSidenav, $log) {
+        
+        $scope.toggleLeft = function() {
+            $mdSidenav('left').toggle();
+        };
+
+    });
+    
+    MainModule.controller('LeftCtrl', function($scope, $timeout, $mdSidenav, $log) {
+        $scope.close = function() {
+          $mdSidenav('left').close();
+        };
+    })
 
     MainModule.service('PanelBuilder', require('ng-admin/Main/component/service/PanelBuilder'));
     MainModule.service('Validator', require('ng-admin/Main/component/service/Validator'));
@@ -38,6 +52,13 @@ define(function (require) {
     MainModule.filter('enabled', require('ng-admin/Main/component/filter/Enabled'));
     MainModule.filter('orderElement', require('ng-admin/Main/component/filter/OrderElement'));
     MainModule.filter('stripTags', require('ng-admin/Main/component/filter/StripTags'));
+    
+    // Translation
+    MainModule.filter('trans', function () {
+        return function (input) {
+            return Translator.trans(input);
+        };
+    });
 
     MainModule.directive('maDashboardPanel', require('ng-admin/Main/component/directive/maDashboardPanel'));
     MainModule.directive('menu', require('ng-admin/Main/component/directive/Menu'));
