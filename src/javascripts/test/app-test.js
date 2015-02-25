@@ -33,6 +33,9 @@ requirejs.config({
         'restangular': 'bower_components/restangular/dist/restangular',
         'humane': 'bower_components/humane/humane',
         'nprogress': 'bower_components/nprogress/nprogress',
+        'angular-animate': 'bower_components/angular-animate/angular-animate.min',
+        'angular-aria': 'bower_components/angular-aria/angular-aria.min',
+        'angular-material': 'bower_components/angular-material/angular-material.min',
 
         'MainModule': 'ng-admin/Main/MainModule',
         'CrudModule': 'ng-admin/Crud/CrudModule'
@@ -70,6 +73,9 @@ requirejs.config({
         },
         'nprogress': {
             exports: 'NProgress'
+        },
+        'angular-material': {
+            deps:['angular', 'angular-animate', 'angular-aria']
         }
     },
 
