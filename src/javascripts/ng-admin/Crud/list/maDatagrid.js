@@ -21,7 +21,7 @@ define(function (require) {
             controller: DatagridController
         };
     }
-
+    
     maDatagridDirective.$inject = [];
 
     return maDatagridDirective;

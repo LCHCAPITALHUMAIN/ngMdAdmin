@@ -1,21 +1,46 @@
-<table class="md-table">
-    <thead>
+<md-content class="md-whiteframe-z1">
+    <md-list class="my-list" role="list">
+    
+        <md-item data-ng-repeat="entry in entries track by $index">
+            
+<!--            <md-item-content data-ng-if="true"> 
+                {{ entry.entityName }} 
+                <ma-tile-content></ma-tile-content>
+            </md-item-content>-->
+            
+            <md-item-content>
+
+                <div class="md-tile-content" data-ng-repeat="field in fields() track by $index" data-ng-class="field.config.name" >
+                    <!--{{ field.config.name }}-->
+
+                    <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
+                </div>
+
+            </md-item-content>
+        </md-item>
+    
+    </md-list>
+</md-content>
+
+
+<!--<table class="md-table">-->
+<!--    <thead>
         <tr class="md-table-headers-row">
             <th class="md-table-header">
                 <md-checkbox checkbox-all="entries.isSelected" class="md-primary" aria-label="selectAll"></md-checkbox>
             </th>
-            <th ng-repeat="field in fields() track by $index" ng-class="'ng-admin-column-' + field.name()" class="md-table-header">
-                <a ng-click="datagrid.sort(field)">
-                    <span class="glyphicon {{ datagrid.sortDir === 'DESC' ? 'glyphicon-chevron-down': 'glyphicon-chevron-up' }}" ng-if="datagrid.isSorting(field)"></span>
+            <th data-ng-repeat="field in fields() track by $index" data-ng-class="'ng-admin-column-' + field.name()" class="md-table-header">
+                <a data-ng-click="datagrid.sort(field)">
+                    <span class="glyphicon {{ datagrid.sortDir === 'DESC' ? 'glyphicon-chevron-down': 'glyphicon-chevron-up' }}" data-ng-if="datagrid.isSorting(field)"></span>
 
                     {{ field.label() }}
                 </a>
             </th>
-            <th ng-if="listActions()" class="md-table-header">
+            <th data-ng-if="listActions()" class="md-table-header">
                 Actions
             </th>
         </tr>
-    </thead>
+    </thead>-->
 
 <!--    <tbody>
         <tr ng-repeat-start="entry in entries track by $index" class="md-table-content-row">
@@ -34,20 +59,20 @@
         </tr>
     </tbody>-->
     
-    <tbody ng-repeat="entry in entries track by $index">
+<!--    <tbody data-ng-repeat="entry in entries track by $index">
         <tr class="md-table-content-row">
-            <td class="md-table-content-thumbs"><md-checkbox type="checkbox" ng-model="entry.isSelected" aria-label="entry.identifierValue"></md-checkbox></td>
-            <td ng-repeat="field in fields() track by $index" ng-class="field.getCssClasses(entry)"  ui-sref="edit({id:entry.identifierValue})" ng-click="datagrid.editRow(entry.identifierValue)" class="md-table-content">
+            <td class="md-table-content-thumbs"><md-checkbox type="checkbox" data-ng-model="entry.isSelected" aria-label="entry.identifierValue"></md-checkbox></td>
+            <td data-ng-repeat="field in fields() track by $index" data-ng-class="field.getCssClasses(entry)"  ui-sref="edit({id:entry.identifierValue})" data-ng-click="datagrid.editRow(entry.identifierValue)" class="md-table-content">
                 <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
             </td>
-            <td ng-if="listActions()" class="ng-admin-column-actions"  ng-click="datagrid.editRow(entry.identifierValue)" class="md-table-content">
+            <td data-ng-if="listActions()" class="ng-admin-column-actions"  data-ng-click="datagrid.editRow(entry.identifierValue)" class="md-table-content">
                 <list-actions entry="::entry" entity="::entity" buttons="listActions()"></list-actions>
             </td>
         </tr>
-        <tr ng-show="activeEdit == entry.identifierValue" class="md-table-content-row">
+        <tr data-ng-show="activeEdit == entry.identifierValue" class="md-table-content-row">
             <td colspan="{{fields().length + 1}}" class="md-table-content">
-                <md-whiteframe layout class="md-whiteframe-z5" ui-view></md-whiteframe>
+                <div layout class="md-whiteframe-z1" ui-view="" ></div>
             </td>
         </tr>
-    </tbody>
-</table>
+    </tbody>-->
+<!--</table>-->
