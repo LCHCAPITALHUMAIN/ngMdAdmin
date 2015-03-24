@@ -1,0 +1,47 @@
+{
+    "attributes": {
+        "compile": {},
+        "layout": {
+            "context": "div"
+        },
+        "flex": {}
+    },
+    "elements": {
+        "ma-list-button": {
+            "attributes": {
+                "entity": {}
+            }
+        },
+        "md-checkbox": {
+            "attributes": {
+                "checkbox-all": {}
+            }
+        },
+        "md-button": {
+            "attributes": {
+                "data-ng-click": {},
+                "class": {},
+                "type": {},
+                "hide-gt-md": {}
+            }
+        },
+        "md-list": {
+            "attributes": {
+                "class": {}
+            }
+        },
+        "md-toolbar": {
+            "attributes": {
+                "class": {}
+            }
+        },
+        "md-input-container": {},
+        "ma-view-actions": {
+            "attributes": {
+                "override": {},
+                "entry": {},
+                "entity": {}
+            }
+        }
+    }
+}
