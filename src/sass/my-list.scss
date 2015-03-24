@@ -1,3 +1,8 @@
+.my-list-container {
+    margin: 50px;
+    overflow: visible;
+}
+
 md-list.my-list {
     
     padding: 8px 0px 8px 0px;
@@ -25,31 +30,49 @@ md-list.my-list {
                     text-align: center;
                 }
                 .infra-customer_number {
+                    h1 {
+                        margin: 0;
+                        color: black;
+                        i.mdi {
+                            font-size: 1.4em;
+                        }
+                    }
                     color: rgb(1, 162, 166);
                     font-weight: 600;
                 }
-                .infra-id {
-                    color: black;
-                    text-decoration: none;
-                    h1 {
-                        margin:0;
-                        font-size: 20px;
-                        font-weight: 400;
+                .infra-id, 
+                .infra-domaine, 
+                .infra-mail {
+                    display: flex;
+                    i.mdi {
+                        margin-top: 18px;
+                        font-size: 2em;
                     }
                     h2 {
                         margin:0;
-                        font-size: 12px;
+                        margin-top: 10px;
+                        font-size: 1.4em;
+                        font-weight: 400;
+                        padding-left: 16px;
+                    }
+                    h3 {
+                        margin:0;
+                        font-size: 1.2em;
                         font-weight: 100;
+                        padding-left: 16px;
                     }
                 }
-                
+                 
             }
             
-            &.item-content-editable {
-                /*height: 260px;*/
-            }
-            
-            
+        }
+        
+        md-item-content.item-content-editable {
+            margin-left: -25px;
+            margin-right: -25px;
+            background: rgb(255, 255, 255);
+            box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+            top: 10px;
         }
       
     }

@@ -1,4 +1,4 @@
-<md-content class="md-whiteframe-z1">
+<md-content class="my-list-container md-whiteframe-z1">
     <md-list class="my-list" role="list">
     
         <md-item data-ng-repeat="entry in entries track by $index">
@@ -7,12 +7,19 @@
                 {{ entry.entityName }} 
                 <ma-tile-content></ma-tile-content>
             </md-item-content>-->
+
             
-            <md-item-content data-ng-click="datagrid.editRow(entry.identifierValue)" ui-sref="edit({id:entry.identifierValue})">
+            <md-item-content data-ng-hide="activeEdit == entry.identifierValue" layout="row" layout-align="start center" data-ng-click="datagrid.editRow(entry.identifierValue)" ui-sref="edit({id:entry.identifierValue})">
 
                 <div class="md-tile-content" data-ng-repeat="field in fields() track by $index" data-ng-class="field.config.name" >
-                    <!--{{ field.config.name }}-->
+                    <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
+                </div>
 
+            </md-item-content>
+
+            <md-item-content class="item-content-editable" data-ng-show="activeEdit == entry.identifierValue" layout="row" layout-align="start center" data-ng-click="datagrid.editRow(entry.identifierValue)" ui-sref="edit({id:entry.identifierValue})">
+
+                <div class="md-tile-content" data-ng-repeat="field in fields() track by $index" data-ng-class="field.config.name" >
                     <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
                 </div>
 
@@ -23,7 +30,7 @@
             </md-item-content>
 
         </md-item>
-    
+   
     </md-list>
 </md-content>
 

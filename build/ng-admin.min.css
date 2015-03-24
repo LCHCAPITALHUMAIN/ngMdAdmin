@@ -11154,10 +11154,16 @@ md-toolbar.md-default-theme .md-button {
 }
 
 /* line 1, ../src/sass/my-list.scss */
+.my-list-container {
+  margin: 50px;
+  overflow: visible;
+}
+
+/* line 6, ../src/sass/my-list.scss */
 md-list.my-list {
   padding: 8px 0px 8px 0px;
 }
-/* line 10, ../src/sass/my-list.scss */
+/* line 15, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content .md-tile-content {
   padding: 10px;
   -webkit-flex: 2;
@@ -11169,38 +11175,66 @@ md-list.my-list md-item md-item-content .md-tile-content {
   border-right: 1px solid gainsboro;
   border-bottom: 1px solid gainsboro;
 }
-/* line 21, ../src/sass/my-list.scss */
+/* line 26, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content .md-tile-content.customer_number {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   text-align: center;
 }
-/* line 27, ../src/sass/my-list.scss */
+/* line 32, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content .md-tile-content .infra-customer_number {
   color: #01a2a6;
   font-weight: 600;
 }
-/* line 31, ../src/sass/my-list.scss */
-md-list.my-list md-item md-item-content .md-tile-content .infra-id {
+/* line 33, ../src/sass/my-list.scss */
+md-list.my-list md-item md-item-content .md-tile-content .infra-customer_number h1 {
+  margin: 0;
   color: black;
-  text-decoration: none;
 }
-/* line 34, ../src/sass/my-list.scss */
-md-list.my-list md-item md-item-content .md-tile-content .infra-id h1 {
+/* line 36, ../src/sass/my-list.scss */
+md-list.my-list md-item md-item-content .md-tile-content .infra-customer_number h1 i.mdi {
+  font-size: 1.4em;
+}
+/* line 43, ../src/sass/my-list.scss */
+md-list.my-list md-item md-item-content .md-tile-content .infra-id,
+md-list.my-list md-item md-item-content .md-tile-content .infra-domaine,
+md-list.my-list md-item md-item-content .md-tile-content .infra-mail {
+  display: flex;
+}
+/* line 47, ../src/sass/my-list.scss */
+md-list.my-list md-item md-item-content .md-tile-content .infra-id i.mdi,
+md-list.my-list md-item md-item-content .md-tile-content .infra-domaine i.mdi,
+md-list.my-list md-item md-item-content .md-tile-content .infra-mail i.mdi {
+  margin-top: 18px;
+  font-size: 2em;
+}
+/* line 51, ../src/sass/my-list.scss */
+md-list.my-list md-item md-item-content .md-tile-content .infra-id h2,
+md-list.my-list md-item md-item-content .md-tile-content .infra-domaine h2,
+md-list.my-list md-item md-item-content .md-tile-content .infra-mail h2 {
   margin: 0;
-  font-size: 20px;
+  margin-top: 10px;
+  font-size: 1.4em;
   font-weight: 400;
+  padding-left: 16px;
 }
-/* line 39, ../src/sass/my-list.scss */
-md-list.my-list md-item md-item-content .md-tile-content .infra-id h2 {
+/* line 58, ../src/sass/my-list.scss */
+md-list.my-list md-item md-item-content .md-tile-content .infra-id h3,
+md-list.my-list md-item md-item-content .md-tile-content .infra-domaine h3,
+md-list.my-list md-item md-item-content .md-tile-content .infra-mail h3 {
   margin: 0;
-  font-size: 12px;
+  font-size: 1.2em;
   font-weight: 100;
+  padding-left: 16px;
 }
-/* line 48, ../src/sass/my-list.scss */
+/* line 70, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content.item-content-editable {
-  /*height: 260px;*/
+  margin-left: -25px;
+  margin-right: -25px;
+  background: white;
+  box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+  top: 10px;
 }
 
 /* MaterialDesignIcons.com */
