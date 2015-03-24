@@ -8,7 +8,7 @@
                 <ma-tile-content></ma-tile-content>
             </md-item-content>-->
             
-            <md-item-content>
+            <md-item-content data-ng-click="datagrid.editRow(entry.identifierValue)" ui-sref="edit({id:entry.identifierValue})">
 
                 <div class="md-tile-content" data-ng-repeat="field in fields() track by $index" data-ng-class="field.config.name" >
                     <!--{{ field.config.name }}-->
@@ -17,6 +17,11 @@
                 </div>
 
             </md-item-content>
+
+            <md-item-content data-ng-show="activeEdit == entry.identifierValue" class="item-content-editable">
+                <div layout="" ui-view="" ></div>
+            </md-item-content>
+
         </md-item>
     
     </md-list>

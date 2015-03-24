@@ -16,16 +16,37 @@ md-list.my-list {
                 text-overflow: ellipsis; 
                 height: 96px;
                 border-right: 1px solid rgb(220,220,220);
-                border-bottom   : 1px solid rgb(220,220,220);
+                border-bottom : 1px solid rgb(220,220,220);
                 
-                &.id {
+                &.customer_number {
                     -webkit-flex: 1;
                     -ms-flex: 1;
                     flex: 1;
                     text-align: center;
                 }
+                .infra-customer_number {
+                    color: rgb(1, 162, 166);
+                    font-weight: 600;
+                }
+                .infra-id {
+                    color: black;
+                    text-decoration: none;
+                    h1 {
+                        margin:0;
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+                    h2 {
+                        margin:0;
+                        font-size: 12px;
+                        font-weight: 100;
+                    }
+                }
                 
-                
+            }
+            
+            &.item-content-editable {
+                /*height: 260px;*/
             }
             
             

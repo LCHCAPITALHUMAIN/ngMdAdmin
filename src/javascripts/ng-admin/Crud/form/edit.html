@@ -1,4 +1,4 @@
-<md-content class="md-padding" layout="row" layout-sm="column" style="font-size:1.2em" id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
+<md-content layout="row" id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
     <form layout name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
         <div ng-include="'ng-admin/Crud/form/edit-attribute.html'" ng-repeat="field in formController.fields track by $index"></div>
 
@@ -8,3 +8,18 @@
         </md-input-container>
     </form>
 </md-content>
+
+
+
+
+<!-- old gneneric edit view -->
+<!--<md-content layout="row" layout-sm="column" style="font-size:1.2em" id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
+    <form layout name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
+        <div ng-include="'ng-admin/Crud/form/edit-attribute.html'" ng-repeat="field in formController.fields track by $index"></div>
+
+        <md-input-container flex>
+            <md-button type="submit" class="md-raised">{{"save.changes" | trans}}</md-button>
+            <md-button class="md-raised" ui-sref="delete({id:entry.identifierValue})">{{"delete" | trans}}</md-button>
+        </md-input-container>
+    </form>
+</md-content>-->
