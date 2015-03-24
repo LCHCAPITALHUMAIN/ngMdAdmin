@@ -2,4 +2,13 @@
 @import "ng-md-admin";
 @import "my-list";
 
-@import "../javascripts/bower_components/mdi/scss/materialdesignicons";
+
+/* MaterialDesignIcons.com */
+
+$mdi-font-path:        "../../assets/fonts" !default;
+$mdi-font-size-base:   24px !default;
+$mdi-css-prefix:       mdi !default;
+$mdi-version:          "0.9.72" !default;
+@import "materialdesignicons/path";
+@import "materialdesignicons/core";
+@import "materialdesignicons/icons";
