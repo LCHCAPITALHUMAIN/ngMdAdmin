@@ -150,7 +150,7 @@ module.exports = function (grunt) {
                 }
             },
             javascripts: {
-                files: ['src/javascripts/ng-admin.js', 'src/javascripts/ng-admin/**/**/*.js', 'src/javascripts/ng-admin/**/**/*.html'],
+                files: ['src/javascripts/ng-admin.js', 'src/javascripts/ng-admin/**/**/*.js','src/javascripts/ng-admin/**/**/*.js.map', 'src/javascripts/ng-admin/**/**/*.html'],
                 tasks: ['requirejs:dev', 'copy:js_dev'],
                 options: {
                     atBegin: true,
