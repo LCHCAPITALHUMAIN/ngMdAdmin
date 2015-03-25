@@ -25,6 +25,11 @@
                 "hide-gt-md": {}
             }
         },
+        "md-item-content": {
+            "attributes": {
+                "data-ng-repeat": {}
+            }
+        },
         "md-list": {
             "attributes": {
                 "class": {}

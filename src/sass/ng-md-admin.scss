@@ -13,7 +13,7 @@
 html, body {
   height: 100%;
   color: rgba(0, 0, 0, 0.87);
-  background: white;
+  background-color: rgb(247, 247, 249);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: 100%;
@@ -3720,6 +3720,7 @@ md-content {
   display: block;
   position: relative;
   overflow: auto;
+  background-color: inherit;
   -webkit-overflow-scrolling: touch; }
   md-content[md-scroll-y] {
     overflow-y: auto;
@@ -3734,6 +3735,9 @@ md-content {
   md-content.md-padding {
     padding: 16px; }
  }
+ md-content.md-default-theme {
+    background-color: inherit;
+}
 
 .md-dialog-container {
   display: -webkit-box;

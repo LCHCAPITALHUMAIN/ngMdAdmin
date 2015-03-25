@@ -19,7 +19,7 @@
 html, body {
   height: 100%;
   color: rgba(0, 0, 0, 0.87);
-  background: white;
+  background-color: #f7f7f9;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: 100%;
@@ -5317,33 +5317,39 @@ md-content {
   display: block;
   position: relative;
   overflow: auto;
+  background-color: inherit;
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 3724, ../src/sass/ng-md-admin.scss */
+/* line 3725, ../src/sass/ng-md-admin.scss */
 md-content[md-scroll-y] {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-/* line 3727, ../src/sass/ng-md-admin.scss */
+/* line 3728, ../src/sass/ng-md-admin.scss */
 md-content[md-scroll-x] {
   overflow-x: auto;
   overflow-y: hidden;
 }
 
-/* line 3730, ../src/sass/ng-md-admin.scss */
+/* line 3731, ../src/sass/ng-md-admin.scss */
 md-content.md-padding {
   padding: 8px;
 }
 
 @media (min-width: 600px) {
-  /* line 3734, ../src/sass/ng-md-admin.scss */
+  /* line 3735, ../src/sass/ng-md-admin.scss */
   md-content.md-padding {
     padding: 16px;
   }
 }
 /* line 3738, ../src/sass/ng-md-admin.scss */
+md-content.md-default-theme {
+  background-color: inherit;
+}
+
+/* line 3742, ../src/sass/ng-md-admin.scss */
 .md-dialog-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5365,7 +5371,7 @@ md-content.md-padding {
   z-index: 80;
 }
 
-/* line 3758, ../src/sass/ng-md-admin.scss */
+/* line 3762, ../src/sass/ng-md-admin.scss */
 md-dialog {
   opacity: 0;
   min-width: 240px;
@@ -5385,7 +5391,7 @@ md-dialog {
   flex-direction: column;
 }
 
-/* line 3775, ../src/sass/ng-md-admin.scss */
+/* line 3779, ../src/sass/ng-md-admin.scss */
 md-dialog.transition-in {
   opacity: 1;
   -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -5394,7 +5400,7 @@ md-dialog.transition-in {
   transform: translate3d(0, 0, 0) scale(1);
 }
 
-/* line 3781, ../src/sass/ng-md-admin.scss */
+/* line 3785, ../src/sass/ng-md-admin.scss */
 md-dialog.transition-out {
   -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -5402,7 +5408,7 @@ md-dialog.transition-out {
   transform: translate3d(0, 100%, 0) scale(0.2);
 }
 
-/* line 3786, ../src/sass/ng-md-admin.scss */
+/* line 3790, ../src/sass/ng-md-admin.scss */
 md-dialog md-content {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
@@ -5413,12 +5419,12 @@ md-dialog md-content {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 3794, ../src/sass/ng-md-admin.scss */
+/* line 3798, ../src/sass/ng-md-admin.scss */
 md-dialog md-content:not([layout=row]) > *:first-child:not(.md-subheader) {
   margin-top: 0px;
 }
 
-/* line 3796, ../src/sass/ng-md-admin.scss */
+/* line 3800, ../src/sass/ng-md-admin.scss */
 md-dialog .md-actions {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5441,44 +5447,44 @@ md-dialog .md-actions {
   min-height: 40px;
 }
 
-/* line 3816, ../src/sass/ng-md-admin.scss */
+/* line 3820, ../src/sass/ng-md-admin.scss */
 md-dialog .md-actions > * {
   margin-left: 8px;
 }
 
-/* line 3818, ../src/sass/ng-md-admin.scss */
+/* line 3822, ../src/sass/ng-md-admin.scss */
 md-dialog.md-content-overflow .md-actions {
   border-top: 1px solid;
 }
 
-/* line 3821, ../src/sass/ng-md-admin.scss */
+/* line 3825, ../src/sass/ng-md-admin.scss */
 md-divider {
   display: block;
   border-top: 1px solid;
   margin: 0;
 }
 
-/* line 3825, ../src/sass/ng-md-admin.scss */
+/* line 3829, ../src/sass/ng-md-admin.scss */
 md-divider[md-inset] {
   margin-left: 80px;
 }
 
-/* line 3828, ../src/sass/ng-md-admin.scss */
+/* line 3832, ../src/sass/ng-md-admin.scss */
 md-grid-list, md-grid-tile {
   display: block;
 }
 
-/* line 3831, ../src/sass/ng-md-admin.scss */
+/* line 3835, ../src/sass/ng-md-admin.scss */
 md-grid-list {
   position: relative;
 }
 
-/* line 3834, ../src/sass/ng-md-admin.scss */
+/* line 3838, ../src/sass/ng-md-admin.scss */
 md-grid-tile {
   position: absolute;
 }
 
-/* line 3836, ../src/sass/ng-md-admin.scss */
+/* line 3840, ../src/sass/ng-md-admin.scss */
 md-grid-tile figure {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5502,7 +5508,7 @@ md-grid-tile figure {
   margin: 0;
 }
 
-/* line 3857, ../src/sass/ng-md-admin.scss */
+/* line 3861, ../src/sass/ng-md-admin.scss */
 md-grid-tile md-grid-tile-header, md-grid-tile md-grid-tile-footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5526,33 +5532,33 @@ md-grid-tile md-grid-tile-header, md-grid-tile md-grid-tile-footer {
   right: 0;
 }
 
-/* line 3878, ../src/sass/ng-md-admin.scss */
+/* line 3882, ../src/sass/ng-md-admin.scss */
 md-grid-tile md-grid-tile-header h3, md-grid-tile md-grid-tile-header h4, md-grid-tile md-grid-tile-footer h3, md-grid-tile md-grid-tile-footer h4 {
   font-weight: 400;
   margin: 0 0 0 16px;
 }
 
-/* line 3881, ../src/sass/ng-md-admin.scss */
+/* line 3885, ../src/sass/ng-md-admin.scss */
 md-grid-tile md-grid-tile-header h3, md-grid-tile md-grid-tile-footer h3 {
   font-size: 14px;
 }
 
-/* line 3883, ../src/sass/ng-md-admin.scss */
+/* line 3887, ../src/sass/ng-md-admin.scss */
 md-grid-tile md-grid-tile-header h4, md-grid-tile md-grid-tile-footer h4 {
   font-size: 12px;
 }
 
-/* line 3885, ../src/sass/ng-md-admin.scss */
+/* line 3889, ../src/sass/ng-md-admin.scss */
 md-grid-tile md-grid-tile-header {
   top: 0;
 }
 
-/* line 3887, ../src/sass/ng-md-admin.scss */
+/* line 3891, ../src/sass/ng-md-admin.scss */
 md-grid-tile md-grid-tile-footer {
   bottom: 0;
 }
 
-/* line 3890, ../src/sass/ng-md-admin.scss */
+/* line 3894, ../src/sass/ng-md-admin.scss */
 md-icon {
   margin: auto;
   background-repeat: no-repeat no-repeat;
@@ -5563,7 +5569,7 @@ md-icon {
   width: 24px;
 }
 
-/* line 3899, ../src/sass/ng-md-admin.scss */
+/* line 3903, ../src/sass/ng-md-admin.scss */
 md-input-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5581,20 +5587,20 @@ md-input-container {
    */
 }
 
-/* line 3914, ../src/sass/ng-md-admin.scss */
+/* line 3918, ../src/sass/ng-md-admin.scss */
 md-input-container textarea, md-input-container input[type="text"], md-input-container input[type="password"], md-input-container input[type="datetime"], md-input-container input[type="datetime-local"], md-input-container input[type="date"], md-input-container input[type="month"], md-input-container input[type="time"], md-input-container input[type="week"], md-input-container input[type="number"], md-input-container input[type="email"], md-input-container input[type="url"], md-input-container input[type="search"], md-input-container input[type="tel"], md-input-container input[type="color"] {
   /* remove default appearance from all input/textarea */
   -moz-appearance: none;
   -webkit-appearance: none;
 }
 
-/* line 3918, ../src/sass/ng-md-admin.scss */
+/* line 3922, ../src/sass/ng-md-admin.scss */
 md-input-container textarea {
   resize: none;
   overflow: hidden;
 }
 
-/* line 3921, ../src/sass/ng-md-admin.scss */
+/* line 3925, ../src/sass/ng-md-admin.scss */
 md-input-container label:not(.md-no-float), md-input-container .md-placeholder {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
@@ -5612,7 +5618,7 @@ md-input-container label:not(.md-no-float), md-input-container .md-placeholder {
   transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
 }
 
-/* line 3936, ../src/sass/ng-md-admin.scss */
+/* line 3940, ../src/sass/ng-md-admin.scss */
 md-input-container .md-placeholder {
   position: absolute;
   top: 0;
@@ -5623,21 +5629,21 @@ md-input-container .md-placeholder {
   transform: translate3d(0, 30px, 0);
 }
 
-/* line 3944, ../src/sass/ng-md-admin.scss */
+/* line 3948, ../src/sass/ng-md-admin.scss */
 md-input-container.md-input-focused .md-placeholder {
   opacity: 1;
   -webkit-transform: translate3d(0, 24px, 0);
   transform: translate3d(0, 24px, 0);
 }
 
-/* line 3948, ../src/sass/ng-md-admin.scss */
+/* line 3952, ../src/sass/ng-md-admin.scss */
 md-input-container.md-input-has-value .md-placeholder {
   -webkit-transition: none;
   transition: none;
   opacity: 0;
 }
 
-/* line 3952, ../src/sass/ng-md-admin.scss */
+/* line 3956, ../src/sass/ng-md-admin.scss */
 md-input-container .md-input {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -5659,18 +5665,18 @@ md-input-container .md-input {
   border-radius: 0;
 }
 
-/* line 3971, ../src/sass/ng-md-admin.scss */
+/* line 3975, ../src/sass/ng-md-admin.scss */
 md-input-container .md-input:focus {
   outline: none;
 }
 
-/* line 3973, ../src/sass/ng-md-admin.scss */
+/* line 3977, ../src/sass/ng-md-admin.scss */
 md-input-container .md-input:invalid {
   outline: none;
   box-shadow: none;
 }
 
-/* line 3976, ../src/sass/ng-md-admin.scss */
+/* line 3980, ../src/sass/ng-md-admin.scss */
 md-input-container ng-messages, md-input-container data-ng-messages, md-input-container x-ng-messages, md-input-container [ng-messages], md-input-container [data-ng-messages], md-input-container [x-ng-messages] {
   -webkit-box-ordinal-group: 4;
   -webkit-order: 3;
@@ -5679,7 +5685,7 @@ md-input-container ng-messages, md-input-container data-ng-messages, md-input-co
   position: relative;
 }
 
-/* line 3982, ../src/sass/ng-md-admin.scss */
+/* line 3986, ../src/sass/ng-md-admin.scss */
 md-input-container ng-message, md-input-container data-ng-message, md-input-container x-ng-message, md-input-container [ng-message], md-input-container [data-ng-message], md-input-container [x-ng-message], md-input-container .md-char-counter {
   -webkit-font-smoothing: antialiased;
   position: absolute;
@@ -5687,7 +5693,7 @@ md-input-container ng-message, md-input-container data-ng-message, md-input-cont
   line-height: 24px;
 }
 
-/* line 3987, ../src/sass/ng-md-admin.scss */
+/* line 3991, ../src/sass/ng-md-admin.scss */
 md-input-container ng-message.ng-enter, md-input-container data-ng-message.ng-enter, md-input-container x-ng-message.ng-enter, md-input-container [ng-message].ng-enter, md-input-container [data-ng-message].ng-enter, md-input-container [x-ng-message].ng-enter, md-input-container .md-char-counter.ng-enter {
   -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -5695,57 +5701,57 @@ md-input-container ng-message.ng-enter, md-input-container data-ng-message.ng-en
   transition-delay: 0.2s;
 }
 
-/* line 3992, ../src/sass/ng-md-admin.scss */
+/* line 3996, ../src/sass/ng-md-admin.scss */
 md-input-container ng-message.ng-leave, md-input-container data-ng-message.ng-leave, md-input-container x-ng-message.ng-leave, md-input-container [ng-message].ng-leave, md-input-container [data-ng-message].ng-leave, md-input-container [x-ng-message].ng-leave, md-input-container .md-char-counter.ng-leave {
   -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
   transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
 }
 
-/* line 3995, ../src/sass/ng-md-admin.scss */
+/* line 3999, ../src/sass/ng-md-admin.scss */
 md-input-container ng-message.ng-enter, md-input-container ng-message.ng-leave.ng-leave-active, md-input-container data-ng-message.ng-enter, md-input-container data-ng-message.ng-leave.ng-leave-active, md-input-container x-ng-message.ng-enter, md-input-container x-ng-message.ng-leave.ng-leave-active, md-input-container [ng-message].ng-enter, md-input-container [ng-message].ng-leave.ng-leave-active, md-input-container [data-ng-message].ng-enter, md-input-container [data-ng-message].ng-leave.ng-leave-active, md-input-container [x-ng-message].ng-enter, md-input-container [x-ng-message].ng-leave.ng-leave-active, md-input-container .md-char-counter.ng-enter, md-input-container .md-char-counter.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate3d(0, -20%, 0);
   transform: translate3d(0, -20%, 0);
 }
 
-/* line 3999, ../src/sass/ng-md-admin.scss */
+/* line 4003, ../src/sass/ng-md-admin.scss */
 md-input-container ng-message.ng-leave, md-input-container ng-message.ng-enter.ng-enter-active, md-input-container data-ng-message.ng-leave, md-input-container data-ng-message.ng-enter.ng-enter-active, md-input-container x-ng-message.ng-leave, md-input-container x-ng-message.ng-enter.ng-enter-active, md-input-container [ng-message].ng-leave, md-input-container [ng-message].ng-enter.ng-enter-active, md-input-container [data-ng-message].ng-leave, md-input-container [data-ng-message].ng-enter.ng-enter-active, md-input-container [x-ng-message].ng-leave, md-input-container [x-ng-message].ng-enter.ng-enter-active, md-input-container .md-char-counter.ng-leave, md-input-container .md-char-counter.ng-enter.ng-enter-active {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 4003, ../src/sass/ng-md-admin.scss */
+/* line 4007, ../src/sass/ng-md-admin.scss */
 md-input-container .md-char-counter {
   bottom: 2px;
   right: 2px;
 }
 
-/* line 4006, ../src/sass/ng-md-admin.scss */
+/* line 4010, ../src/sass/ng-md-admin.scss */
 md-input-container.md-input-focused label:not(.md-no-float), md-input-container.md-input-has-value label:not(.md-no-float) {
   -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
   transform: translate3d(0, 4px, 0) scale(0.75);
 }
 
-/* line 4009, ../src/sass/ng-md-admin.scss */
+/* line 4013, ../src/sass/ng-md-admin.scss */
 md-input-container.md-input-focused .md-input, md-input-container .md-input.ng-invalid.ng-dirty {
   padding-bottom: 0px;
   border-width: 0 0 2px 0;
 }
 
-/* line 4012, ../src/sass/ng-md-admin.scss */
+/* line 4016, ../src/sass/ng-md-admin.scss */
 md-input-container .md-input[disabled], [disabled] md-input-container .md-input {
   background-position: 0 bottom;
   background-size: 3px 1px;
   background-repeat: repeat-x;
 }
 
-/* line 4017, ../src/sass/ng-md-admin.scss */
+/* line 4021, ../src/sass/ng-md-admin.scss */
 md-list {
   padding: 8px 0px 8px 0px;
 }
 
-/* line 4020, ../src/sass/ng-md-admin.scss */
+/* line 4024, ../src/sass/ng-md-admin.scss */
 md-item-content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5768,7 +5774,7 @@ md-item-content {
 /**
  * The left tile for a list item.
  */
-/* line 4041, ../src/sass/ng-md-admin.scss */
+/* line 4045, ../src/sass/ng-md-admin.scss */
 .md-tile-left {
   min-width: 56px;
   margin-right: -16px;
@@ -5777,7 +5783,7 @@ md-item-content {
 /**
  * The center content tile for a list item.
  */
-/* line 4048, ../src/sass/ng-md-admin.scss */
+/* line 4052, ../src/sass/ng-md-admin.scss */
 .md-tile-content {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -5787,21 +5793,21 @@ md-item-content {
   text-overflow: ellipsis;
 }
 
-/* line 4055, ../src/sass/ng-md-admin.scss */
+/* line 4059, ../src/sass/ng-md-admin.scss */
 .md-tile-content h3 {
   margin: 0 0 3px 0;
   font-weight: 400;
   font-size: 1.1em;
 }
 
-/* line 4059, ../src/sass/ng-md-admin.scss */
+/* line 4063, ../src/sass/ng-md-admin.scss */
 .md-tile-content h4 {
   margin: 0 0 3px 0;
   font-weight: 400;
   font-size: 0.9em;
 }
 
-/* line 4063, ../src/sass/ng-md-admin.scss */
+/* line 4067, ../src/sass/ng-md-admin.scss */
 .md-tile-content p {
   margin: 0 0 3px 0;
   font-size: 0.75em;
@@ -5810,7 +5816,7 @@ md-item-content {
 /**
  * The right tile for a list item.
  */
-/* line 4070, ../src/sass/ng-md-admin.scss */
+/* line 4074, ../src/sass/ng-md-admin.scss */
 .md-tile-right {
   padding-right: 0px;
 }
@@ -5935,7 +5941,7 @@ md-item-content {
     transform: rotate(1080deg);
   }
 }
-/* line 4185, ../src/sass/ng-md-admin.scss */
+/* line 4189, ../src/sass/ng-md-admin.scss */
 md-progress-circular {
   width: 50px;
   height: 50px;
@@ -5946,14 +5952,14 @@ md-progress-circular {
   overflow: hidden;
 }
 
-/* line 4193, ../src/sass/ng-md-admin.scss */
+/* line 4197, ../src/sass/ng-md-admin.scss */
 md-progress-circular .md-inner {
   width: 50px;
   height: 50px;
   position: relative;
 }
 
-/* line 4197, ../src/sass/ng-md-admin.scss */
+/* line 4201, ../src/sass/ng-md-admin.scss */
 md-progress-circular .md-inner .md-gap {
   position: absolute;
   left: 24px;
@@ -5964,7 +5970,7 @@ md-progress-circular .md-inner .md-gap {
   box-sizing: border-box;
 }
 
-/* line 4205, ../src/sass/ng-md-admin.scss */
+/* line 4209, ../src/sass/ng-md-admin.scss */
 md-progress-circular .md-inner .md-left, md-progress-circular .md-inner .md-right {
   position: absolute;
   top: 0;
@@ -5973,7 +5979,7 @@ md-progress-circular .md-inner .md-left, md-progress-circular .md-inner .md-righ
   overflow: hidden;
 }
 
-/* line 4211, ../src/sass/ng-md-admin.scss */
+/* line 4215, ../src/sass/ng-md-admin.scss */
 md-progress-circular .md-inner .md-left .md-half-circle, md-progress-circular .md-inner .md-right .md-half-circle {
   position: absolute;
   top: 0;
@@ -5986,35 +5992,35 @@ md-progress-circular .md-inner .md-left .md-half-circle, md-progress-circular .m
   border-radius: 50%;
 }
 
-/* line 4221, ../src/sass/ng-md-admin.scss */
+/* line 4225, ../src/sass/ng-md-admin.scss */
 md-progress-circular .md-inner .md-left {
   left: 0;
 }
 
-/* line 4223, ../src/sass/ng-md-admin.scss */
+/* line 4227, ../src/sass/ng-md-admin.scss */
 md-progress-circular .md-inner .md-left .md-half-circle {
   left: 0;
   border-right-color: transparent;
 }
 
-/* line 4226, ../src/sass/ng-md-admin.scss */
+/* line 4230, ../src/sass/ng-md-admin.scss */
 md-progress-circular .md-inner .md-right {
   right: 0;
 }
 
-/* line 4228, ../src/sass/ng-md-admin.scss */
+/* line 4232, ../src/sass/ng-md-admin.scss */
 md-progress-circular .md-inner .md-right .md-half-circle {
   right: 0;
   border-left-color: transparent;
 }
 
-/* line 4231, ../src/sass/ng-md-admin.scss */
+/* line 4235, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="0"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4234, ../src/sass/ng-md-admin.scss */
+/* line 4238, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="0"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6022,20 +6028,20 @@ md-progress-circular[value="0"] .md-inner .md-right .md-half-circle {
   transform: rotate(-135deg);
 }
 
-/* line 4239, ../src/sass/ng-md-admin.scss */
+/* line 4243, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="0"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4243, ../src/sass/ng-md-admin.scss */
+/* line 4247, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="1"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4246, ../src/sass/ng-md-admin.scss */
+/* line 4250, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="1"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6043,20 +6049,20 @@ md-progress-circular[value="1"] .md-inner .md-right .md-half-circle {
   transform: rotate(-131.4deg);
 }
 
-/* line 4251, ../src/sass/ng-md-admin.scss */
+/* line 4255, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="1"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4255, ../src/sass/ng-md-admin.scss */
+/* line 4259, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="2"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4258, ../src/sass/ng-md-admin.scss */
+/* line 4262, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="2"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6064,20 +6070,20 @@ md-progress-circular[value="2"] .md-inner .md-right .md-half-circle {
   transform: rotate(-127.8deg);
 }
 
-/* line 4263, ../src/sass/ng-md-admin.scss */
+/* line 4267, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="2"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4267, ../src/sass/ng-md-admin.scss */
+/* line 4271, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="3"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4270, ../src/sass/ng-md-admin.scss */
+/* line 4274, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="3"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6085,20 +6091,20 @@ md-progress-circular[value="3"] .md-inner .md-right .md-half-circle {
   transform: rotate(-124.2deg);
 }
 
-/* line 4275, ../src/sass/ng-md-admin.scss */
+/* line 4279, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="3"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4279, ../src/sass/ng-md-admin.scss */
+/* line 4283, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="4"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4282, ../src/sass/ng-md-admin.scss */
+/* line 4286, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="4"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6106,20 +6112,20 @@ md-progress-circular[value="4"] .md-inner .md-right .md-half-circle {
   transform: rotate(-120.6deg);
 }
 
-/* line 4287, ../src/sass/ng-md-admin.scss */
+/* line 4291, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="4"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4291, ../src/sass/ng-md-admin.scss */
+/* line 4295, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="5"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4294, ../src/sass/ng-md-admin.scss */
+/* line 4298, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="5"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6127,20 +6133,20 @@ md-progress-circular[value="5"] .md-inner .md-right .md-half-circle {
   transform: rotate(-117deg);
 }
 
-/* line 4299, ../src/sass/ng-md-admin.scss */
+/* line 4303, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="5"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4303, ../src/sass/ng-md-admin.scss */
+/* line 4307, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="6"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4306, ../src/sass/ng-md-admin.scss */
+/* line 4310, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="6"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6148,20 +6154,20 @@ md-progress-circular[value="6"] .md-inner .md-right .md-half-circle {
   transform: rotate(-113.4deg);
 }
 
-/* line 4311, ../src/sass/ng-md-admin.scss */
+/* line 4315, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="6"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4315, ../src/sass/ng-md-admin.scss */
+/* line 4319, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="7"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4318, ../src/sass/ng-md-admin.scss */
+/* line 4322, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="7"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6169,20 +6175,20 @@ md-progress-circular[value="7"] .md-inner .md-right .md-half-circle {
   transform: rotate(-109.8deg);
 }
 
-/* line 4323, ../src/sass/ng-md-admin.scss */
+/* line 4327, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="7"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4327, ../src/sass/ng-md-admin.scss */
+/* line 4331, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="8"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4330, ../src/sass/ng-md-admin.scss */
+/* line 4334, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="8"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6190,20 +6196,20 @@ md-progress-circular[value="8"] .md-inner .md-right .md-half-circle {
   transform: rotate(-106.2deg);
 }
 
-/* line 4335, ../src/sass/ng-md-admin.scss */
+/* line 4339, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="8"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4339, ../src/sass/ng-md-admin.scss */
+/* line 4343, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="9"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4342, ../src/sass/ng-md-admin.scss */
+/* line 4346, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="9"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6211,20 +6217,20 @@ md-progress-circular[value="9"] .md-inner .md-right .md-half-circle {
   transform: rotate(-102.6deg);
 }
 
-/* line 4347, ../src/sass/ng-md-admin.scss */
+/* line 4351, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="9"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4351, ../src/sass/ng-md-admin.scss */
+/* line 4355, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="10"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4354, ../src/sass/ng-md-admin.scss */
+/* line 4358, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="10"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6232,20 +6238,20 @@ md-progress-circular[value="10"] .md-inner .md-right .md-half-circle {
   transform: rotate(-99deg);
 }
 
-/* line 4359, ../src/sass/ng-md-admin.scss */
+/* line 4363, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="10"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4363, ../src/sass/ng-md-admin.scss */
+/* line 4367, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="11"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4366, ../src/sass/ng-md-admin.scss */
+/* line 4370, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="11"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6253,20 +6259,20 @@ md-progress-circular[value="11"] .md-inner .md-right .md-half-circle {
   transform: rotate(-95.4deg);
 }
 
-/* line 4371, ../src/sass/ng-md-admin.scss */
+/* line 4375, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="11"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4375, ../src/sass/ng-md-admin.scss */
+/* line 4379, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="12"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4378, ../src/sass/ng-md-admin.scss */
+/* line 4382, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="12"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6274,20 +6280,20 @@ md-progress-circular[value="12"] .md-inner .md-right .md-half-circle {
   transform: rotate(-91.8deg);
 }
 
-/* line 4383, ../src/sass/ng-md-admin.scss */
+/* line 4387, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="12"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4387, ../src/sass/ng-md-admin.scss */
+/* line 4391, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="13"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4390, ../src/sass/ng-md-admin.scss */
+/* line 4394, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="13"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6295,20 +6301,20 @@ md-progress-circular[value="13"] .md-inner .md-right .md-half-circle {
   transform: rotate(-88.2deg);
 }
 
-/* line 4395, ../src/sass/ng-md-admin.scss */
+/* line 4399, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="13"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4399, ../src/sass/ng-md-admin.scss */
+/* line 4403, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="14"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4402, ../src/sass/ng-md-admin.scss */
+/* line 4406, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="14"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6316,20 +6322,20 @@ md-progress-circular[value="14"] .md-inner .md-right .md-half-circle {
   transform: rotate(-84.6deg);
 }
 
-/* line 4407, ../src/sass/ng-md-admin.scss */
+/* line 4411, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="14"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4411, ../src/sass/ng-md-admin.scss */
+/* line 4415, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="15"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4414, ../src/sass/ng-md-admin.scss */
+/* line 4418, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="15"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6337,20 +6343,20 @@ md-progress-circular[value="15"] .md-inner .md-right .md-half-circle {
   transform: rotate(-81deg);
 }
 
-/* line 4419, ../src/sass/ng-md-admin.scss */
+/* line 4423, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="15"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4423, ../src/sass/ng-md-admin.scss */
+/* line 4427, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="16"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4426, ../src/sass/ng-md-admin.scss */
+/* line 4430, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="16"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6358,20 +6364,20 @@ md-progress-circular[value="16"] .md-inner .md-right .md-half-circle {
   transform: rotate(-77.4deg);
 }
 
-/* line 4431, ../src/sass/ng-md-admin.scss */
+/* line 4435, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="16"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4435, ../src/sass/ng-md-admin.scss */
+/* line 4439, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="17"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4438, ../src/sass/ng-md-admin.scss */
+/* line 4442, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="17"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6379,20 +6385,20 @@ md-progress-circular[value="17"] .md-inner .md-right .md-half-circle {
   transform: rotate(-73.8deg);
 }
 
-/* line 4443, ../src/sass/ng-md-admin.scss */
+/* line 4447, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="17"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4447, ../src/sass/ng-md-admin.scss */
+/* line 4451, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="18"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4450, ../src/sass/ng-md-admin.scss */
+/* line 4454, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="18"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6400,20 +6406,20 @@ md-progress-circular[value="18"] .md-inner .md-right .md-half-circle {
   transform: rotate(-70.2deg);
 }
 
-/* line 4455, ../src/sass/ng-md-admin.scss */
+/* line 4459, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="18"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4459, ../src/sass/ng-md-admin.scss */
+/* line 4463, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="19"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4462, ../src/sass/ng-md-admin.scss */
+/* line 4466, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="19"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6421,20 +6427,20 @@ md-progress-circular[value="19"] .md-inner .md-right .md-half-circle {
   transform: rotate(-66.6deg);
 }
 
-/* line 4467, ../src/sass/ng-md-admin.scss */
+/* line 4471, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="19"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4471, ../src/sass/ng-md-admin.scss */
+/* line 4475, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="20"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4474, ../src/sass/ng-md-admin.scss */
+/* line 4478, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="20"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6442,20 +6448,20 @@ md-progress-circular[value="20"] .md-inner .md-right .md-half-circle {
   transform: rotate(-63deg);
 }
 
-/* line 4479, ../src/sass/ng-md-admin.scss */
+/* line 4483, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="20"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4483, ../src/sass/ng-md-admin.scss */
+/* line 4487, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="21"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4486, ../src/sass/ng-md-admin.scss */
+/* line 4490, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="21"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6463,20 +6469,20 @@ md-progress-circular[value="21"] .md-inner .md-right .md-half-circle {
   transform: rotate(-59.4deg);
 }
 
-/* line 4491, ../src/sass/ng-md-admin.scss */
+/* line 4495, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="21"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4495, ../src/sass/ng-md-admin.scss */
+/* line 4499, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="22"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4498, ../src/sass/ng-md-admin.scss */
+/* line 4502, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="22"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6484,20 +6490,20 @@ md-progress-circular[value="22"] .md-inner .md-right .md-half-circle {
   transform: rotate(-55.8deg);
 }
 
-/* line 4503, ../src/sass/ng-md-admin.scss */
+/* line 4507, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="22"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4507, ../src/sass/ng-md-admin.scss */
+/* line 4511, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="23"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4510, ../src/sass/ng-md-admin.scss */
+/* line 4514, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="23"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6505,20 +6511,20 @@ md-progress-circular[value="23"] .md-inner .md-right .md-half-circle {
   transform: rotate(-52.2deg);
 }
 
-/* line 4515, ../src/sass/ng-md-admin.scss */
+/* line 4519, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="23"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4519, ../src/sass/ng-md-admin.scss */
+/* line 4523, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="24"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4522, ../src/sass/ng-md-admin.scss */
+/* line 4526, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="24"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6526,20 +6532,20 @@ md-progress-circular[value="24"] .md-inner .md-right .md-half-circle {
   transform: rotate(-48.6deg);
 }
 
-/* line 4527, ../src/sass/ng-md-admin.scss */
+/* line 4531, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="24"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4531, ../src/sass/ng-md-admin.scss */
+/* line 4535, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="25"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4534, ../src/sass/ng-md-admin.scss */
+/* line 4538, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="25"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6547,20 +6553,20 @@ md-progress-circular[value="25"] .md-inner .md-right .md-half-circle {
   transform: rotate(-45deg);
 }
 
-/* line 4539, ../src/sass/ng-md-admin.scss */
+/* line 4543, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="25"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4543, ../src/sass/ng-md-admin.scss */
+/* line 4547, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="26"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4546, ../src/sass/ng-md-admin.scss */
+/* line 4550, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="26"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6568,20 +6574,20 @@ md-progress-circular[value="26"] .md-inner .md-right .md-half-circle {
   transform: rotate(-41.4deg);
 }
 
-/* line 4551, ../src/sass/ng-md-admin.scss */
+/* line 4555, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="26"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4555, ../src/sass/ng-md-admin.scss */
+/* line 4559, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="27"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4558, ../src/sass/ng-md-admin.scss */
+/* line 4562, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="27"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6589,20 +6595,20 @@ md-progress-circular[value="27"] .md-inner .md-right .md-half-circle {
   transform: rotate(-37.8deg);
 }
 
-/* line 4563, ../src/sass/ng-md-admin.scss */
+/* line 4567, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="27"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4567, ../src/sass/ng-md-admin.scss */
+/* line 4571, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="28"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4570, ../src/sass/ng-md-admin.scss */
+/* line 4574, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="28"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6610,20 +6616,20 @@ md-progress-circular[value="28"] .md-inner .md-right .md-half-circle {
   transform: rotate(-34.2deg);
 }
 
-/* line 4575, ../src/sass/ng-md-admin.scss */
+/* line 4579, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="28"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4579, ../src/sass/ng-md-admin.scss */
+/* line 4583, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="29"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4582, ../src/sass/ng-md-admin.scss */
+/* line 4586, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="29"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6631,20 +6637,20 @@ md-progress-circular[value="29"] .md-inner .md-right .md-half-circle {
   transform: rotate(-30.6deg);
 }
 
-/* line 4587, ../src/sass/ng-md-admin.scss */
+/* line 4591, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="29"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4591, ../src/sass/ng-md-admin.scss */
+/* line 4595, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="30"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4594, ../src/sass/ng-md-admin.scss */
+/* line 4598, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="30"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6652,20 +6658,20 @@ md-progress-circular[value="30"] .md-inner .md-right .md-half-circle {
   transform: rotate(-27deg);
 }
 
-/* line 4599, ../src/sass/ng-md-admin.scss */
+/* line 4603, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="30"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4603, ../src/sass/ng-md-admin.scss */
+/* line 4607, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="31"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4606, ../src/sass/ng-md-admin.scss */
+/* line 4610, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="31"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6673,20 +6679,20 @@ md-progress-circular[value="31"] .md-inner .md-right .md-half-circle {
   transform: rotate(-23.4deg);
 }
 
-/* line 4611, ../src/sass/ng-md-admin.scss */
+/* line 4615, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="31"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4615, ../src/sass/ng-md-admin.scss */
+/* line 4619, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="32"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4618, ../src/sass/ng-md-admin.scss */
+/* line 4622, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="32"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6694,20 +6700,20 @@ md-progress-circular[value="32"] .md-inner .md-right .md-half-circle {
   transform: rotate(-19.8deg);
 }
 
-/* line 4623, ../src/sass/ng-md-admin.scss */
+/* line 4627, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="32"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4627, ../src/sass/ng-md-admin.scss */
+/* line 4631, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="33"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4630, ../src/sass/ng-md-admin.scss */
+/* line 4634, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="33"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6715,20 +6721,20 @@ md-progress-circular[value="33"] .md-inner .md-right .md-half-circle {
   transform: rotate(-16.2deg);
 }
 
-/* line 4635, ../src/sass/ng-md-admin.scss */
+/* line 4639, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="33"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4639, ../src/sass/ng-md-admin.scss */
+/* line 4643, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="34"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4642, ../src/sass/ng-md-admin.scss */
+/* line 4646, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="34"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6736,20 +6742,20 @@ md-progress-circular[value="34"] .md-inner .md-right .md-half-circle {
   transform: rotate(-12.6deg);
 }
 
-/* line 4647, ../src/sass/ng-md-admin.scss */
+/* line 4651, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="34"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4651, ../src/sass/ng-md-admin.scss */
+/* line 4655, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="35"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4654, ../src/sass/ng-md-admin.scss */
+/* line 4658, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="35"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6757,20 +6763,20 @@ md-progress-circular[value="35"] .md-inner .md-right .md-half-circle {
   transform: rotate(-9deg);
 }
 
-/* line 4659, ../src/sass/ng-md-admin.scss */
+/* line 4663, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="35"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4663, ../src/sass/ng-md-admin.scss */
+/* line 4667, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="36"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4666, ../src/sass/ng-md-admin.scss */
+/* line 4670, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="36"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6778,20 +6784,20 @@ md-progress-circular[value="36"] .md-inner .md-right .md-half-circle {
   transform: rotate(-5.4deg);
 }
 
-/* line 4671, ../src/sass/ng-md-admin.scss */
+/* line 4675, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="36"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4675, ../src/sass/ng-md-admin.scss */
+/* line 4679, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="37"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4678, ../src/sass/ng-md-admin.scss */
+/* line 4682, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="37"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6799,20 +6805,20 @@ md-progress-circular[value="37"] .md-inner .md-right .md-half-circle {
   transform: rotate(-1.8deg);
 }
 
-/* line 4683, ../src/sass/ng-md-admin.scss */
+/* line 4687, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="37"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4687, ../src/sass/ng-md-admin.scss */
+/* line 4691, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="38"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4690, ../src/sass/ng-md-admin.scss */
+/* line 4694, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="38"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6820,20 +6826,20 @@ md-progress-circular[value="38"] .md-inner .md-right .md-half-circle {
   transform: rotate(1.8deg);
 }
 
-/* line 4695, ../src/sass/ng-md-admin.scss */
+/* line 4699, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="38"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4699, ../src/sass/ng-md-admin.scss */
+/* line 4703, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="39"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4702, ../src/sass/ng-md-admin.scss */
+/* line 4706, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="39"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6841,20 +6847,20 @@ md-progress-circular[value="39"] .md-inner .md-right .md-half-circle {
   transform: rotate(5.4deg);
 }
 
-/* line 4707, ../src/sass/ng-md-admin.scss */
+/* line 4711, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="39"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4711, ../src/sass/ng-md-admin.scss */
+/* line 4715, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="40"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4714, ../src/sass/ng-md-admin.scss */
+/* line 4718, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="40"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6862,20 +6868,20 @@ md-progress-circular[value="40"] .md-inner .md-right .md-half-circle {
   transform: rotate(9deg);
 }
 
-/* line 4719, ../src/sass/ng-md-admin.scss */
+/* line 4723, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="40"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4723, ../src/sass/ng-md-admin.scss */
+/* line 4727, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="41"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4726, ../src/sass/ng-md-admin.scss */
+/* line 4730, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="41"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6883,20 +6889,20 @@ md-progress-circular[value="41"] .md-inner .md-right .md-half-circle {
   transform: rotate(12.6deg);
 }
 
-/* line 4731, ../src/sass/ng-md-admin.scss */
+/* line 4735, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="41"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4735, ../src/sass/ng-md-admin.scss */
+/* line 4739, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="42"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4738, ../src/sass/ng-md-admin.scss */
+/* line 4742, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="42"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6904,20 +6910,20 @@ md-progress-circular[value="42"] .md-inner .md-right .md-half-circle {
   transform: rotate(16.2deg);
 }
 
-/* line 4743, ../src/sass/ng-md-admin.scss */
+/* line 4747, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="42"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4747, ../src/sass/ng-md-admin.scss */
+/* line 4751, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="43"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4750, ../src/sass/ng-md-admin.scss */
+/* line 4754, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="43"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6925,20 +6931,20 @@ md-progress-circular[value="43"] .md-inner .md-right .md-half-circle {
   transform: rotate(19.8deg);
 }
 
-/* line 4755, ../src/sass/ng-md-admin.scss */
+/* line 4759, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="43"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4759, ../src/sass/ng-md-admin.scss */
+/* line 4763, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="44"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4762, ../src/sass/ng-md-admin.scss */
+/* line 4766, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="44"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6946,20 +6952,20 @@ md-progress-circular[value="44"] .md-inner .md-right .md-half-circle {
   transform: rotate(23.4deg);
 }
 
-/* line 4767, ../src/sass/ng-md-admin.scss */
+/* line 4771, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="44"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4771, ../src/sass/ng-md-admin.scss */
+/* line 4775, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="45"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4774, ../src/sass/ng-md-admin.scss */
+/* line 4778, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="45"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6967,20 +6973,20 @@ md-progress-circular[value="45"] .md-inner .md-right .md-half-circle {
   transform: rotate(27deg);
 }
 
-/* line 4779, ../src/sass/ng-md-admin.scss */
+/* line 4783, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="45"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4783, ../src/sass/ng-md-admin.scss */
+/* line 4787, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="46"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4786, ../src/sass/ng-md-admin.scss */
+/* line 4790, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="46"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -6988,20 +6994,20 @@ md-progress-circular[value="46"] .md-inner .md-right .md-half-circle {
   transform: rotate(30.6deg);
 }
 
-/* line 4791, ../src/sass/ng-md-admin.scss */
+/* line 4795, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="46"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4795, ../src/sass/ng-md-admin.scss */
+/* line 4799, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="47"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4798, ../src/sass/ng-md-admin.scss */
+/* line 4802, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="47"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7009,20 +7015,20 @@ md-progress-circular[value="47"] .md-inner .md-right .md-half-circle {
   transform: rotate(34.2deg);
 }
 
-/* line 4803, ../src/sass/ng-md-admin.scss */
+/* line 4807, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="47"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4807, ../src/sass/ng-md-admin.scss */
+/* line 4811, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="48"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4810, ../src/sass/ng-md-admin.scss */
+/* line 4814, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="48"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7030,20 +7036,20 @@ md-progress-circular[value="48"] .md-inner .md-right .md-half-circle {
   transform: rotate(37.8deg);
 }
 
-/* line 4815, ../src/sass/ng-md-admin.scss */
+/* line 4819, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="48"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4819, ../src/sass/ng-md-admin.scss */
+/* line 4823, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="49"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4822, ../src/sass/ng-md-admin.scss */
+/* line 4826, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="49"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7051,20 +7057,20 @@ md-progress-circular[value="49"] .md-inner .md-right .md-half-circle {
   transform: rotate(41.4deg);
 }
 
-/* line 4827, ../src/sass/ng-md-admin.scss */
+/* line 4831, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="49"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4831, ../src/sass/ng-md-admin.scss */
+/* line 4835, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="50"] .md-inner .md-left .md-half-circle {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 4834, ../src/sass/ng-md-admin.scss */
+/* line 4838, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="50"] .md-inner .md-right .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7072,14 +7078,14 @@ md-progress-circular[value="50"] .md-inner .md-right .md-half-circle {
   transform: rotate(45deg);
 }
 
-/* line 4839, ../src/sass/ng-md-admin.scss */
+/* line 4843, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="50"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: transparent !important;
 }
 
-/* line 4843, ../src/sass/ng-md-admin.scss */
+/* line 4847, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="51"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7087,13 +7093,13 @@ md-progress-circular[value="51"] .md-inner .md-left .md-half-circle {
   transform: rotate(138.6deg);
 }
 
-/* line 4848, ../src/sass/ng-md-admin.scss */
+/* line 4852, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="51"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4851, ../src/sass/ng-md-admin.scss */
+/* line 4855, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="51"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7101,7 +7107,7 @@ md-progress-circular[value="51"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4856, ../src/sass/ng-md-admin.scss */
+/* line 4860, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="52"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7109,13 +7115,13 @@ md-progress-circular[value="52"] .md-inner .md-left .md-half-circle {
   transform: rotate(142.2deg);
 }
 
-/* line 4861, ../src/sass/ng-md-admin.scss */
+/* line 4865, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="52"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4864, ../src/sass/ng-md-admin.scss */
+/* line 4868, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="52"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7123,7 +7129,7 @@ md-progress-circular[value="52"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4869, ../src/sass/ng-md-admin.scss */
+/* line 4873, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="53"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7131,13 +7137,13 @@ md-progress-circular[value="53"] .md-inner .md-left .md-half-circle {
   transform: rotate(145.8deg);
 }
 
-/* line 4874, ../src/sass/ng-md-admin.scss */
+/* line 4878, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="53"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4877, ../src/sass/ng-md-admin.scss */
+/* line 4881, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="53"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7145,7 +7151,7 @@ md-progress-circular[value="53"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4882, ../src/sass/ng-md-admin.scss */
+/* line 4886, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="54"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7153,13 +7159,13 @@ md-progress-circular[value="54"] .md-inner .md-left .md-half-circle {
   transform: rotate(149.4deg);
 }
 
-/* line 4887, ../src/sass/ng-md-admin.scss */
+/* line 4891, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="54"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4890, ../src/sass/ng-md-admin.scss */
+/* line 4894, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="54"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7167,7 +7173,7 @@ md-progress-circular[value="54"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4895, ../src/sass/ng-md-admin.scss */
+/* line 4899, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="55"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7175,13 +7181,13 @@ md-progress-circular[value="55"] .md-inner .md-left .md-half-circle {
   transform: rotate(153deg);
 }
 
-/* line 4900, ../src/sass/ng-md-admin.scss */
+/* line 4904, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="55"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4903, ../src/sass/ng-md-admin.scss */
+/* line 4907, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="55"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7189,7 +7195,7 @@ md-progress-circular[value="55"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4908, ../src/sass/ng-md-admin.scss */
+/* line 4912, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="56"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7197,13 +7203,13 @@ md-progress-circular[value="56"] .md-inner .md-left .md-half-circle {
   transform: rotate(156.6deg);
 }
 
-/* line 4913, ../src/sass/ng-md-admin.scss */
+/* line 4917, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="56"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4916, ../src/sass/ng-md-admin.scss */
+/* line 4920, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="56"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7211,7 +7217,7 @@ md-progress-circular[value="56"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4921, ../src/sass/ng-md-admin.scss */
+/* line 4925, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="57"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7219,13 +7225,13 @@ md-progress-circular[value="57"] .md-inner .md-left .md-half-circle {
   transform: rotate(160.2deg);
 }
 
-/* line 4926, ../src/sass/ng-md-admin.scss */
+/* line 4930, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="57"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4929, ../src/sass/ng-md-admin.scss */
+/* line 4933, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="57"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7233,7 +7239,7 @@ md-progress-circular[value="57"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4934, ../src/sass/ng-md-admin.scss */
+/* line 4938, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="58"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7241,13 +7247,13 @@ md-progress-circular[value="58"] .md-inner .md-left .md-half-circle {
   transform: rotate(163.8deg);
 }
 
-/* line 4939, ../src/sass/ng-md-admin.scss */
+/* line 4943, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="58"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4942, ../src/sass/ng-md-admin.scss */
+/* line 4946, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="58"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7255,7 +7261,7 @@ md-progress-circular[value="58"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4947, ../src/sass/ng-md-admin.scss */
+/* line 4951, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="59"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7263,13 +7269,13 @@ md-progress-circular[value="59"] .md-inner .md-left .md-half-circle {
   transform: rotate(167.4deg);
 }
 
-/* line 4952, ../src/sass/ng-md-admin.scss */
+/* line 4956, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="59"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4955, ../src/sass/ng-md-admin.scss */
+/* line 4959, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="59"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7277,7 +7283,7 @@ md-progress-circular[value="59"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4960, ../src/sass/ng-md-admin.scss */
+/* line 4964, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="60"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7285,13 +7291,13 @@ md-progress-circular[value="60"] .md-inner .md-left .md-half-circle {
   transform: rotate(171deg);
 }
 
-/* line 4965, ../src/sass/ng-md-admin.scss */
+/* line 4969, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="60"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4968, ../src/sass/ng-md-admin.scss */
+/* line 4972, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="60"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7299,7 +7305,7 @@ md-progress-circular[value="60"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4973, ../src/sass/ng-md-admin.scss */
+/* line 4977, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="61"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7307,13 +7313,13 @@ md-progress-circular[value="61"] .md-inner .md-left .md-half-circle {
   transform: rotate(174.6deg);
 }
 
-/* line 4978, ../src/sass/ng-md-admin.scss */
+/* line 4982, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="61"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4981, ../src/sass/ng-md-admin.scss */
+/* line 4985, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="61"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7321,7 +7327,7 @@ md-progress-circular[value="61"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4986, ../src/sass/ng-md-admin.scss */
+/* line 4990, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="62"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7329,13 +7335,13 @@ md-progress-circular[value="62"] .md-inner .md-left .md-half-circle {
   transform: rotate(178.2deg);
 }
 
-/* line 4991, ../src/sass/ng-md-admin.scss */
+/* line 4995, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="62"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 4994, ../src/sass/ng-md-admin.scss */
+/* line 4998, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="62"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7343,7 +7349,7 @@ md-progress-circular[value="62"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 4999, ../src/sass/ng-md-admin.scss */
+/* line 5003, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="63"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7351,13 +7357,13 @@ md-progress-circular[value="63"] .md-inner .md-left .md-half-circle {
   transform: rotate(181.8deg);
 }
 
-/* line 5004, ../src/sass/ng-md-admin.scss */
+/* line 5008, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="63"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5007, ../src/sass/ng-md-admin.scss */
+/* line 5011, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="63"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7365,7 +7371,7 @@ md-progress-circular[value="63"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5012, ../src/sass/ng-md-admin.scss */
+/* line 5016, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="64"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7373,13 +7379,13 @@ md-progress-circular[value="64"] .md-inner .md-left .md-half-circle {
   transform: rotate(185.4deg);
 }
 
-/* line 5017, ../src/sass/ng-md-admin.scss */
+/* line 5021, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="64"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5020, ../src/sass/ng-md-admin.scss */
+/* line 5024, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="64"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7387,7 +7393,7 @@ md-progress-circular[value="64"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5025, ../src/sass/ng-md-admin.scss */
+/* line 5029, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="65"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7395,13 +7401,13 @@ md-progress-circular[value="65"] .md-inner .md-left .md-half-circle {
   transform: rotate(189deg);
 }
 
-/* line 5030, ../src/sass/ng-md-admin.scss */
+/* line 5034, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="65"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5033, ../src/sass/ng-md-admin.scss */
+/* line 5037, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="65"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7409,7 +7415,7 @@ md-progress-circular[value="65"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5038, ../src/sass/ng-md-admin.scss */
+/* line 5042, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="66"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7417,13 +7423,13 @@ md-progress-circular[value="66"] .md-inner .md-left .md-half-circle {
   transform: rotate(192.6deg);
 }
 
-/* line 5043, ../src/sass/ng-md-admin.scss */
+/* line 5047, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="66"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5046, ../src/sass/ng-md-admin.scss */
+/* line 5050, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="66"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7431,7 +7437,7 @@ md-progress-circular[value="66"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5051, ../src/sass/ng-md-admin.scss */
+/* line 5055, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="67"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7439,13 +7445,13 @@ md-progress-circular[value="67"] .md-inner .md-left .md-half-circle {
   transform: rotate(196.2deg);
 }
 
-/* line 5056, ../src/sass/ng-md-admin.scss */
+/* line 5060, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="67"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5059, ../src/sass/ng-md-admin.scss */
+/* line 5063, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="67"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7453,7 +7459,7 @@ md-progress-circular[value="67"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5064, ../src/sass/ng-md-admin.scss */
+/* line 5068, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="68"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7461,13 +7467,13 @@ md-progress-circular[value="68"] .md-inner .md-left .md-half-circle {
   transform: rotate(199.8deg);
 }
 
-/* line 5069, ../src/sass/ng-md-admin.scss */
+/* line 5073, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="68"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5072, ../src/sass/ng-md-admin.scss */
+/* line 5076, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="68"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7475,7 +7481,7 @@ md-progress-circular[value="68"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5077, ../src/sass/ng-md-admin.scss */
+/* line 5081, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="69"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7483,13 +7489,13 @@ md-progress-circular[value="69"] .md-inner .md-left .md-half-circle {
   transform: rotate(203.4deg);
 }
 
-/* line 5082, ../src/sass/ng-md-admin.scss */
+/* line 5086, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="69"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5085, ../src/sass/ng-md-admin.scss */
+/* line 5089, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="69"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7497,7 +7503,7 @@ md-progress-circular[value="69"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5090, ../src/sass/ng-md-admin.scss */
+/* line 5094, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="70"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7505,13 +7511,13 @@ md-progress-circular[value="70"] .md-inner .md-left .md-half-circle {
   transform: rotate(207deg);
 }
 
-/* line 5095, ../src/sass/ng-md-admin.scss */
+/* line 5099, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="70"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5098, ../src/sass/ng-md-admin.scss */
+/* line 5102, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="70"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7519,7 +7525,7 @@ md-progress-circular[value="70"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5103, ../src/sass/ng-md-admin.scss */
+/* line 5107, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="71"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7527,13 +7533,13 @@ md-progress-circular[value="71"] .md-inner .md-left .md-half-circle {
   transform: rotate(210.6deg);
 }
 
-/* line 5108, ../src/sass/ng-md-admin.scss */
+/* line 5112, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="71"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5111, ../src/sass/ng-md-admin.scss */
+/* line 5115, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="71"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7541,7 +7547,7 @@ md-progress-circular[value="71"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5116, ../src/sass/ng-md-admin.scss */
+/* line 5120, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="72"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7549,13 +7555,13 @@ md-progress-circular[value="72"] .md-inner .md-left .md-half-circle {
   transform: rotate(214.2deg);
 }
 
-/* line 5121, ../src/sass/ng-md-admin.scss */
+/* line 5125, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="72"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5124, ../src/sass/ng-md-admin.scss */
+/* line 5128, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="72"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7563,7 +7569,7 @@ md-progress-circular[value="72"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5129, ../src/sass/ng-md-admin.scss */
+/* line 5133, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="73"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7571,13 +7577,13 @@ md-progress-circular[value="73"] .md-inner .md-left .md-half-circle {
   transform: rotate(217.8deg);
 }
 
-/* line 5134, ../src/sass/ng-md-admin.scss */
+/* line 5138, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="73"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5137, ../src/sass/ng-md-admin.scss */
+/* line 5141, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="73"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7585,7 +7591,7 @@ md-progress-circular[value="73"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5142, ../src/sass/ng-md-admin.scss */
+/* line 5146, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="74"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7593,13 +7599,13 @@ md-progress-circular[value="74"] .md-inner .md-left .md-half-circle {
   transform: rotate(221.4deg);
 }
 
-/* line 5147, ../src/sass/ng-md-admin.scss */
+/* line 5151, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="74"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5150, ../src/sass/ng-md-admin.scss */
+/* line 5154, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="74"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7607,7 +7613,7 @@ md-progress-circular[value="74"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5155, ../src/sass/ng-md-admin.scss */
+/* line 5159, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="75"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7615,13 +7621,13 @@ md-progress-circular[value="75"] .md-inner .md-left .md-half-circle {
   transform: rotate(225deg);
 }
 
-/* line 5160, ../src/sass/ng-md-admin.scss */
+/* line 5164, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="75"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5163, ../src/sass/ng-md-admin.scss */
+/* line 5167, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="75"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7629,7 +7635,7 @@ md-progress-circular[value="75"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5168, ../src/sass/ng-md-admin.scss */
+/* line 5172, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="76"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7637,13 +7643,13 @@ md-progress-circular[value="76"] .md-inner .md-left .md-half-circle {
   transform: rotate(228.6deg);
 }
 
-/* line 5173, ../src/sass/ng-md-admin.scss */
+/* line 5177, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="76"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5176, ../src/sass/ng-md-admin.scss */
+/* line 5180, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="76"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7651,7 +7657,7 @@ md-progress-circular[value="76"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5181, ../src/sass/ng-md-admin.scss */
+/* line 5185, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="77"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7659,13 +7665,13 @@ md-progress-circular[value="77"] .md-inner .md-left .md-half-circle {
   transform: rotate(232.2deg);
 }
 
-/* line 5186, ../src/sass/ng-md-admin.scss */
+/* line 5190, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="77"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5189, ../src/sass/ng-md-admin.scss */
+/* line 5193, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="77"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7673,7 +7679,7 @@ md-progress-circular[value="77"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5194, ../src/sass/ng-md-admin.scss */
+/* line 5198, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="78"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7681,13 +7687,13 @@ md-progress-circular[value="78"] .md-inner .md-left .md-half-circle {
   transform: rotate(235.8deg);
 }
 
-/* line 5199, ../src/sass/ng-md-admin.scss */
+/* line 5203, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="78"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5202, ../src/sass/ng-md-admin.scss */
+/* line 5206, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="78"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7695,7 +7701,7 @@ md-progress-circular[value="78"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5207, ../src/sass/ng-md-admin.scss */
+/* line 5211, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="79"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7703,13 +7709,13 @@ md-progress-circular[value="79"] .md-inner .md-left .md-half-circle {
   transform: rotate(239.4deg);
 }
 
-/* line 5212, ../src/sass/ng-md-admin.scss */
+/* line 5216, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="79"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5215, ../src/sass/ng-md-admin.scss */
+/* line 5219, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="79"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7717,7 +7723,7 @@ md-progress-circular[value="79"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5220, ../src/sass/ng-md-admin.scss */
+/* line 5224, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="80"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7725,13 +7731,13 @@ md-progress-circular[value="80"] .md-inner .md-left .md-half-circle {
   transform: rotate(243deg);
 }
 
-/* line 5225, ../src/sass/ng-md-admin.scss */
+/* line 5229, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="80"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5228, ../src/sass/ng-md-admin.scss */
+/* line 5232, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="80"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7739,7 +7745,7 @@ md-progress-circular[value="80"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5233, ../src/sass/ng-md-admin.scss */
+/* line 5237, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="81"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7747,13 +7753,13 @@ md-progress-circular[value="81"] .md-inner .md-left .md-half-circle {
   transform: rotate(246.6deg);
 }
 
-/* line 5238, ../src/sass/ng-md-admin.scss */
+/* line 5242, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="81"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5241, ../src/sass/ng-md-admin.scss */
+/* line 5245, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="81"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7761,7 +7767,7 @@ md-progress-circular[value="81"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5246, ../src/sass/ng-md-admin.scss */
+/* line 5250, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="82"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7769,13 +7775,13 @@ md-progress-circular[value="82"] .md-inner .md-left .md-half-circle {
   transform: rotate(250.2deg);
 }
 
-/* line 5251, ../src/sass/ng-md-admin.scss */
+/* line 5255, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="82"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5254, ../src/sass/ng-md-admin.scss */
+/* line 5258, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="82"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7783,7 +7789,7 @@ md-progress-circular[value="82"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5259, ../src/sass/ng-md-admin.scss */
+/* line 5263, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="83"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7791,13 +7797,13 @@ md-progress-circular[value="83"] .md-inner .md-left .md-half-circle {
   transform: rotate(253.8deg);
 }
 
-/* line 5264, ../src/sass/ng-md-admin.scss */
+/* line 5268, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="83"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5267, ../src/sass/ng-md-admin.scss */
+/* line 5271, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="83"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7805,7 +7811,7 @@ md-progress-circular[value="83"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5272, ../src/sass/ng-md-admin.scss */
+/* line 5276, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="84"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7813,13 +7819,13 @@ md-progress-circular[value="84"] .md-inner .md-left .md-half-circle {
   transform: rotate(257.4deg);
 }
 
-/* line 5277, ../src/sass/ng-md-admin.scss */
+/* line 5281, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="84"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5280, ../src/sass/ng-md-admin.scss */
+/* line 5284, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="84"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7827,7 +7833,7 @@ md-progress-circular[value="84"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5285, ../src/sass/ng-md-admin.scss */
+/* line 5289, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="85"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7835,13 +7841,13 @@ md-progress-circular[value="85"] .md-inner .md-left .md-half-circle {
   transform: rotate(261deg);
 }
 
-/* line 5290, ../src/sass/ng-md-admin.scss */
+/* line 5294, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="85"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5293, ../src/sass/ng-md-admin.scss */
+/* line 5297, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="85"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7849,7 +7855,7 @@ md-progress-circular[value="85"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5298, ../src/sass/ng-md-admin.scss */
+/* line 5302, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="86"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7857,13 +7863,13 @@ md-progress-circular[value="86"] .md-inner .md-left .md-half-circle {
   transform: rotate(264.6deg);
 }
 
-/* line 5303, ../src/sass/ng-md-admin.scss */
+/* line 5307, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="86"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5306, ../src/sass/ng-md-admin.scss */
+/* line 5310, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="86"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7871,7 +7877,7 @@ md-progress-circular[value="86"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5311, ../src/sass/ng-md-admin.scss */
+/* line 5315, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="87"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7879,13 +7885,13 @@ md-progress-circular[value="87"] .md-inner .md-left .md-half-circle {
   transform: rotate(268.2deg);
 }
 
-/* line 5316, ../src/sass/ng-md-admin.scss */
+/* line 5320, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="87"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5319, ../src/sass/ng-md-admin.scss */
+/* line 5323, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="87"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7893,7 +7899,7 @@ md-progress-circular[value="87"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5324, ../src/sass/ng-md-admin.scss */
+/* line 5328, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="88"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7901,13 +7907,13 @@ md-progress-circular[value="88"] .md-inner .md-left .md-half-circle {
   transform: rotate(271.8deg);
 }
 
-/* line 5329, ../src/sass/ng-md-admin.scss */
+/* line 5333, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="88"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5332, ../src/sass/ng-md-admin.scss */
+/* line 5336, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="88"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7915,7 +7921,7 @@ md-progress-circular[value="88"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5337, ../src/sass/ng-md-admin.scss */
+/* line 5341, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="89"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7923,13 +7929,13 @@ md-progress-circular[value="89"] .md-inner .md-left .md-half-circle {
   transform: rotate(275.4deg);
 }
 
-/* line 5342, ../src/sass/ng-md-admin.scss */
+/* line 5346, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="89"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5345, ../src/sass/ng-md-admin.scss */
+/* line 5349, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="89"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7937,7 +7943,7 @@ md-progress-circular[value="89"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5350, ../src/sass/ng-md-admin.scss */
+/* line 5354, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="90"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7945,13 +7951,13 @@ md-progress-circular[value="90"] .md-inner .md-left .md-half-circle {
   transform: rotate(279deg);
 }
 
-/* line 5355, ../src/sass/ng-md-admin.scss */
+/* line 5359, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="90"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5358, ../src/sass/ng-md-admin.scss */
+/* line 5362, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="90"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7959,7 +7965,7 @@ md-progress-circular[value="90"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5363, ../src/sass/ng-md-admin.scss */
+/* line 5367, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="91"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7967,13 +7973,13 @@ md-progress-circular[value="91"] .md-inner .md-left .md-half-circle {
   transform: rotate(282.6deg);
 }
 
-/* line 5368, ../src/sass/ng-md-admin.scss */
+/* line 5372, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="91"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5371, ../src/sass/ng-md-admin.scss */
+/* line 5375, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="91"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -7981,7 +7987,7 @@ md-progress-circular[value="91"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5376, ../src/sass/ng-md-admin.scss */
+/* line 5380, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="92"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -7989,13 +7995,13 @@ md-progress-circular[value="92"] .md-inner .md-left .md-half-circle {
   transform: rotate(286.2deg);
 }
 
-/* line 5381, ../src/sass/ng-md-admin.scss */
+/* line 5385, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="92"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5384, ../src/sass/ng-md-admin.scss */
+/* line 5388, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="92"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -8003,7 +8009,7 @@ md-progress-circular[value="92"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5389, ../src/sass/ng-md-admin.scss */
+/* line 5393, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="93"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -8011,13 +8017,13 @@ md-progress-circular[value="93"] .md-inner .md-left .md-half-circle {
   transform: rotate(289.8deg);
 }
 
-/* line 5394, ../src/sass/ng-md-admin.scss */
+/* line 5398, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="93"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5397, ../src/sass/ng-md-admin.scss */
+/* line 5401, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="93"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -8025,7 +8031,7 @@ md-progress-circular[value="93"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5402, ../src/sass/ng-md-admin.scss */
+/* line 5406, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="94"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -8033,13 +8039,13 @@ md-progress-circular[value="94"] .md-inner .md-left .md-half-circle {
   transform: rotate(293.4deg);
 }
 
-/* line 5407, ../src/sass/ng-md-admin.scss */
+/* line 5411, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="94"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5410, ../src/sass/ng-md-admin.scss */
+/* line 5414, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="94"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -8047,7 +8053,7 @@ md-progress-circular[value="94"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5415, ../src/sass/ng-md-admin.scss */
+/* line 5419, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="95"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -8055,13 +8061,13 @@ md-progress-circular[value="95"] .md-inner .md-left .md-half-circle {
   transform: rotate(297deg);
 }
 
-/* line 5420, ../src/sass/ng-md-admin.scss */
+/* line 5424, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="95"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5423, ../src/sass/ng-md-admin.scss */
+/* line 5427, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="95"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -8069,7 +8075,7 @@ md-progress-circular[value="95"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5428, ../src/sass/ng-md-admin.scss */
+/* line 5432, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="96"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -8077,13 +8083,13 @@ md-progress-circular[value="96"] .md-inner .md-left .md-half-circle {
   transform: rotate(300.6deg);
 }
 
-/* line 5433, ../src/sass/ng-md-admin.scss */
+/* line 5437, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="96"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5436, ../src/sass/ng-md-admin.scss */
+/* line 5440, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="96"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -8091,7 +8097,7 @@ md-progress-circular[value="96"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5441, ../src/sass/ng-md-admin.scss */
+/* line 5445, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="97"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -8099,13 +8105,13 @@ md-progress-circular[value="97"] .md-inner .md-left .md-half-circle {
   transform: rotate(304.2deg);
 }
 
-/* line 5446, ../src/sass/ng-md-admin.scss */
+/* line 5450, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="97"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5449, ../src/sass/ng-md-admin.scss */
+/* line 5453, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="97"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -8113,7 +8119,7 @@ md-progress-circular[value="97"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5454, ../src/sass/ng-md-admin.scss */
+/* line 5458, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="98"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -8121,13 +8127,13 @@ md-progress-circular[value="98"] .md-inner .md-left .md-half-circle {
   transform: rotate(307.8deg);
 }
 
-/* line 5459, ../src/sass/ng-md-admin.scss */
+/* line 5463, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="98"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5462, ../src/sass/ng-md-admin.scss */
+/* line 5466, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="98"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -8135,7 +8141,7 @@ md-progress-circular[value="98"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5467, ../src/sass/ng-md-admin.scss */
+/* line 5471, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="99"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -8143,13 +8149,13 @@ md-progress-circular[value="99"] .md-inner .md-left .md-half-circle {
   transform: rotate(311.4deg);
 }
 
-/* line 5472, ../src/sass/ng-md-admin.scss */
+/* line 5476, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="99"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5475, ../src/sass/ng-md-admin.scss */
+/* line 5479, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="99"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -8157,7 +8163,7 @@ md-progress-circular[value="99"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5480, ../src/sass/ng-md-admin.scss */
+/* line 5484, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="100"] .md-inner .md-left .md-half-circle {
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
@@ -8165,13 +8171,13 @@ md-progress-circular[value="100"] .md-inner .md-left .md-half-circle {
   transform: rotate(315deg);
 }
 
-/* line 5485, ../src/sass/ng-md-admin.scss */
+/* line 5489, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="100"] .md-inner .md-right .md-half-circle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 5488, ../src/sass/ng-md-admin.scss */
+/* line 5492, ../src/sass/ng-md-admin.scss */
 md-progress-circular[value="100"] .md-inner .md-gap {
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -8179,19 +8185,19 @@ md-progress-circular[value="100"] .md-inner .md-gap {
   transition: border-bottom-color 0.1s linear;
 }
 
-/* line 5493, ../src/sass/ng-md-admin.scss */
+/* line 5497, ../src/sass/ng-md-admin.scss */
 md-progress-circular[md-mode=indeterminate] .md-spinner-wrapper {
   -webkit-animation: outer-rotate 2.91667s linear infinite;
   animation: outer-rotate 2.91667s linear infinite;
 }
 
-/* line 5496, ../src/sass/ng-md-admin.scss */
+/* line 5500, ../src/sass/ng-md-admin.scss */
 md-progress-circular[md-mode=indeterminate] .md-spinner-wrapper .md-inner {
   -webkit-animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;
   animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;
 }
 
-/* line 5499, ../src/sass/ng-md-admin.scss */
+/* line 5503, ../src/sass/ng-md-admin.scss */
 md-progress-circular[md-mode=indeterminate] .md-spinner-wrapper .md-inner .md-left .md-half-circle, md-progress-circular[md-mode=indeterminate] .md-spinner-wrapper .md-inner .md-right .md-half-circle {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -8201,26 +8207,26 @@ md-progress-circular[md-mode=indeterminate] .md-spinner-wrapper .md-inner .md-le
   animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
 }
 
-/* line 5506, ../src/sass/ng-md-admin.scss */
+/* line 5510, ../src/sass/ng-md-admin.scss */
 md-progress-circular[md-mode=indeterminate] .md-spinner-wrapper .md-inner .md-left .md-half-circle {
   -webkit-animation-name: left-wobble;
   animation-name: left-wobble;
 }
 
-/* line 5509, ../src/sass/ng-md-admin.scss */
+/* line 5513, ../src/sass/ng-md-admin.scss */
 md-progress-circular[md-mode=indeterminate] .md-spinner-wrapper .md-inner .md-right .md-half-circle {
   -webkit-animation-name: right-wobble;
   animation-name: right-wobble;
 }
 
-/* line 5513, ../src/sass/ng-md-admin.scss */
+/* line 5517, ../src/sass/ng-md-admin.scss */
 md-progress-linear {
   display: block;
   width: 100%;
   height: 5px;
 }
 
-/* line 5517, ../src/sass/ng-md-admin.scss */
+/* line 5521, ../src/sass/ng-md-admin.scss */
 md-progress-linear .md-container {
   overflow: hidden;
   position: relative;
@@ -8232,48 +8238,48 @@ md-progress-linear .md-container {
   transition: all 0.3s linear;
 }
 
-/* line 5526, ../src/sass/ng-md-admin.scss */
+/* line 5530, ../src/sass/ng-md-admin.scss */
 md-progress-linear .md-container.md-ready {
   -webkit-transform: translate(0, 0) scale(1, 1);
   transform: translate(0, 0) scale(1, 1);
 }
 
-/* line 5529, ../src/sass/ng-md-admin.scss */
+/* line 5533, ../src/sass/ng-md-admin.scss */
 md-progress-linear .md-bar {
   height: 5px;
   position: absolute;
   width: 100%;
 }
 
-/* line 5533, ../src/sass/ng-md-admin.scss */
+/* line 5537, ../src/sass/ng-md-admin.scss */
 md-progress-linear .md-bar1, md-progress-linear .md-bar2 {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-/* line 5536, ../src/sass/ng-md-admin.scss */
+/* line 5540, ../src/sass/ng-md-admin.scss */
 md-progress-linear[md-mode=determinate] .md-bar1 {
   display: none;
 }
 
-/* line 5538, ../src/sass/ng-md-admin.scss */
+/* line 5542, ../src/sass/ng-md-admin.scss */
 md-progress-linear[md-mode=indeterminate] .md-bar1 {
   -webkit-animation: indeterminate1 4s infinite linear;
   animation: indeterminate1 4s infinite linear;
 }
 
-/* line 5541, ../src/sass/ng-md-admin.scss */
+/* line 5545, ../src/sass/ng-md-admin.scss */
 md-progress-linear[md-mode=indeterminate] .md-bar2 {
   -webkit-animation: indeterminate2 4s infinite linear;
   animation: indeterminate2 4s infinite linear;
 }
 
-/* line 5544, ../src/sass/ng-md-admin.scss */
+/* line 5548, ../src/sass/ng-md-admin.scss */
 md-progress-linear[md-mode=buffer] .md-container {
   background-color: transparent !important;
 }
 
-/* line 5546, ../src/sass/ng-md-admin.scss */
+/* line 5550, ../src/sass/ng-md-admin.scss */
 md-progress-linear[md-mode=buffer] .md-dashed:before {
   content: "";
   display: block;
@@ -8288,7 +8294,7 @@ md-progress-linear[md-mode=buffer] .md-dashed:before {
   animation: buffer 3s infinite linear;
 }
 
-/* line 5558, ../src/sass/ng-md-admin.scss */
+/* line 5562, ../src/sass/ng-md-admin.scss */
 md-progress-linear[md-mode=query] .md-bar2 {
   -webkit-animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
   animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -8616,7 +8622,7 @@ md-progress-linear[md-mode=query] .md-bar2 {
     background-position: -200px -23px;
   }
 }
-/* line 5876, ../src/sass/ng-md-admin.scss */
+/* line 5880, ../src/sass/ng-md-admin.scss */
 md-radio-button, .md-switch-thumb {
   display: block;
   margin: 15px;
@@ -8624,12 +8630,12 @@ md-radio-button, .md-switch-thumb {
   cursor: pointer;
 }
 
-/* line 5881, ../src/sass/ng-md-admin.scss */
+/* line 5885, ../src/sass/ng-md-admin.scss */
 md-radio-button input, .md-switch-thumb input {
   display: none;
 }
 
-/* line 5883, ../src/sass/ng-md-admin.scss */
+/* line 5887, ../src/sass/ng-md-admin.scss */
 md-radio-button .md-container, .md-switch-thumb .md-container {
   position: relative;
   top: 4px;
@@ -8639,7 +8645,7 @@ md-radio-button .md-container, .md-switch-thumb .md-container {
   cursor: pointer;
 }
 
-/* line 5890, ../src/sass/ng-md-admin.scss */
+/* line 5894, ../src/sass/ng-md-admin.scss */
 md-radio-button .md-container .md-ripple-container, .md-switch-thumb .md-container .md-ripple-container {
   position: absolute;
   display: block;
@@ -8649,7 +8655,7 @@ md-radio-button .md-container .md-ripple-container, .md-switch-thumb .md-contain
   top: -16px;
 }
 
-/* line 5897, ../src/sass/ng-md-admin.scss */
+/* line 5901, ../src/sass/ng-md-admin.scss */
 md-radio-button .md-off, .md-switch-thumb .md-off {
   position: absolute;
   top: 0px;
@@ -8662,7 +8668,7 @@ md-radio-button .md-off, .md-switch-thumb .md-off {
   transition: border-color ease 0.28s;
 }
 
-/* line 5907, ../src/sass/ng-md-admin.scss */
+/* line 5911, ../src/sass/ng-md-admin.scss */
 md-radio-button .md-on, .md-switch-thumb .md-on {
   position: absolute;
   top: 0;
@@ -8676,13 +8682,13 @@ md-radio-button .md-on, .md-switch-thumb .md-on {
   transform: scale(0);
 }
 
-/* line 5918, ../src/sass/ng-md-admin.scss */
+/* line 5922, ../src/sass/ng-md-admin.scss */
 md-radio-button.md-checked .md-on, .md-switch-thumb.md-checked .md-on {
   -webkit-transform: scale(0.55);
   transform: scale(0.55);
 }
 
-/* line 5921, ../src/sass/ng-md-admin.scss */
+/* line 5925, ../src/sass/ng-md-admin.scss */
 md-radio-button .md-label, .md-switch-thumb .md-label {
   position: relative;
   display: inline-block;
@@ -8694,24 +8700,24 @@ md-radio-button .md-label, .md-switch-thumb .md-label {
   width: auto;
 }
 
-/* line 5930, ../src/sass/ng-md-admin.scss */
+/* line 5934, ../src/sass/ng-md-admin.scss */
 md-radio-button .circle, .md-switch-thumb .circle {
   border-radius: 50%;
 }
 
-/* line 5933, ../src/sass/ng-md-admin.scss */
+/* line 5937, ../src/sass/ng-md-admin.scss */
 md-radio-group {
   border: 1px dotted transparent;
   display: block;
   outline: none;
 }
 
-/* line 5938, ../src/sass/ng-md-admin.scss */
+/* line 5942, ../src/sass/ng-md-admin.scss */
 .radioButtondemoBasicUsage md-radio-group {
   border: none;
 }
 
-/* line 5941, ../src/sass/ng-md-admin.scss */
+/* line 5945, ../src/sass/ng-md-admin.scss */
 md-sidenav {
   position: absolute;
   width: 304px;
@@ -8728,12 +8734,12 @@ md-sidenav {
   flex-direction: column;
 }
 
-/* line 5955, ../src/sass/ng-md-admin.scss */
+/* line 5959, ../src/sass/ng-md-admin.scss */
 md-sidenav.md-closed {
   display: none;
 }
 
-/* line 5957, ../src/sass/ng-md-admin.scss */
+/* line 5961, ../src/sass/ng-md-admin.scss */
 md-sidenav.md-closed-add, md-sidenav.md-closed-remove {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8745,13 +8751,13 @@ md-sidenav.md-closed-add, md-sidenav.md-closed-remove {
   transition: 0s all;
 }
 
-/* line 5966, ../src/sass/ng-md-admin.scss */
+/* line 5970, ../src/sass/ng-md-admin.scss */
 md-sidenav.md-closed-add.md-closed-add-active, md-sidenav.md-closed-remove.md-closed-remove-active {
   -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* line 5969, ../src/sass/ng-md-admin.scss */
+/* line 5973, ../src/sass/ng-md-admin.scss */
 md-sidenav.md-locked-open-add, md-sidenav.md-locked-open-remove {
   position: static;
   display: -webkit-box;
@@ -8762,14 +8768,14 @@ md-sidenav.md-locked-open-add, md-sidenav.md-locked-open-remove {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 5977, ../src/sass/ng-md-admin.scss */
+/* line 5981, ../src/sass/ng-md-admin.scss */
 md-sidenav.md-locked-open {
   width: 304px;
   min-width: 304px;
   max-width: 304px;
 }
 
-/* line 5981, ../src/sass/ng-md-admin.scss */
+/* line 5985, ../src/sass/ng-md-admin.scss */
 md-sidenav.md-locked-open, md-sidenav.md-locked-open.md-closed, md-sidenav.md-locked-open.md-closed.md-sidenav-left, md-sidenav.md-locked-open.md-closed, md-sidenav.md-locked-open.md-closed.md-sidenav-right, md-sidenav.md-locked-open-remove.md-closed {
   position: static;
   display: -webkit-box;
@@ -8780,7 +8786,7 @@ md-sidenav.md-locked-open, md-sidenav.md-locked-open.md-closed, md-sidenav.md-lo
   transform: translate3d(0, 0, 0);
 }
 
-/* line 5989, ../src/sass/ng-md-admin.scss */
+/* line 5993, ../src/sass/ng-md-admin.scss */
 md-sidenav.md-locked-open-remove-active {
   -webkit-transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
   transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
@@ -8788,7 +8794,7 @@ md-sidenav.md-locked-open-remove-active {
   min-width: 0;
 }
 
-/* line 5994, ../src/sass/ng-md-admin.scss */
+/* line 5998, ../src/sass/ng-md-admin.scss */
 md-sidenav.md-closed.md-locked-open-add {
   width: 0;
   min-width: 0;
@@ -8796,7 +8802,7 @@ md-sidenav.md-closed.md-locked-open-add {
   transform: translate3d(0%, 0, 0);
 }
 
-/* line 5999, ../src/sass/ng-md-admin.scss */
+/* line 6003, ../src/sass/ng-md-admin.scss */
 md-sidenav.md-closed.md-locked-open-add-active {
   -webkit-transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
   transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
@@ -8806,12 +8812,12 @@ md-sidenav.md-closed.md-locked-open-add-active {
   transform: translate3d(0%, 0, 0);
 }
 
-/* line 6007, ../src/sass/ng-md-admin.scss */
+/* line 6011, ../src/sass/ng-md-admin.scss */
 .md-sidenav-backdrop.md-locked-open {
   display: none;
 }
 
-/* line 6010, ../src/sass/ng-md-admin.scss */
+/* line 6014, ../src/sass/ng-md-admin.scss */
 .md-sidenav-left, md-sidenav {
   left: 0;
   top: 0;
@@ -8819,13 +8825,13 @@ md-sidenav.md-closed.md-locked-open-add-active {
   transform: translate3d(0%, 0, 0);
 }
 
-/* line 6015, ../src/sass/ng-md-admin.scss */
+/* line 6019, ../src/sass/ng-md-admin.scss */
 .md-sidenav-left.md-closed, md-sidenav.md-closed {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
 
-/* line 6019, ../src/sass/ng-md-admin.scss */
+/* line 6023, ../src/sass/ng-md-admin.scss */
 .md-sidenav-right {
   left: 100%;
   top: 0;
@@ -8833,14 +8839,14 @@ md-sidenav.md-closed.md-locked-open-add-active {
   transform: translate3d(-100%, 0, 0);
 }
 
-/* line 6024, ../src/sass/ng-md-admin.scss */
+/* line 6028, ../src/sass/ng-md-admin.scss */
 .md-sidenav-right.md-closed {
   -webkit-transform: translate3d(0%, 0, 0);
   transform: translate3d(0%, 0, 0);
 }
 
 @media (max-width: 360px) {
-  /* line 6029, ../src/sass/ng-md-admin.scss */
+  /* line 6033, ../src/sass/ng-md-admin.scss */
   md-sidenav {
     width: 85%;
   }
@@ -8875,7 +8881,7 @@ md-sidenav.md-closed.md-locked-open-add-active {
     opacity: 0;
   }
 }
-/* line 6061, ../src/sass/ng-md-admin.scss */
+/* line 6065, ../src/sass/ng-md-admin.scss */
 md-slider {
   height: 48px;
   position: relative;
@@ -8896,12 +8902,12 @@ md-slider {
   /* Don't animate left/right while panning */
 }
 
-/* line 6079, ../src/sass/ng-md-admin.scss */
+/* line 6083, ../src/sass/ng-md-admin.scss */
 md-slider .md-slider-wrapper {
   position: relative;
 }
 
-/* line 6081, ../src/sass/ng-md-admin.scss */
+/* line 6085, ../src/sass/ng-md-admin.scss */
 md-slider .md-track-container {
   width: 100%;
   position: absolute;
@@ -8909,7 +8915,7 @@ md-slider .md-track-container {
   height: 2px;
 }
 
-/* line 6086, ../src/sass/ng-md-admin.scss */
+/* line 6090, ../src/sass/ng-md-admin.scss */
 md-slider .md-track {
   position: absolute;
   left: 0;
@@ -8917,13 +8923,13 @@ md-slider .md-track {
   height: 100%;
 }
 
-/* line 6091, ../src/sass/ng-md-admin.scss */
+/* line 6095, ../src/sass/ng-md-admin.scss */
 md-slider .md-track-fill {
   -webkit-transition: width 0.05s linear;
   transition: width 0.05s linear;
 }
 
-/* line 6094, ../src/sass/ng-md-admin.scss */
+/* line 6098, ../src/sass/ng-md-admin.scss */
 md-slider .md-track-ticks {
   position: absolute;
   left: 0;
@@ -8931,7 +8937,7 @@ md-slider .md-track-ticks {
   height: 100%;
 }
 
-/* line 6099, ../src/sass/ng-md-admin.scss */
+/* line 6103, ../src/sass/ng-md-admin.scss */
 md-slider .md-thumb-container {
   position: absolute;
   left: 0;
@@ -8942,7 +8948,7 @@ md-slider .md-thumb-container {
   transition: left 0.1s linear;
 }
 
-/* line 6107, ../src/sass/ng-md-admin.scss */
+/* line 6111, ../src/sass/ng-md-admin.scss */
 md-slider .md-thumb {
   z-index: 1;
   position: absolute;
@@ -8957,7 +8963,7 @@ md-slider .md-thumb {
   transition: all 0.1s linear;
 }
 
-/* line 6119, ../src/sass/ng-md-admin.scss */
+/* line 6123, ../src/sass/ng-md-admin.scss */
 md-slider .md-thumb:after {
   content: '';
   position: absolute;
@@ -8969,7 +8975,7 @@ md-slider .md-thumb:after {
   border: 3px solid;
 }
 
-/* line 6128, ../src/sass/ng-md-admin.scss */
+/* line 6132, ../src/sass/ng-md-admin.scss */
 md-slider .md-sign {
   /* Center the children (slider-thumb-text) */
   display: -webkit-box;
@@ -8997,7 +9003,7 @@ md-slider .md-sign {
   /* The arrow pointing down under the sign */
 }
 
-/* line 6153, ../src/sass/ng-md-admin.scss */
+/* line 6157, ../src/sass/ng-md-admin.scss */
 md-slider .md-sign:after {
   position: absolute;
   content: '';
@@ -9014,14 +9020,14 @@ md-slider .md-sign:after {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 6167, ../src/sass/ng-md-admin.scss */
+/* line 6171, ../src/sass/ng-md-admin.scss */
 md-slider .md-sign .md-thumb-text {
   z-index: 1;
   font-size: 12px;
   font-weight: bold;
 }
 
-/* line 6171, ../src/sass/ng-md-admin.scss */
+/* line 6175, ../src/sass/ng-md-admin.scss */
 md-slider .md-focus-thumb {
   position: absolute;
   left: -24px;
@@ -9036,7 +9042,7 @@ md-slider .md-focus-thumb {
   animation: sliderFocusThumb 0.4s linear;
 }
 
-/* line 6183, ../src/sass/ng-md-admin.scss */
+/* line 6187, ../src/sass/ng-md-admin.scss */
 md-slider .md-focus-ring {
   position: absolute;
   left: -24px;
@@ -9052,7 +9058,7 @@ md-slider .md-focus-ring {
   transition: all 0.2s linear;
 }
 
-/* line 6196, ../src/sass/ng-md-admin.scss */
+/* line 6200, ../src/sass/ng-md-admin.scss */
 md-slider .md-disabled-thumb {
   position: absolute;
   left: -22px;
@@ -9066,99 +9072,99 @@ md-slider .md-disabled-thumb {
   display: none;
 }
 
-/* line 6207, ../src/sass/ng-md-admin.scss */
+/* line 6211, ../src/sass/ng-md-admin.scss */
 md-slider.md-min .md-thumb:after {
   background-color: white;
 }
 
-/* line 6209, ../src/sass/ng-md-admin.scss */
+/* line 6213, ../src/sass/ng-md-admin.scss */
 md-slider.md-min .md-sign {
   opacity: 0;
 }
 
-/* line 6211, ../src/sass/ng-md-admin.scss */
+/* line 6215, ../src/sass/ng-md-admin.scss */
 md-slider:focus {
   outline: none;
 }
 
-/* line 6213, ../src/sass/ng-md-admin.scss */
+/* line 6217, ../src/sass/ng-md-admin.scss */
 md-slider.dragging .md-thumb-container, md-slider.dragging .md-track-fill {
   -webkit-transition: none;
   transition: none;
 }
 
-/* line 6216, ../src/sass/ng-md-admin.scss */
+/* line 6220, ../src/sass/ng-md-admin.scss */
 md-slider:not([md-discrete]) {
   /* Hide the sign and ticks in non-discrete mode */
 }
 
-/* line 6218, ../src/sass/ng-md-admin.scss */
+/* line 6222, ../src/sass/ng-md-admin.scss */
 md-slider:not([md-discrete]) .md-track-ticks, md-slider:not([md-discrete]) .md-sign {
   display: none;
 }
 
-/* line 6220, ../src/sass/ng-md-admin.scss */
+/* line 6224, ../src/sass/ng-md-admin.scss */
 md-slider:not([md-discrete]):not([disabled]):hover .md-thumb {
   -webkit-transform: scale(0.6);
   transform: scale(0.6);
 }
 
-/* line 6223, ../src/sass/ng-md-admin.scss */
+/* line 6227, ../src/sass/ng-md-admin.scss */
 md-slider:not([md-discrete]):not([disabled]):focus .md-focus-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-focus-thumb {
   display: block;
 }
 
-/* line 6225, ../src/sass/ng-md-admin.scss */
+/* line 6229, ../src/sass/ng-md-admin.scss */
 md-slider:not([md-discrete]):not([disabled]):focus .md-focus-ring, md-slider:not([md-discrete]):not([disabled]).active .md-focus-ring {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
 
-/* line 6228, ../src/sass/ng-md-admin.scss */
+/* line 6232, ../src/sass/ng-md-admin.scss */
 md-slider:not([md-discrete]):not([disabled]):focus .md-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-thumb {
   -webkit-transform: scale(0.85);
   transform: scale(0.85);
 }
 
-/* line 6231, ../src/sass/ng-md-admin.scss */
+/* line 6235, ../src/sass/ng-md-admin.scss */
 md-slider[md-discrete] {
   /* Hide the focus thumb in discrete mode */
 }
 
-/* line 6233, ../src/sass/ng-md-admin.scss */
+/* line 6237, ../src/sass/ng-md-admin.scss */
 md-slider[md-discrete] .md-focus-thumb, md-slider[md-discrete] .md-focus-ring {
   display: none;
 }
 
-/* line 6235, ../src/sass/ng-md-admin.scss */
+/* line 6239, ../src/sass/ng-md-admin.scss */
 md-slider[md-discrete]:not([disabled]):focus .md-sign, md-slider[md-discrete]:not([disabled]):focus .md-sign:after, md-slider[md-discrete]:not([disabled]).active .md-sign, md-slider[md-discrete]:not([disabled]).active .md-sign:after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0) scale(1);
   transform: translate3d(0, 0, 0) scale(1);
 }
 
-/* line 6239, ../src/sass/ng-md-admin.scss */
+/* line 6243, ../src/sass/ng-md-admin.scss */
 md-slider[disabled] .md-track-fill {
   display: none;
 }
 
-/* line 6241, ../src/sass/ng-md-admin.scss */
+/* line 6245, ../src/sass/ng-md-admin.scss */
 md-slider[disabled] .md-sign {
   display: none;
 }
 
-/* line 6243, ../src/sass/ng-md-admin.scss */
+/* line 6247, ../src/sass/ng-md-admin.scss */
 md-slider[disabled] .md-thumb {
   -webkit-transform: scale(0.35);
   transform: scale(0.35);
 }
 
-/* line 6246, ../src/sass/ng-md-admin.scss */
+/* line 6250, ../src/sass/ng-md-admin.scss */
 md-slider[disabled] .md-disabled-thumb {
   display: block;
 }
 
-/* line 6249, ../src/sass/ng-md-admin.scss */
+/* line 6253, ../src/sass/ng-md-admin.scss */
 .md-sticky-clone {
   z-index: 2;
   top: 0;
@@ -9169,13 +9175,13 @@ md-slider[disabled] .md-disabled-thumb {
   transform: translate3d(-9999px, -9999px, 0);
 }
 
-/* line 6257, ../src/sass/ng-md-admin.scss */
+/* line 6261, ../src/sass/ng-md-admin.scss */
 .md-sticky-clone[sticky-state="active"] {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 6260, ../src/sass/ng-md-admin.scss */
+/* line 6264, ../src/sass/ng-md-admin.scss */
 .md-sticky-clone[sticky-state="active"]:not(.md-sticky-no-effect):after {
   -webkit-animation: subheaderStickyHoverIn 0.3s ease-out both;
   animation: subheaderStickyHoverIn 0.3s ease-out both;
@@ -9213,7 +9219,7 @@ md-slider[disabled] .md-disabled-thumb {
     box-shadow: 0 0 0 0 transparent;
   }
 }
-/* line 6292, ../src/sass/ng-md-admin.scss */
+/* line 6296, ../src/sass/ng-md-admin.scss */
 .md-subheader {
   display: block;
   font-size: 0.9em;
@@ -9225,13 +9231,13 @@ md-slider[disabled] .md-disabled-thumb {
   position: relative;
 }
 
-/* line 6301, ../src/sass/ng-md-admin.scss */
+/* line 6305, ../src/sass/ng-md-admin.scss */
 .md-subheader:not(.md-sticky-no-effect) {
   -webkit-transition: 0.2s ease-out margin;
   transition: 0.2s ease-out margin;
 }
 
-/* line 6304, ../src/sass/ng-md-admin.scss */
+/* line 6308, ../src/sass/ng-md-admin.scss */
 .md-subheader:not(.md-sticky-no-effect):after {
   position: absolute;
   left: 0;
@@ -9241,29 +9247,29 @@ md-slider[disabled] .md-disabled-thumb {
   content: '';
 }
 
-/* line 6311, ../src/sass/ng-md-admin.scss */
+/* line 6315, ../src/sass/ng-md-admin.scss */
 .md-subheader:not(.md-sticky-no-effect).md-sticky-clone {
   z-index: 2;
 }
 
-/* line 6313, ../src/sass/ng-md-admin.scss */
+/* line 6317, ../src/sass/ng-md-admin.scss */
 .md-subheader:not(.md-sticky-no-effect)[sticky-state="active"] {
   margin-top: -2px;
 }
 
-/* line 6315, ../src/sass/ng-md-admin.scss */
+/* line 6319, ../src/sass/ng-md-admin.scss */
 .md-subheader:not(.md-sticky-no-effect):not(.md-sticky-clone)[sticky-prev-state="active"]:after {
   -webkit-animation: subheaderStickyHoverOut 0.3s ease-out both;
   animation: subheaderStickyHoverOut 0.3s ease-out both;
 }
 
-/* line 6318, ../src/sass/ng-md-admin.scss */
+/* line 6322, ../src/sass/ng-md-admin.scss */
 .md-subheader .md-subheader-content {
   z-index: 1;
   position: relative;
 }
 
-/* line 6322, ../src/sass/ng-md-admin.scss */
+/* line 6326, ../src/sass/ng-md-admin.scss */
 md-switch {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9283,7 +9289,7 @@ md-switch {
   user-select: none;
 }
 
-/* line 6339, ../src/sass/ng-md-admin.scss */
+/* line 6343, ../src/sass/ng-md-admin.scss */
 md-switch .md-container {
   cursor: -webkit-grab;
   cursor: grab;
@@ -9297,19 +9303,19 @@ md-switch .md-container {
   margin-right: 8px;
 }
 
-/* line 6350, ../src/sass/ng-md-admin.scss */
+/* line 6354, ../src/sass/ng-md-admin.scss */
 md-switch:not([disabled]) .md-dragging, md-switch:not([disabled]).md-dragging .md-container {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-/* line 6353, ../src/sass/ng-md-admin.scss */
+/* line 6357, ../src/sass/ng-md-admin.scss */
 md-switch .md-label {
   border-color: transparent;
   border-width: 0px;
 }
 
-/* line 6356, ../src/sass/ng-md-admin.scss */
+/* line 6360, ../src/sass/ng-md-admin.scss */
 md-switch .md-bar {
   left: 1px;
   width: 34px;
@@ -9319,7 +9325,7 @@ md-switch .md-bar {
   position: absolute;
 }
 
-/* line 6363, ../src/sass/ng-md-admin.scss */
+/* line 6367, ../src/sass/ng-md-admin.scss */
 md-switch .md-thumb-container {
   top: 2px;
   left: 0;
@@ -9330,13 +9336,13 @@ md-switch .md-thumb-container {
   z-index: 1;
 }
 
-/* line 6371, ../src/sass/ng-md-admin.scss */
+/* line 6375, ../src/sass/ng-md-admin.scss */
 md-switch.md-checked .md-thumb-container {
   -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
 }
 
-/* line 6374, ../src/sass/ng-md-admin.scss */
+/* line 6378, ../src/sass/ng-md-admin.scss */
 md-switch .md-thumb {
   position: absolute;
   margin: 0;
@@ -9349,7 +9355,7 @@ md-switch .md-thumb {
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-/* line 6384, ../src/sass/ng-md-admin.scss */
+/* line 6388, ../src/sass/ng-md-admin.scss */
 md-switch .md-thumb .md-ripple-container {
   position: absolute;
   display: block;
@@ -9361,7 +9367,7 @@ md-switch .md-thumb .md-ripple-container {
   bottom: -20px;
 }
 
-/* line 6393, ../src/sass/ng-md-admin.scss */
+/* line 6397, ../src/sass/ng-md-admin.scss */
 md-switch:not(.md-dragging) .md-bar, md-switch:not(.md-dragging) .md-thumb-container, md-switch:not(.md-dragging) .md-thumb {
   -webkit-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
   transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
@@ -9369,13 +9375,13 @@ md-switch:not(.md-dragging) .md-bar, md-switch:not(.md-dragging) .md-thumb-conta
   transition-property: transform, background-color;
 }
 
-/* line 6398, ../src/sass/ng-md-admin.scss */
+/* line 6402, ../src/sass/ng-md-admin.scss */
 md-switch:not(.md-dragging) .md-bar, md-switch:not(.md-dragging) .md-thumb {
   -webkit-transition-delay: 0.05s;
   transition-delay: 0.05s;
 }
 
-/* line 6402, ../src/sass/ng-md-admin.scss */
+/* line 6406, ../src/sass/ng-md-admin.scss */
 md-tabs {
   display: block;
   width: 100%;
@@ -9383,7 +9389,7 @@ md-tabs {
   overflow: auto;
 }
 
-/* line 6408, ../src/sass/ng-md-admin.scss */
+/* line 6412, ../src/sass/ng-md-admin.scss */
 .md-header {
   width: 100%;
   height: 48px;
@@ -9391,7 +9397,7 @@ md-tabs {
   position: relative;
 }
 
-/* line 6414, ../src/sass/ng-md-admin.scss */
+/* line 6418, ../src/sass/ng-md-admin.scss */
 .md-paginator {
   z-index: 1;
   margin-right: -2px;
@@ -9419,28 +9425,28 @@ md-tabs {
    to use svgs correctly */
 }
 
-/* line 6439, ../src/sass/ng-md-admin.scss */
+/* line 6443, ../src/sass/ng-md-admin.scss */
 .md-paginator.md-prev {
   left: 0;
 }
 
-/* line 6441, ../src/sass/ng-md-admin.scss */
+/* line 6445, ../src/sass/ng-md-admin.scss */
 .md-paginator.md-next {
   right: 0;
 }
 
-/* line 6443, ../src/sass/ng-md-admin.scss */
+/* line 6447, ../src/sass/ng-md-admin.scss */
 .md-paginator.md-prev {
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMjA4IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTUuNCw3LjQgMTQsNiA4LDEyIDE0LDE4IDE1LjQsMTYuNiAxMC44LDEyIAkJIiBzdHlsZT0iZmlsbDp3aGl0ZTsiLz4gPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+IDwvZz4gPC9nPiA8ZyBpZD0iR3JpZCIgZGlzcGxheT0ibm9uZSI+IDxnIGRpc3BsYXk9ImlubGluZSI+IDwvZz4gPC9nPiA8L3N2Zz4NCg==");
 }
 
-/* line 6445, ../src/sass/ng-md-admin.scss */
+/* line 6449, ../src/sass/ng-md-admin.scss */
 .md-paginator.md-next {
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMzM2IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTAsNiA4LjYsNy40IDEzLjIsMTIgOC42LDE2LjYgMTAsMTggMTYsMTIgCQkiIHN0eWxlPSJmaWxsOndoaXRlOyIvPiA8cmVjdCBmaWxsPSJub25lIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4gPC9nPiA8L2c+IDxnIGlkPSJHcmlkIiBkaXNwbGF5PSJub25lIj4gPGcgZGlzcGxheT0iaW5saW5lIj4gPC9nPiA8L2c+IDwvc3ZnPg0K");
 }
 
 /* If `center` justified, change to left-justify if paginating */
-/* line 6449, ../src/sass/ng-md-admin.scss */
+/* line 6453, ../src/sass/ng-md-admin.scss */
 md-tabs[center] .md-header:not(.md-paginating) .md-header-items {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -9448,13 +9454,13 @@ md-tabs[center] .md-header:not(.md-paginating) .md-header-items {
   justify-content: center;
 }
 
-/* line 6455, ../src/sass/ng-md-admin.scss */
+/* line 6459, ../src/sass/ng-md-admin.scss */
 .md-paginating .md-header-items-container {
   left: 32px;
   right: 32px;
 }
 
-/* line 6459, ../src/sass/ng-md-admin.scss */
+/* line 6463, ../src/sass/ng-md-admin.scss */
 .md-header-items-container {
   overflow: hidden;
   position: absolute;
@@ -9468,7 +9474,7 @@ md-tabs[center] .md-header:not(.md-paginating) .md-header-items {
   margin: auto;
 }
 
-/* line 6470, ../src/sass/ng-md-admin.scss */
+/* line 6474, ../src/sass/ng-md-admin.scss */
 .md-header-items-container .md-header-items {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9483,24 +9489,24 @@ md-tabs[center] .md-header:not(.md-paginating) .md-header-items {
   width: 99999px;
 }
 
-/* line 6483, ../src/sass/ng-md-admin.scss */
+/* line 6487, ../src/sass/ng-md-admin.scss */
 .md-tabs-content {
   overflow: hidden;
   width: 100%;
   position: relative;
 }
 
-/* line 6487, ../src/sass/ng-md-admin.scss */
+/* line 6491, ../src/sass/ng-md-admin.scss */
 .md-tabs-content .md-tab-content {
   height: 100%;
 }
 
-/* line 6489, ../src/sass/ng-md-admin.scss */
+/* line 6493, ../src/sass/ng-md-admin.scss */
 .md-tabs-content .md-tab-content.ng-hide.ng-animate {
   display: block !important;
 }
 
-/* line 6491, ../src/sass/ng-md-admin.scss */
+/* line 6495, ../src/sass/ng-md-admin.scss */
 .md-tabs-content .md-tab-content.ng-animate {
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
   transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
@@ -9508,19 +9514,19 @@ md-tabs[center] .md-header:not(.md-paginating) .md-header-items {
   transform: translateX(0);
 }
 
-/* line 6496, ../src/sass/ng-md-admin.scss */
+/* line 6500, ../src/sass/ng-md-admin.scss */
 .md-tabs-content .md-tab-content.ng-animate.ng-hide-add {
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-/* line 6499, ../src/sass/ng-md-admin.scss */
+/* line 6503, ../src/sass/ng-md-admin.scss */
 .md-tabs-content .md-tab-content.ng-animate.ng-hide-add.md-transition-rtl {
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-/* line 6502, ../src/sass/ng-md-admin.scss */
+/* line 6506, ../src/sass/ng-md-admin.scss */
 .md-tabs-content .md-tab-content.ng-animate.ng-hide-remove {
   position: absolute;
   -webkit-transform: translateX(100%);
@@ -9531,19 +9537,19 @@ md-tabs[center] .md-header:not(.md-paginating) .md-header-items {
   bottom: 0;
 }
 
-/* line 6510, ../src/sass/ng-md-admin.scss */
+/* line 6514, ../src/sass/ng-md-admin.scss */
 .md-tabs-content .md-tab-content.ng-animate.ng-hide-remove.md-transition-rtl {
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-/* line 6513, ../src/sass/ng-md-admin.scss */
+/* line 6517, ../src/sass/ng-md-admin.scss */
 .md-tabs-content .md-tab-content.ng-animate.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
-/* line 6517, ../src/sass/ng-md-admin.scss */
+/* line 6521, ../src/sass/ng-md-admin.scss */
 md-tabs-ink-bar {
   z-index: 1;
   display: none;
@@ -9559,19 +9565,19 @@ md-tabs-ink-bar {
   transform-origin: 0 0;
 }
 
-/* line 6530, ../src/sass/ng-md-admin.scss */
+/* line 6534, ../src/sass/ng-md-admin.scss */
 md-tabs-ink-bar.md-transition-right {
   -webkit-transition: right 0.25s cubic-bezier(0.35, 0, 0.25, 1), left 0.25s cubic-bezier(0.35, 0, 0.25, 1) 0.075s;
   transition: right 0.25s cubic-bezier(0.35, 0, 0.25, 1), left 0.25s cubic-bezier(0.35, 0, 0.25, 1) 0.075s;
 }
 
-/* line 6533, ../src/sass/ng-md-admin.scss */
+/* line 6537, ../src/sass/ng-md-admin.scss */
 md-tabs-ink-bar.md-transition-left {
   -webkit-transition: right 0.25s cubic-bezier(0.35, 0, 0.25, 1) 0.075s, left 0.25s cubic-bezier(0.35, 0, 0.25, 1);
   transition: right 0.25s cubic-bezier(0.35, 0, 0.25, 1) 0.075s, left 0.25s cubic-bezier(0.35, 0, 0.25, 1);
 }
 
-/* line 6537, ../src/sass/ng-md-admin.scss */
+/* line 6541, ../src/sass/ng-md-admin.scss */
 md-tab {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9601,24 +9607,24 @@ md-tab {
   user-select: none;
 }
 
-/* line 6564, ../src/sass/ng-md-admin.scss */
+/* line 6568, ../src/sass/ng-md-admin.scss */
 md-tab.md-tab-themed {
   -webkit-transition: background 0.35s cubic-bezier(0.35, 0, 0.25, 1), color 0.35s cubic-bezier(0.35, 0, 0.25, 1);
   transition: background 0.35s cubic-bezier(0.35, 0, 0.25, 1), color 0.35s cubic-bezier(0.35, 0, 0.25, 1);
 }
 
-/* line 6567, ../src/sass/ng-md-admin.scss */
+/* line 6571, ../src/sass/ng-md-admin.scss */
 md-tab[disabled] {
   pointer-events: none;
   cursor: default;
 }
 
-/* line 6570, ../src/sass/ng-md-admin.scss */
+/* line 6574, ../src/sass/ng-md-admin.scss */
 md-tab:focus {
   outline: none;
 }
 
-/* line 6572, ../src/sass/ng-md-admin.scss */
+/* line 6576, ../src/sass/ng-md-admin.scss */
 md-tab md-tab-label {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
@@ -9629,13 +9635,13 @@ md-tab md-tab-label {
   overflow: hidden;
 }
 
-/* line 6581, ../src/sass/ng-md-admin.scss */
+/* line 6585, ../src/sass/ng-md-admin.scss */
 md-input-group label, .md-input-group label {
   display: block;
   font-size: 0.75em;
 }
 
-/* line 6584, ../src/sass/ng-md-admin.scss */
+/* line 6588, ../src/sass/ng-md-admin.scss */
 md-input-group textarea, md-input-group input[type="text"], md-input-group input[type="password"], md-input-group input[type="datetime"], md-input-group input[type="datetime-local"], md-input-group input[type="date"], md-input-group input[type="month"], md-input-group input[type="time"], md-input-group input[type="week"], md-input-group input[type="number"], md-input-group input[type="email"], md-input-group input[type="url"], md-input-group input[type="search"], md-input-group input[type="tel"], md-input-group input[type="color"], .md-input-group textarea, .md-input-group input[type="text"], .md-input-group input[type="password"], .md-input-group input[type="datetime"], .md-input-group input[type="datetime-local"], .md-input-group input[type="date"], .md-input-group input[type="month"], .md-input-group input[type="time"], .md-input-group input[type="week"], .md-input-group input[type="number"], .md-input-group input[type="email"], .md-input-group input[type="url"], .md-input-group input[type="search"], .md-input-group input[type="tel"], .md-input-group input[type="color"] {
   display: block;
   border-width: 0 0 1px 0;
@@ -9644,17 +9650,17 @@ md-input-group textarea, md-input-group input[type="text"], md-input-group input
   padding-bottom: 1px;
 }
 
-/* line 6590, ../src/sass/ng-md-admin.scss */
+/* line 6594, ../src/sass/ng-md-admin.scss */
 md-input-group textarea:focus, md-input-group input[type="text"]:focus, md-input-group input[type="password"]:focus, md-input-group input[type="datetime"]:focus, md-input-group input[type="datetime-local"]:focus, md-input-group input[type="date"]:focus, md-input-group input[type="month"]:focus, md-input-group input[type="time"]:focus, md-input-group input[type="week"]:focus, md-input-group input[type="number"]:focus, md-input-group input[type="email"]:focus, md-input-group input[type="url"]:focus, md-input-group input[type="search"]:focus, md-input-group input[type="tel"]:focus, md-input-group input[type="color"]:focus, .md-input-group textarea:focus, .md-input-group input[type="text"]:focus, .md-input-group input[type="password"]:focus, .md-input-group input[type="datetime"]:focus, .md-input-group input[type="datetime-local"]:focus, .md-input-group input[type="date"]:focus, .md-input-group input[type="month"]:focus, .md-input-group input[type="time"]:focus, .md-input-group input[type="week"]:focus, .md-input-group input[type="number"]:focus, .md-input-group input[type="email"]:focus, .md-input-group input[type="url"]:focus, .md-input-group input[type="search"]:focus, .md-input-group input[type="tel"]:focus, .md-input-group input[type="color"]:focus {
   outline: 0;
 }
 
-/* line 6592, ../src/sass/ng-md-admin.scss */
+/* line 6596, ../src/sass/ng-md-admin.scss */
 md-input-group input, md-input-group textarea, .md-input-group input, .md-input-group textarea {
   background: none;
 }
 
-/* line 6595, ../src/sass/ng-md-admin.scss */
+/* line 6599, ../src/sass/ng-md-admin.scss */
 md-input-group, .md-input-group {
   padding-bottom: 2px;
   margin: 10px 0 8px 0;
@@ -9662,7 +9668,7 @@ md-input-group, .md-input-group {
   display: block;
 }
 
-/* line 6600, ../src/sass/ng-md-admin.scss */
+/* line 6604, ../src/sass/ng-md-admin.scss */
 md-input-group label, .md-input-group label {
   font-size: 1em;
   z-index: 1;
@@ -9670,12 +9676,12 @@ md-input-group label, .md-input-group label {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 6605, ../src/sass/ng-md-admin.scss */
+/* line 6609, ../src/sass/ng-md-admin.scss */
 md-input-group label:hover, .md-input-group label:hover {
   cursor: text;
 }
 
-/* line 6607, ../src/sass/ng-md-admin.scss */
+/* line 6611, ../src/sass/ng-md-admin.scss */
 md-input-group label, .md-input-group label {
   -webkit-transform: translate3d(0, 22px, 0);
   transform: translate3d(0, 22px, 0);
@@ -9687,47 +9693,47 @@ md-input-group label, .md-input-group label {
   transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
 }
 
-/* line 6616, ../src/sass/ng-md-admin.scss */
+/* line 6620, ../src/sass/ng-md-admin.scss */
 md-input-group input, md-input-group textarea, .md-input-group input, .md-input-group textarea {
   border-bottom-width: 1px;
   -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
   transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
 }
 
-/* line 6620, ../src/sass/ng-md-admin.scss */
+/* line 6624, ../src/sass/ng-md-admin.scss */
 md-input-group.md-input-focused label, .md-input-group.md-input-focused label {
   -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
   transform: translate3d(0, 4px, 0) scale(0.75);
 }
 
-/* line 6623, ../src/sass/ng-md-admin.scss */
+/* line 6627, ../src/sass/ng-md-admin.scss */
 md-input-group.md-input-focused input, md-input-group.md-input-focused textarea, .md-input-group.md-input-focused input, .md-input-group.md-input-focused textarea {
   border-bottom-width: 2px;
 }
 
-/* line 6625, ../src/sass/ng-md-admin.scss */
+/* line 6629, ../src/sass/ng-md-admin.scss */
 md-input-group.md-input-focused input, .md-input-group.md-input-focused input {
   padding-bottom: 0px;
 }
 
-/* line 6627, ../src/sass/ng-md-admin.scss */
+/* line 6631, ../src/sass/ng-md-admin.scss */
 md-input-group.md-input-has-value label, .md-input-group.md-input-has-value label {
   -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
   transform: translate3d(0, 4px, 0) scale(0.75);
 }
 
-/* line 6630, ../src/sass/ng-md-admin.scss */
+/* line 6634, ../src/sass/ng-md-admin.scss */
 md-input-group.md-input-has-value:not(.md-input-focused) label, .md-input-group.md-input-has-value:not(.md-input-focused) label {
   -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
   transform: translate3d(0, 4px, 0) scale(0.75);
 }
 
-/* line 6633, ../src/sass/ng-md-admin.scss */
+/* line 6637, ../src/sass/ng-md-admin.scss */
 md-input-group[disabled] input, md-input-group[disabled] textarea, .md-input-group[disabled] input, .md-input-group[disabled] textarea {
   border-bottom-width: 0px;
 }
 
-/* line 6635, ../src/sass/ng-md-admin.scss */
+/* line 6639, ../src/sass/ng-md-admin.scss */
 md-input-group[disabled] input, md-input-group[disabled] textarea, .md-input-group[disabled] input, .md-input-group[disabled] textarea {
   background-size: 3px 1px;
   background-position: 0 bottom;
@@ -9736,13 +9742,13 @@ md-input-group[disabled] input, md-input-group[disabled] textarea, .md-input-gro
   pointer-events: none;
 }
 
-/* line 6641, ../src/sass/ng-md-admin.scss */
+/* line 6645, ../src/sass/ng-md-admin.scss */
 md-input-group[disabled] label, .md-input-group[disabled] label {
   -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
   transform: translate3d(0, 4px, 0) scale(0.75);
 }
 
-/* line 6644, ../src/sass/ng-md-admin.scss */
+/* line 6648, ../src/sass/ng-md-admin.scss */
 md-input-group[disabled] *:not(.md-input-has-value) label, .md-input-group[disabled] *:not(.md-input-has-value) label {
   -webkit-transform: translate3d(0, 22px, 0);
   transform: translate3d(0, 22px, 0);
@@ -9752,7 +9758,7 @@ md-input-group[disabled] *:not(.md-input-has-value) label, .md-input-group[disab
   transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
 }
 
-/* line 6652, ../src/sass/ng-md-admin.scss */
+/* line 6656, ../src/sass/ng-md-admin.scss */
 md-toast {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9783,69 +9789,69 @@ md-toast {
   /* Transition differently when swiping */
 }
 
-/* line 6680, ../src/sass/ng-md-admin.scss */
+/* line 6684, ../src/sass/ng-md-admin.scss */
 md-toast.md-capsule {
   border-radius: 24px;
 }
 
-/* line 6682, ../src/sass/ng-md-admin.scss */
+/* line 6686, ../src/sass/ng-md-admin.scss */
 md-toast.ng-leave-active {
   -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
   transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
 }
 
-/* line 6685, ../src/sass/ng-md-admin.scss */
+/* line 6689, ../src/sass/ng-md-admin.scss */
 md-toast.md-swipeleft, md-toast.md-swiperight, md-toast.md-swipeup, md-toast.md-swipedown {
   -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* line 6688, ../src/sass/ng-md-admin.scss */
+/* line 6692, ../src/sass/ng-md-admin.scss */
 md-toast.ng-enter {
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
   opacity: 0;
 }
 
-/* line 6692, ../src/sass/ng-md-admin.scss */
+/* line 6696, ../src/sass/ng-md-admin.scss */
 md-toast.ng-enter.md-top {
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }
 
-/* line 6695, ../src/sass/ng-md-admin.scss */
+/* line 6699, ../src/sass/ng-md-admin.scss */
 md-toast.ng-enter.ng-enter-active {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
-/* line 6699, ../src/sass/ng-md-admin.scss */
+/* line 6703, ../src/sass/ng-md-admin.scss */
 md-toast.ng-leave.ng-leave-active {
   opacity: 0;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
 }
 
-/* line 6703, ../src/sass/ng-md-admin.scss */
+/* line 6707, ../src/sass/ng-md-admin.scss */
 md-toast.ng-leave.ng-leave-active.md-top {
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }
 
-/* line 6706, ../src/sass/ng-md-admin.scss */
+/* line 6710, ../src/sass/ng-md-admin.scss */
 md-toast.ng-leave.ng-leave-active.md-swipeleft {
   -webkit-transform: translate3d(-100%, 0%, 0);
   transform: translate3d(-100%, 0%, 0);
 }
 
-/* line 6709, ../src/sass/ng-md-admin.scss */
+/* line 6713, ../src/sass/ng-md-admin.scss */
 md-toast.ng-leave.ng-leave-active.md-swiperight {
   -webkit-transform: translate3d(100%, 0%, 0);
   transform: translate3d(100%, 0%, 0);
 }
 
-/* line 6712, ../src/sass/ng-md-admin.scss */
+/* line 6716, ../src/sass/ng-md-admin.scss */
 md-toast .md-action {
   line-height: 19px;
   margin-left: 24px;
@@ -9855,7 +9861,7 @@ md-toast .md-action {
 }
 
 @media (max-width: 600px) {
-  /* line 6720, ../src/sass/ng-md-admin.scss */
+  /* line 6724, ../src/sass/ng-md-admin.scss */
   md-toast {
     left: 0;
     right: 0;
@@ -9866,14 +9872,14 @@ md-toast .md-action {
     bottom: 0;
   }
 
-  /* line 6728, ../src/sass/ng-md-admin.scss */
+  /* line 6732, ../src/sass/ng-md-admin.scss */
   md-toast.md-top {
     bottom: auto;
     top: 0;
   }
 }
 @media (min-width: 600px) {
-  /* line 6734, ../src/sass/ng-md-admin.scss */
+  /* line 6738, ../src/sass/ng-md-admin.scss */
   md-toast {
     min-width: 288px;
     /* 
@@ -9882,51 +9888,51 @@ md-toast .md-action {
      */
   }
 
-  /* line 6740, ../src/sass/ng-md-admin.scss */
+  /* line 6744, ../src/sass/ng-md-admin.scss */
   md-toast.md-bottom {
     bottom: 8px;
   }
 
-  /* line 6742, ../src/sass/ng-md-admin.scss */
+  /* line 6746, ../src/sass/ng-md-admin.scss */
   md-toast.md-left {
     left: 8px;
   }
 
-  /* line 6744, ../src/sass/ng-md-admin.scss */
+  /* line 6748, ../src/sass/ng-md-admin.scss */
   md-toast.md-right {
     right: 8px;
   }
 
-  /* line 6746, ../src/sass/ng-md-admin.scss */
+  /* line 6750, ../src/sass/ng-md-admin.scss */
   md-toast.md-top {
     top: 8px;
   }
 
-  /* line 6748, ../src/sass/ng-md-admin.scss */
+  /* line 6752, ../src/sass/ng-md-admin.scss */
   md-toast.ng-leave.ng-leave-active.md-swipeleft {
     -webkit-transform: translate3d(-100%, 25%, 0) rotateZ(-15deg);
     transform: translate3d(-100%, 25%, 0) rotateZ(-15deg);
   }
 
-  /* line 6751, ../src/sass/ng-md-admin.scss */
+  /* line 6755, ../src/sass/ng-md-admin.scss */
   md-toast.ng-leave.ng-leave-active.md-swiperight {
     -webkit-transform: translate3d(100%, 25%, 0) rotateZ(15deg);
     transform: translate3d(100%, 25%, 0) rotateZ(15deg);
   }
 
-  /* line 6754, ../src/sass/ng-md-admin.scss */
+  /* line 6758, ../src/sass/ng-md-admin.scss */
   md-toast.ng-leave.ng-leave-active.md-top.md-swipeleft {
     -webkit-transform: translate3d(-100%, 0, 0) rotateZ(-15deg);
     transform: translate3d(-100%, 0, 0) rotateZ(-15deg);
   }
 
-  /* line 6757, ../src/sass/ng-md-admin.scss */
+  /* line 6761, ../src/sass/ng-md-admin.scss */
   md-toast.ng-leave.ng-leave-active.md-top.md-swiperight {
     -webkit-transform: translate3d(100%, 0, 0) rotateZ(15deg);
     transform: translate3d(100%, 0, 0) rotateZ(15deg);
   }
 }
-/* line 6762, ../src/sass/ng-md-admin.scss */
+/* line 6766, ../src/sass/ng-md-admin.scss */
 md-toolbar {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9945,33 +9951,33 @@ md-toolbar {
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-/* line 6778, ../src/sass/ng-md-admin.scss */
+/* line 6782, ../src/sass/ng-md-admin.scss */
 md-toolbar.md-tall {
   height: 128px;
   min-height: 128px;
   max-height: 128px;
 }
 
-/* line 6782, ../src/sass/ng-md-admin.scss */
+/* line 6786, ../src/sass/ng-md-admin.scss */
 md-toolbar.md-medium-tall {
   height: 88px;
   min-height: 88px;
   max-height: 88px;
 }
 
-/* line 6786, ../src/sass/ng-md-admin.scss */
+/* line 6790, ../src/sass/ng-md-admin.scss */
 md-toolbar.md-medium-tall .md-toolbar-tools {
   height: 48px;
   min-height: 48px;
   max-height: 48px;
 }
 
-/* line 6790, ../src/sass/ng-md-admin.scss */
+/* line 6794, ../src/sass/ng-md-admin.scss */
 md-toolbar .md-indent {
   margin-left: 64px;
 }
 
-/* line 6793, ../src/sass/ng-md-admin.scss */
+/* line 6797, ../src/sass/ng-md-admin.scss */
 .md-toolbar-tools {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9995,23 +10001,23 @@ md-toolbar .md-indent {
   margin: 0;
 }
 
-/* line 6814, ../src/sass/ng-md-admin.scss */
+/* line 6818, ../src/sass/ng-md-admin.scss */
 .md-toolbar-tools > * {
   font-size: inherit;
 }
 
-/* line 6816, ../src/sass/ng-md-admin.scss */
+/* line 6820, ../src/sass/ng-md-admin.scss */
 .md-toolbar-tools h2, .md-toolbar-tools h3 {
   font-weight: normal;
 }
 
-/* line 6818, ../src/sass/ng-md-admin.scss */
+/* line 6822, ../src/sass/ng-md-admin.scss */
 .md-toolbar-tools a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 6821, ../src/sass/ng-md-admin.scss */
+/* line 6825, ../src/sass/ng-md-admin.scss */
 .md-toolbar-tools .fill-height {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10023,17 +10029,17 @@ md-toolbar .md-indent {
   align-items: center;
 }
 
-/* line 6830, ../src/sass/ng-md-admin.scss */
+/* line 6834, ../src/sass/ng-md-admin.scss */
 .md-toolbar-tools .md-tools {
   margin-left: auto;
 }
 
-/* line 6832, ../src/sass/ng-md-admin.scss */
+/* line 6836, ../src/sass/ng-md-admin.scss */
 .md-toolbar-tools .md-button {
   font-size: 14px;
 }
 
-/* line 6835, ../src/sass/ng-md-admin.scss */
+/* line 6839, ../src/sass/ng-md-admin.scss */
 md-tooltip {
   position: absolute;
   font-size: 14px;
@@ -10043,7 +10049,7 @@ md-tooltip {
   border-radius: 4px;
 }
 
-/* line 6842, ../src/sass/ng-md-admin.scss */
+/* line 6846, ../src/sass/ng-md-admin.scss */
 md-tooltip .md-background {
   position: absolute;
   border-radius: 50%;
@@ -10052,7 +10058,7 @@ md-tooltip .md-background {
   opacity: 1;
 }
 
-/* line 6848, ../src/sass/ng-md-admin.scss */
+/* line 6852, ../src/sass/ng-md-admin.scss */
 md-tooltip .md-background.md-show-add {
   -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -10061,27 +10067,27 @@ md-tooltip .md-background.md-show-add {
   opacity: 0;
 }
 
-/* line 6854, ../src/sass/ng-md-admin.scss */
+/* line 6858, ../src/sass/ng-md-admin.scss */
 md-tooltip .md-background.md-show, md-tooltip .md-background.md-show-add-active {
   -webkit-transform: translate(-50%, -50%) scale(1);
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
 
-/* line 6858, ../src/sass/ng-md-admin.scss */
+/* line 6862, ../src/sass/ng-md-admin.scss */
 md-tooltip .md-background.md-show-remove {
   -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
   transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
 }
 
-/* line 6861, ../src/sass/ng-md-admin.scss */
+/* line 6865, ../src/sass/ng-md-admin.scss */
 md-tooltip .md-background.md-show-remove.md-show-remove-active {
   -webkit-transform: translate(-50%, -50%) scale(0);
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
 }
 
-/* line 6865, ../src/sass/ng-md-admin.scss */
+/* line 6869, ../src/sass/ng-md-admin.scss */
 md-tooltip .md-content {
   max-width: 240px;
   white-space: nowrap;
@@ -10094,13 +10100,13 @@ md-tooltip .md-content {
   transition: inherit;
 }
 
-/* line 6875, ../src/sass/ng-md-admin.scss */
+/* line 6879, ../src/sass/ng-md-admin.scss */
 md-tooltip.md-hide {
   -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
   transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
 }
 
-/* line 6878, ../src/sass/ng-md-admin.scss */
+/* line 6882, ../src/sass/ng-md-admin.scss */
 md-tooltip.md-show {
   -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -10109,32 +10115,32 @@ md-tooltip.md-show {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 6884, ../src/sass/ng-md-admin.scss */
+/* line 6888, ../src/sass/ng-md-admin.scss */
 md-tooltip.md-show .md-content {
   opacity: 0.99;
 }
 
-/* line 6887, ../src/sass/ng-md-admin.scss */
+/* line 6891, ../src/sass/ng-md-admin.scss */
 .md-whiteframe-z1 {
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-/* line 6890, ../src/sass/ng-md-admin.scss */
+/* line 6894, ../src/sass/ng-md-admin.scss */
 .md-whiteframe-z2 {
   box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
 }
 
-/* line 6893, ../src/sass/ng-md-admin.scss */
+/* line 6897, ../src/sass/ng-md-admin.scss */
 .md-whiteframe-z3 {
   box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.19);
 }
 
-/* line 6896, ../src/sass/ng-md-admin.scss */
+/* line 6900, ../src/sass/ng-md-admin.scss */
 .md-whiteframe-z4 {
   box-shadow: 0px 16px 28px 0 rgba(0, 0, 0, 0.22);
 }
 
-/* line 6899, ../src/sass/ng-md-admin.scss */
+/* line 6903, ../src/sass/ng-md-admin.scss */
 .md-whiteframe-z5 {
   box-shadow: 0px 27px 24px 0 rgba(0, 0, 0, 0.2);
 }
@@ -10144,7 +10150,7 @@ md-tooltip.md-show .md-content {
   Author: Justin Perry <http://github.com/ourmaninamsterdam>
   Original theme - https://github.com/chriskempson/tomorrow-theme
 */
-/* line 6908, ../src/sass/ng-md-admin.scss */
+/* line 6912, ../src/sass/ng-md-admin.scss */
 .hljs, hljs {
   display: block;
   overflow-x: auto;
@@ -10158,18 +10164,18 @@ md-tooltip.md-show .md-content {
   -webkit-text-size-adjust: none;
 }
 
-/* line 6921, ../src/sass/ng-md-admin.scss */
+/* line 6925, ../src/sass/ng-md-admin.scss */
 hljs pre > code.highlight {
   background: #222;
 }
 
-/* line 6925, ../src/sass/ng-md-admin.scss */
+/* line 6929, ../src/sass/ng-md-admin.scss */
 .hljs-comment,
 .hljs-title {
   color: #ab875d;
 }
 
-/* line 6930, ../src/sass/ng-md-admin.scss */
+/* line 6934, ../src/sass/ng-md-admin.scss */
 .hljs-variable,
 .hljs-attribute,
 .hljs-tag,
@@ -10182,23 +10188,23 @@ hljs pre > code.highlight {
   color: #BC9A72;
 }
 
-/* line 6942, ../src/sass/ng-md-admin.scss */
+/* line 6946, ../src/sass/ng-md-admin.scss */
 .css .value {
   color: #cd6a51;
 }
 
-/* line 6946, ../src/sass/ng-md-admin.scss */
+/* line 6950, ../src/sass/ng-md-admin.scss */
 .css .value .function,
 .css .value .string {
   color: #a67f59;
 }
 
-/* line 6951, ../src/sass/ng-md-admin.scss */
+/* line 6955, ../src/sass/ng-md-admin.scss */
 .css .value .number {
   color: #9b869c;
 }
 
-/* line 6955, ../src/sass/ng-md-admin.scss */
+/* line 6959, ../src/sass/ng-md-admin.scss */
 .css .id,
 .css .class,
 .css-pseudo,
@@ -10207,7 +10213,7 @@ hljs pre > code.highlight {
   color: #dfc48c;
 }
 
-/* line 6963, ../src/sass/ng-md-admin.scss */
+/* line 6967, ../src/sass/ng-md-admin.scss */
 .hljs-number,
 .hljs-preprocessor,
 .hljs-built_in,
@@ -10217,13 +10223,13 @@ hljs pre > code.highlight {
   color: #ab875d;
 }
 
-/* line 6972, ../src/sass/ng-md-admin.scss */
+/* line 6976, ../src/sass/ng-md-admin.scss */
 .ruby .class .title,
 .css .rules .attribute {
   color: #9b869b;
 }
 
-/* line 6977, ../src/sass/ng-md-admin.scss */
+/* line 6981, ../src/sass/ng-md-admin.scss */
 .hljs-string,
 .hljs-value,
 .hljs-inheritance,
@@ -10233,12 +10239,12 @@ hljs pre > code.highlight {
   color: #9EAA7D;
 }
 
-/* line 6986, ../src/sass/ng-md-admin.scss */
+/* line 6990, ../src/sass/ng-md-admin.scss */
 .css .hexcolor {
   color: #cd6a51;
 }
 
-/* line 6990, ../src/sass/ng-md-admin.scss */
+/* line 6994, ../src/sass/ng-md-admin.scss */
 .function,
 .python .decorator,
 .python .title,
@@ -10250,13 +10256,13 @@ hljs pre > code.highlight {
   color: #fff;
 }
 
-/* line 7001, ../src/sass/ng-md-admin.scss */
+/* line 7005, ../src/sass/ng-md-admin.scss */
 .hljs-keyword,
 .javascript .function {
   color: #8f9c6c;
 }
 
-/* line 7006, ../src/sass/ng-md-admin.scss */
+/* line 7010, ../src/sass/ng-md-admin.scss */
 .coffeescript .javascript,
 .javascript,
 .javascript .xml,
@@ -10269,12 +10275,12 @@ hljs pre > code.highlight {
   opacity: 1;
 }
 
-/* line 7018, ../src/sass/ng-md-admin.scss */
+/* line 7022, ../src/sass/ng-md-admin.scss */
 demo-include {
   display: block;
 }
 
-/* line 7022, ../src/sass/ng-md-admin.scss */
+/* line 7026, ../src/sass/ng-md-admin.scss */
 .layout-content demo-include [layout] > div {
   padding: 8px;
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -10282,52 +10288,52 @@ demo-include {
   color: white;
 }
 
-/* line 7028, ../src/sass/ng-md-admin.scss */
+/* line 7032, ../src/sass/ng-md-admin.scss */
 .layout-content demo-include [layout] > div:nth-child(1) {
   background-color: #009688;
 }
 
-/* line 7031, ../src/sass/ng-md-admin.scss */
+/* line 7035, ../src/sass/ng-md-admin.scss */
 .layout-content demo-include [layout] > div:nth-child(2) {
   background-color: #3949ab;
 }
 
-/* line 7034, ../src/sass/ng-md-admin.scss */
+/* line 7038, ../src/sass/ng-md-admin.scss */
 .layout-content demo-include [layout] > div:nth-child(3) {
   background-color: #9c27b0;
 }
 
-/* line 7037, ../src/sass/ng-md-admin.scss */
+/* line 7041, ../src/sass/ng-md-admin.scss */
 .layout-content demo-include [layout] > div:nth-child(4) {
   background-color: #8bc34a;
 }
 
-/* line 7040, ../src/sass/ng-md-admin.scss */
+/* line 7044, ../src/sass/ng-md-admin.scss */
 .layout-content md-divider {
   margin-top: 16px;
 }
 
-/* line 7044, ../src/sass/ng-md-admin.scss */
+/* line 7048, ../src/sass/ng-md-admin.scss */
 .layout-demo :not([layout]) {
   border: 1px solid #eee;
   padding: 8px;
   font-size: 16px;
 }
 
-/* line 7050, ../src/sass/ng-md-admin.scss */
+/* line 7054, ../src/sass/ng-md-admin.scss */
 .layout-content .demo-box {
   box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.26);
   padding: 16px;
 }
 
-/* line 7055, ../src/sass/ng-md-admin.scss */
+/* line 7059, ../src/sass/ng-md-admin.scss */
 .layout-panel-parent {
   height: 200px;
   width: 100%;
   position: relative;
 }
 
-/* line 7060, ../src/sass/ng-md-admin.scss */
+/* line 7064, ../src/sass/ng-md-admin.scss */
 [ng-panel] {
   transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
   -webkit-transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
@@ -10338,37 +10344,37 @@ demo-include {
   height: 100%;
 }
 
-/* line 7069, ../src/sass/ng-md-admin.scss */
+/* line 7073, ../src/sass/ng-md-admin.scss */
 [ng-panel].ng-enter {
   transform: translate3d(0, -15%, 0);
   opacity: 0.1;
   z-index: 1;
 }
 
-/* line 7074, ../src/sass/ng-md-admin.scss */
+/* line 7078, ../src/sass/ng-md-admin.scss */
 [ng-panel].ng-enter.ng-enter-active,
 [ng-panel].ng-leave {
   transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
-/* line 7079, ../src/sass/ng-md-admin.scss */
+/* line 7083, ../src/sass/ng-md-admin.scss */
 [ng-panel].ng-leave.ng-leave-active {
   transform: translate3d(0, 0, 0);
   opacity: 0.5;
 }
 
-/* line 7083, ../src/sass/ng-md-admin.scss */
+/* line 7087, ../src/sass/ng-md-admin.scss */
 [ng-panel] .demo-content {
   background: white;
 }
 
-/* line 7087, ../src/sass/ng-md-admin.scss */
+/* line 7091, ../src/sass/ng-md-admin.scss */
 .hide {
   display: none !important;
 }
 
-/* line 7089, ../src/sass/ng-md-admin.scss */
+/* line 7093, ../src/sass/ng-md-admin.scss */
 body {
   overflow: hidden;
   max-width: 100%;
@@ -10376,18 +10382,18 @@ body {
   font-size: 14px;
 }
 
-/* line 7096, ../src/sass/ng-md-admin.scss */
+/* line 7100, ../src/sass/ng-md-admin.scss */
 a {
   color: #3f51b5;
   text-decoration: none;
 }
 
-/* line 7100, ../src/sass/ng-md-admin.scss */
+/* line 7104, ../src/sass/ng-md-admin.scss */
 a:hover, a:focus {
   text-decoration: underline;
 }
 
-/* line 7104, ../src/sass/ng-md-admin.scss */
+/* line 7108, ../src/sass/ng-md-admin.scss */
 table {
   margin-bottom: 20px;
   max-width: 100%;
@@ -10397,31 +10403,31 @@ table {
   background-color: transparent;
 }
 
-/* line 7113, ../src/sass/ng-md-admin.scss */
+/* line 7117, ../src/sass/ng-md-admin.scss */
 td, th {
   padding: 12px 6px;
   text-align: left;
 }
 
-/* line 7117, ../src/sass/ng-md-admin.scss */
+/* line 7121, ../src/sass/ng-md-admin.scss */
 tr:nth-child(even) td {
   background-color: #f5f5f5;
 }
 
-/* line 7121, ../src/sass/ng-md-admin.scss */
+/* line 7125, ../src/sass/ng-md-admin.scss */
 th {
   border-bottom: 1px solid #ccc;
   background-color: #f5f5f5;
 }
 
-/* line 7126, ../src/sass/ng-md-admin.scss */
+/* line 7130, ../src/sass/ng-md-admin.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 7132, ../src/sass/ng-md-admin.scss */
+/* line 7136, ../src/sass/ng-md-admin.scss */
 pre > code.highlight {
   padding: 10px;
   font-weight: 400;
@@ -10431,7 +10437,7 @@ pre > code.highlight {
   user-select: initial;
 }
 
-/* line 7141, ../src/sass/ng-md-admin.scss */
+/* line 7145, ../src/sass/ng-md-admin.scss */
 pre, code {
   margin: 0;
   padding: 0;
@@ -10439,26 +10445,26 @@ pre, code {
   overflow-wrap: break-word;
 }
 
-/* line 7149, ../src/sass/ng-md-admin.scss */
+/* line 7153, ../src/sass/ng-md-admin.scss */
 pre > code.highlight {
   background-color: transparent;
   font-weight: 400;
   padding: 10px;
 }
 
-/* line 7155, ../src/sass/ng-md-admin.scss */
+/* line 7159, ../src/sass/ng-md-admin.scss */
 code {
   font-size: 14px;
   background: #f6f6f6;
 }
 
-/* line 7160, ../src/sass/ng-md-admin.scss */
+/* line 7164, ../src/sass/ng-md-admin.scss */
 code.highlight {
   display: block;
   overflow-wrap: break-word;
 }
 
-/* line 7165, ../src/sass/ng-md-admin.scss */
+/* line 7169, ../src/sass/ng-md-admin.scss */
 code:not(.highlight) {
   color: #4285f4;
   margin-left: 1px;
@@ -10466,47 +10472,47 @@ code:not(.highlight) {
   -webkit-font-smoothing: auto;
 }
 
-/* line 7172, ../src/sass/ng-md-admin.scss */
+/* line 7176, ../src/sass/ng-md-admin.scss */
 .md-sidenav-inner {
   background: #fff;
 }
 
-/* line 7176, ../src/sass/ng-md-admin.scss */
+/* line 7180, ../src/sass/ng-md-admin.scss */
 .layout-content,
 .doc-content {
   max-width: 864px;
   margin: auto;
 }
 
-/* line 7181, ../src/sass/ng-md-admin.scss */
+/* line 7185, ../src/sass/ng-md-admin.scss */
 .layout-label {
   width: 120px;
 }
 
-/* line 7184, ../src/sass/ng-md-admin.scss */
+/* line 7188, ../src/sass/ng-md-admin.scss */
 .layout-content code.highlight {
   margin-bottom: 15px;
 }
 
 /* Begin Docs Menu */
-/* line 7189, ../src/sass/ng-md-admin.scss */
+/* line 7193, ../src/sass/ng-md-admin.scss */
 .docs-menu,
 .docs-menu ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 7194, ../src/sass/ng-md-admin.scss */
+/* line 7198, ../src/sass/ng-md-admin.scss */
 .docs-menu li {
   margin: 0;
 }
 
-/* line 7197, ../src/sass/ng-md-admin.scss */
+/* line 7201, ../src/sass/ng-md-admin.scss */
 .docs-menu > li {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-/* line 7200, ../src/sass/ng-md-admin.scss */
+/* line 7204, ../src/sass/ng-md-admin.scss */
 .docs-menu .md-button {
   border-radius: 0;
   color: inherit;
@@ -10523,22 +10529,22 @@ code:not(.highlight) {
   width: 100%;
 }
 
-/* line 7215, ../src/sass/ng-md-admin.scss */
+/* line 7219, ../src/sass/ng-md-admin.scss */
 .docs-menu a.md-button {
   display: block;
 }
 
-/* line 7218, ../src/sass/ng-md-admin.scss */
+/* line 7222, ../src/sass/ng-md-admin.scss */
 .docs-menu button.md-button::-moz-focus-inner {
   padding: 0;
 }
 
-/* line 7221, ../src/sass/ng-md-admin.scss */
+/* line 7225, ../src/sass/ng-md-admin.scss */
 .docs-menu .md-button.active {
   color: #03a9f4;
 }
 
-/* line 7224, ../src/sass/ng-md-admin.scss */
+/* line 7228, ../src/sass/ng-md-admin.scss */
 .menu-heading {
   color: #888;
   display: block;
@@ -10551,13 +10557,13 @@ code:not(.highlight) {
   width: 100%;
 }
 
-/* line 7235, ../src/sass/ng-md-admin.scss */
+/* line 7239, ../src/sass/ng-md-admin.scss */
 .docs-menu li.parentActive,
 .docs-menu li.parentActive .menu-toggle-list {
   background-color: #f6f6f6;
 }
 
-/* line 7239, ../src/sass/ng-md-admin.scss */
+/* line 7243, ../src/sass/ng-md-admin.scss */
 .menu-toggle-list {
   background: #fff;
   max-height: 999px;
@@ -10572,19 +10578,19 @@ code:not(.highlight) {
   transition-property: max-height;
 }
 
-/* line 7252, ../src/sass/ng-md-admin.scss */
+/* line 7256, ../src/sass/ng-md-admin.scss */
 .menu-toggle-list.ng-hide {
   max-height: 0;
 }
 
-/* line 7255, ../src/sass/ng-md-admin.scss */
+/* line 7259, ../src/sass/ng-md-admin.scss */
 .docs-menu .menu-toggle-list a.md-button {
   display: block;
   padding: 0 16px 0 32px;
   text-transform: none;
 }
 
-/* line 7260, ../src/sass/ng-md-admin.scss */
+/* line 7264, ../src/sass/ng-md-admin.scss */
 .md-button-toggle .md-toggle-icon {
   background: transparent url(img/icons/list_control_down.png) no-repeat center center;
   background-size: 100% auto;
@@ -10597,14 +10603,14 @@ code:not(.highlight) {
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 7271, ../src/sass/ng-md-admin.scss */
+/* line 7275, ../src/sass/ng-md-admin.scss */
 .md-button-toggle .md-toggle-icon.toggled {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
 
 /* End Docs Menu */
-/* line 7277, ../src/sass/ng-md-admin.scss */
+/* line 7281, ../src/sass/ng-md-admin.scss */
 .menu-icon {
   background: none;
   border: none;
@@ -10612,24 +10618,24 @@ code:not(.highlight) {
   padding: 0;
 }
 
-/* line 7283, ../src/sass/ng-md-admin.scss */
+/* line 7287, ../src/sass/ng-md-admin.scss */
 .app-toolbar .md-toolbar-tools h3 {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
 }
 
-/* line 7287, ../src/sass/ng-md-admin.scss */
+/* line 7291, ../src/sass/ng-md-admin.scss */
 docs-demo {
   display: block;
   margin-top: 16px;
 }
 
-/* line 7291, ../src/sass/ng-md-admin.scss */
+/* line 7295, ../src/sass/ng-md-admin.scss */
 .doc-description p {
   margin-top: 0;
 }
 
-/* line 7294, ../src/sass/ng-md-admin.scss */
+/* line 7298, ../src/sass/ng-md-admin.scss */
 .demo-container {
   border-radius: 4px;
   margin-bottom: 16px;
@@ -10639,7 +10645,7 @@ docs-demo {
   padding-bottom: 0;
 }
 
-/* line 7302, ../src/sass/ng-md-admin.scss */
+/* line 7306, ../src/sass/ng-md-admin.scss */
 .demo-source-tabs {
   z-index: 1;
   -webkit-transition: all 0.45s cubic-bezier(0.35, 0, 0.25, 1);
@@ -10650,36 +10656,36 @@ docs-demo {
   overflow: hidden;
 }
 
-/* line 7312, ../src/sass/ng-md-admin.scss */
+/* line 7316, ../src/sass/ng-md-admin.scss */
 md-tabs.demo-source-tabs md-tab,
 md-tabs.demo-source-tabs .md-header {
   background-color: #444444 !important;
 }
 
-/* line 7318, ../src/sass/ng-md-admin.scss */
+/* line 7322, ../src/sass/ng-md-admin.scss */
 md-tabs.demo-source-tabs md-tab-label {
   color: #ccc !important;
 }
 
-/* line 7322, ../src/sass/ng-md-admin.scss */
+/* line 7326, ../src/sass/ng-md-admin.scss */
 md-tabs.demo-source-tabs .active md-tab-label {
   color: #fff !important;
 }
 
-/* line 7326, ../src/sass/ng-md-admin.scss */
+/* line 7330, ../src/sass/ng-md-admin.scss */
 .demo-source-tabs.ng-hide {
   max-height: 0px;
   min-height: 0px;
 }
 
-/* line 7330, ../src/sass/ng-md-admin.scss */
+/* line 7334, ../src/sass/ng-md-admin.scss */
 .demo-source-tabs {
   position: relative;
   width: 100%;
   z-index: 0;
 }
 
-/* line 7335, ../src/sass/ng-md-admin.scss */
+/* line 7339, ../src/sass/ng-md-admin.scss */
 .demo-content {
   position: relative;
   overflow: hidden;
@@ -10692,18 +10698,18 @@ md-tabs.demo-source-tabs .active md-tab-label {
   display: flex;
 }
 
-/* line 7346, ../src/sass/ng-md-admin.scss */
+/* line 7350, ../src/sass/ng-md-admin.scss */
 .small-demo .demo-source-tabs:not(.ng-hide) {
   min-height: 224px;
   max-height: 224px;
 }
 
-/* line 7350, ../src/sass/ng-md-admin.scss */
+/* line 7354, ../src/sass/ng-md-admin.scss */
 .small-demo .demo-content {
   min-height: 128px;
 }
 
-/* line 7354, ../src/sass/ng-md-admin.scss */
+/* line 7358, ../src/sass/ng-md-admin.scss */
 .doc-content > * {
   -webkit-box-flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
@@ -10713,7 +10719,7 @@ md-tabs.demo-source-tabs .active md-tab-label {
   flex: 1 1 auto;
 }
 
-/* line 7362, ../src/sass/ng-md-admin.scss */
+/* line 7366, ../src/sass/ng-md-admin.scss */
 .demo-content > * {
   -webkit-box-flex: 1 1 0%;
   -webkit-flex: 1 1 0%;
@@ -10723,17 +10729,17 @@ md-tabs.demo-source-tabs .active md-tab-label {
   flex: 1 1 0%;
 }
 
-/* line 7370, ../src/sass/ng-md-admin.scss */
+/* line 7374, ../src/sass/ng-md-admin.scss */
 .demo-content > div[layout-fill] {
   min-height: 448px;
 }
 
-/* line 7373, ../src/sass/ng-md-admin.scss */
+/* line 7377, ../src/sass/ng-md-admin.scss */
 .small-demo .demo-content > div[layout-fill] {
   min-height: 224px;
 }
 
-/* line 7376, ../src/sass/ng-md-admin.scss */
+/* line 7380, ../src/sass/ng-md-admin.scss */
 .layout-content .small-demo .demo-content > div[layout],
 .layout-options .small-demo .demo-content > div[layout] {
   min-height: auto !important;
@@ -10741,7 +10747,7 @@ md-tabs.demo-source-tabs .active md-tab-label {
   height: 128px !important;
 }
 
-/* line 7382, ../src/sass/ng-md-admin.scss */
+/* line 7386, ../src/sass/ng-md-admin.scss */
 .small-demo .demo-toolbar,
 .small-demo .md-toolbar-tools {
   min-height: 48px;
@@ -10749,22 +10755,22 @@ md-tabs.demo-source-tabs .active md-tab-label {
   font-size: 20px;
 }
 
-/* line 7389, ../src/sass/ng-md-admin.scss */
+/* line 7393, ../src/sass/ng-md-admin.scss */
 .show-source md-toolbar.demo-toolbar {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.36);
 }
 
-/* line 7392, ../src/sass/ng-md-admin.scss */
+/* line 7396, ../src/sass/ng-md-admin.scss */
 .demo-toolbar .md-button {
   color: #616161;
 }
 
-/* line 7395, ../src/sass/ng-md-admin.scss */
+/* line 7399, ../src/sass/ng-md-admin.scss */
 md-toolbar.demo-toolbar {
   border-radius: 4px 4px 0 0;
 }
 
-/* line 7398, ../src/sass/ng-md-admin.scss */
+/* line 7402, ../src/sass/ng-md-admin.scss */
 md-toolbar.demo-toolbar,
 .demo-source-tabs md-tab,
 .demo-source-tabs .tabs-header {
@@ -10772,19 +10778,19 @@ md-toolbar.demo-toolbar,
   color: #616161;
 }
 
-/* line 7404, ../src/sass/ng-md-admin.scss */
+/* line 7408, ../src/sass/ng-md-admin.scss */
 md-toolbar.demo-toolbar md-tab-label {
   color: #99E4EE;
 }
 
-/* line 7407, ../src/sass/ng-md-admin.scss */
+/* line 7411, ../src/sass/ng-md-admin.scss */
 md-toolbar.demo-toolbar .md-button:hover,
 md-toolbar.demo-toolbar .md-button:focus,
 md-toolbar.demo-toolbar .md-button.active {
   background: rgba(0, 0, 0, 0.1);
 }
 
-/* line 7413, ../src/sass/ng-md-admin.scss */
+/* line 7417, ../src/sass/ng-md-admin.scss */
 md-toolbar.demo-toolbar .md-button {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -10792,7 +10798,7 @@ md-toolbar.demo-toolbar .md-button {
   color: #616161;
 }
 
-/* line 7419, ../src/sass/ng-md-admin.scss */
+/* line 7423, ../src/sass/ng-md-admin.scss */
 .demo-source-container {
   display: block;
   border: 1px solid #ddd;
@@ -10800,12 +10806,12 @@ md-toolbar.demo-toolbar .md-button {
   height: 400px;
 }
 
-/* line 7426, ../src/sass/ng-md-admin.scss */
+/* line 7430, ../src/sass/ng-md-admin.scss */
 .demo-source-content {
   height: 400px;
 }
 
-/* line 7429, ../src/sass/ng-md-admin.scss */
+/* line 7433, ../src/sass/ng-md-admin.scss */
 .demo-source-content,
 .demo-source-content pre,
 .demo-source-content code {
@@ -10813,23 +10819,23 @@ md-toolbar.demo-toolbar .md-button {
   font-family: monospace;
 }
 
-/* line 7435, ../src/sass/ng-md-admin.scss */
+/* line 7439, ../src/sass/ng-md-admin.scss */
 .demo-source-content pre {
   max-width: 100%;
   overflow-wrap: break-word;
 }
 
-/* line 7440, ../src/sass/ng-md-admin.scss */
+/* line 7444, ../src/sass/ng-md-admin.scss */
 .show-source div[demo-include] {
   border-top: #ddd solid 2px;
 }
 
-/* line 7445, ../src/sass/ng-md-admin.scss */
+/* line 7449, ../src/sass/ng-md-admin.scss */
 .menu-separator-icon {
   margin: 0;
 }
 
-/* line 7448, ../src/sass/ng-md-admin.scss */
+/* line 7452, ../src/sass/ng-md-admin.scss */
 .menu-module-name {
   opacity: 0.6;
   font-size: 18px;
@@ -10838,25 +10844,25 @@ md-toolbar.demo-toolbar .md-button {
 /***************
  * Landing Page
  ***************/
-/* line 7456, ../src/sass/ng-md-admin.scss */
+/* line 7460, ../src/sass/ng-md-admin.scss */
 ul.buckets {
   margin: 24px 0;
   padding: 0;
 }
 
-/* line 7460, ../src/sass/ng-md-admin.scss */
+/* line 7464, ../src/sass/ng-md-admin.scss */
 ul.buckets li {
   list-style: none;
   margin: 0;
   text-align: center;
 }
 
-/* line 7465, ../src/sass/ng-md-admin.scss */
+/* line 7469, ../src/sass/ng-md-admin.scss */
 ul.buckets li md-card md-card-content {
   padding: 0;
 }
 
-/* line 7468, ../src/sass/ng-md-admin.scss */
+/* line 7472, ../src/sass/ng-md-admin.scss */
 ul.buckets li a {
   background-color: transparent;
   display: block;
@@ -10867,7 +10873,7 @@ ul.buckets li a {
   transition: all 0.45s cubic-bezier(0.35, 0, 0.25, 1);
 }
 
-/* line 7477, ../src/sass/ng-md-admin.scss */
+/* line 7481, ../src/sass/ng-md-admin.scss */
 ul.buckets li a:hover,
 ul.buckets li a:focus {
   background-color: #03a9f4;
@@ -10877,37 +10883,37 @@ ul.buckets li a:focus {
 /************
  * API DOCS
  ************/
-/* line 7486, ../src/sass/ng-md-admin.scss */
+/* line 7490, ../src/sass/ng-md-admin.scss */
 .api-options-bar .md-button {
   margin: 4px;
   padding: 4px;
 }
 
-/* line 7490, ../src/sass/ng-md-admin.scss */
+/* line 7494, ../src/sass/ng-md-admin.scss */
 .api-options-bar .md-button:hover,
 .api-options-bar .md-button:focus {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* line 7494, ../src/sass/ng-md-admin.scss */
+/* line 7498, ../src/sass/ng-md-admin.scss */
 .api-options-bar.with-icon md-icon {
   position: absolute;
   top: -3px;
   left: 2px;
 }
 
-/* line 7499, ../src/sass/ng-md-admin.scss */
+/* line 7503, ../src/sass/ng-md-admin.scss */
 .api-options-bar.with-icon .md-button span {
   margin-left: 22px;
 }
 
-/* line 7503, ../src/sass/ng-md-admin.scss */
+/* line 7507, ../src/sass/ng-md-admin.scss */
 .api-params-item {
   min-height: 72px;
   border-bottom: 1px solid #ddd;
 }
 
-/* line 7507, ../src/sass/ng-md-admin.scss */
+/* line 7511, ../src/sass/ng-md-admin.scss */
 .api-params-label {
   margin-right: 8px;
   text-align: center;
@@ -10918,33 +10924,33 @@ ul.buckets li a:focus {
   align-self: flex-start;
 }
 
-/* line 7516, ../src/sass/ng-md-admin.scss */
+/* line 7520, ../src/sass/ng-md-admin.scss */
 .api-params-title {
   color: #888;
 }
 
-/* line 7519, ../src/sass/ng-md-admin.scss */
+/* line 7523, ../src/sass/ng-md-admin.scss */
 code.api-type {
   font-weight: bold;
 }
 
-/* line 7523, ../src/sass/ng-md-admin.scss */
+/* line 7527, ../src/sass/ng-md-admin.scss */
 ul {
   margin: 0;
 }
 
-/* line 7526, ../src/sass/ng-md-admin.scss */
+/* line 7530, ../src/sass/ng-md-admin.scss */
 ul li {
   margin-top: 3px;
   list-style-position: inside;
 }
 
-/* line 7530, ../src/sass/ng-md-admin.scss */
+/* line 7534, ../src/sass/ng-md-admin.scss */
 ul li:first-child {
   margin-top: 0;
 }
 
-/* line 7534, ../src/sass/ng-md-admin.scss */
+/* line 7538, ../src/sass/ng-md-admin.scss */
 .layout-title {
   color: #999999;
   font-size: 14px;
@@ -10952,17 +10958,17 @@ ul li:first-child {
   text-transform: uppercase;
 }
 
-/* line 7541, ../src/sass/ng-md-admin.scss */
+/* line 7545, ../src/sass/ng-md-admin.scss */
 .api-params-content ul {
   padding-left: 4px;
 }
 
-/* line 7544, ../src/sass/ng-md-admin.scss */
+/* line 7548, ../src/sass/ng-md-admin.scss */
 ul.methods > li {
   margin-bottom: 48px;
 }
 
-/* line 7548, ../src/sass/ng-md-admin.scss */
+/* line 7552, ../src/sass/ng-md-admin.scss */
 ul.methods .method-function-syntax {
   font-weight: normal;
   font-size: 20px;
@@ -10971,44 +10977,44 @@ ul.methods .method-function-syntax {
   -webkit-margin-after: 0;
 }
 
-/* line 7555, ../src/sass/ng-md-admin.scss */
+/* line 7559, ../src/sass/ng-md-admin.scss */
 ul.methods li h3 {
   /* border-bottom: 1px solid #eee; */
 }
 
 @media (max-width: 600px) {
-  /* line 7560, ../src/sass/ng-md-admin.scss */
+  /* line 7564, ../src/sass/ng-md-admin.scss */
   ul.methods > li {
     padding-left: 0;
     border-left: none;
     list-style: default;
   }
 
-  /* line 7565, ../src/sass/ng-md-admin.scss */
+  /* line 7569, ../src/sass/ng-md-admin.scss */
   ul.methods .method-function-syntax {
     font-size: 14px;
   }
 }
-/* line 7570, ../src/sass/ng-md-admin.scss */
+/* line 7574, ../src/sass/ng-md-admin.scss */
 .version {
   padding-left: 10px;
   text-decoration: underline;
   font-size: 0.95em;
 }
 
-/* line 7576, ../src/sass/ng-md-admin.scss */
+/* line 7580, ../src/sass/ng-md-admin.scss */
 .demo-source-container pre,
 .demo-source-container code {
   min-height: 100%;
 }
 
-/* line 7581, ../src/sass/ng-md-admin.scss */
+/* line 7585, ../src/sass/ng-md-admin.scss */
 md-content.demo-source-container {
   background-color: transparent;
   border: none;
 }
 
-/* line 7585, ../src/sass/ng-md-admin.scss */
+/* line 7589, ../src/sass/ng-md-admin.scss */
 md-content.demo-source-container > hljs > pre > code.highlight {
   position: absolute;
   top: 0px;
@@ -11016,13 +11022,13 @@ md-content.demo-source-container > hljs > pre > code.highlight {
   right: 0px;
 }
 
-/* line 7593, ../src/sass/ng-md-admin.scss */
+/* line 7597, ../src/sass/ng-md-admin.scss */
 .extraPad {
   padding-left: 32px !important;
   padding-right: 32px !important;
 }
 
-/* line 7598, ../src/sass/ng-md-admin.scss */
+/* line 7602, ../src/sass/ng-md-admin.scss */
 .site-sidenav,
 .site-sidenav.md-locked-open-add-active,
 .site-sidenav.md-locked-open {
@@ -11031,29 +11037,29 @@ md-content.demo-source-container > hljs > pre > code.highlight {
   max-width: 254px;
 }
 
-/* line 7605, ../src/sass/ng-md-admin.scss */
+/* line 7609, ../src/sass/ng-md-admin.scss */
 .site-sidenav > * {
   min-width: 218px;
 }
 
-/* line 7609, ../src/sass/ng-md-admin.scss */
+/* line 7613, ../src/sass/ng-md-admin.scss */
 .dashed_bottom {
   border-bottom: dashed 1px #e0e0e0;
   padding-bottom: 10px;
 }
 
-/* line 7614, ../src/sass/ng-md-admin.scss */
+/* line 7618, ../src/sass/ng-md-admin.scss */
 .api-section h3 {
   padding-top: 20px;
 }
 
 /* ngTable styles */
-/* line 7620, ../src/sass/ng-md-admin.scss */
+/* line 7624, ../src/sass/ng-md-admin.scss */
 a {
   text-decoration: none;
 }
 
-/* line 7624, ../src/sass/ng-md-admin.scss */
+/* line 7628, ../src/sass/ng-md-admin.scss */
 .main-fab {
   position: absolute;
   z-index: 20;
@@ -11062,24 +11068,24 @@ a {
   transform: scale(0.88, 0.88);
 }
 
-/* line 7632, ../src/sass/ng-md-admin.scss */
+/* line 7636, ../src/sass/ng-md-admin.scss */
 .md-breadcrumb {
   padding-left: 88px;
 }
 
-/* line 7636, ../src/sass/ng-md-admin.scss */
+/* line 7640, ../src/sass/ng-md-admin.scss */
 .md-table {
   min-width: 100%;
   border-collapse: collapse;
 }
 
-/* line 7641, ../src/sass/ng-md-admin.scss */
+/* line 7645, ../src/sass/ng-md-admin.scss */
 .md-table tbody tr:hover, .md-table tbody tr:focus {
   cursor: pointer;
   background-color: rgba(63, 81, 181, 0.2);
 }
 
-/* line 7646, ../src/sass/ng-md-admin.scss */
+/* line 7650, ../src/sass/ng-md-admin.scss */
 .md-table-header {
   border-bottom: 1px solid #e6e6e6;
   color: #828282;
@@ -11087,39 +11093,39 @@ a {
   padding: 16px 16px 16px 0;
 }
 
-/* line 7653, ../src/sass/ng-md-admin.scss */
+/* line 7657, ../src/sass/ng-md-admin.scss */
 .md-table-header a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 7658, ../src/sass/ng-md-admin.scss */
+/* line 7662, ../src/sass/ng-md-admin.scss */
 .md-table-caret {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 7663, ../src/sass/ng-md-admin.scss */
+/* line 7667, ../src/sass/ng-md-admin.scss */
 .md-table-content {
   padding: 16px 16px 16px 0;
   height: 72px;
 }
 
-/* line 7668, ../src/sass/ng-md-admin.scss */
+/* line 7672, ../src/sass/ng-md-admin.scss */
 .md-table-td-more {
   max-width: 72px;
   width: 72px;
   padding: 16px;
 }
 
-/* line 7674, ../src/sass/ng-md-admin.scss */
+/* line 7678, ../src/sass/ng-md-admin.scss */
 .md-table-thumbs {
   max-width: 104px;
   width: 104px;
   padding: 16px 32px;
 }
 
-/* line 7680, ../src/sass/ng-md-admin.scss */
+/* line 7684, ../src/sass/ng-md-admin.scss */
 .md-table-thumbs div {
   overflow: hidden;
   width: 40px;
@@ -11131,24 +11137,24 @@ a {
   -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* line 7691, ../src/sass/ng-md-admin.scss */
+/* line 7695, ../src/sass/ng-md-admin.scss */
 .md-table-footer {
   height: 40px;
 }
 
-/* line 7695, ../src/sass/ng-md-admin.scss */
+/* line 7699, ../src/sass/ng-md-admin.scss */
 .md-table-count-info {
   line-height: 40px;
 }
 
-/* line 7699, ../src/sass/ng-md-admin.scss */
+/* line 7703, ../src/sass/ng-md-admin.scss */
 .md-table-footer-item {
   width: 40px;
   height: 40px;
   vertical-align: middle;
 }
 
-/* line 7705, ../src/sass/ng-md-admin.scss */
+/* line 7709, ../src/sass/ng-md-admin.scss */
 md-toolbar.md-default-theme .md-button {
   color: rgba(255, 255, 255, 0.87);
 }
@@ -11163,7 +11169,14 @@ md-toolbar.md-default-theme .md-button {
 md-list.my-list {
   padding: 8px 0px 8px 0px;
 }
-/* line 15, ../src/sass/my-list.scss */
+/* line 12, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content,
+md-list.my-list md-item md-item-content {
+  background-color: white;
+  height: 96px;
+}
+/* line 17, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content .md-tile-content,
 md-list.my-list md-item md-item-content .md-tile-content {
   padding: 10px;
   -webkit-flex: 2;
@@ -11175,41 +11188,54 @@ md-list.my-list md-item md-item-content .md-tile-content {
   border-right: 1px solid gainsboro;
   border-bottom: 1px solid gainsboro;
 }
-/* line 26, ../src/sass/my-list.scss */
+/* line 28, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content .md-tile-content.customer_number,
 md-list.my-list md-item md-item-content .md-tile-content.customer_number {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   text-align: center;
 }
-/* line 32, ../src/sass/my-list.scss */
+/* line 34, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-customer_number,
 md-list.my-list md-item md-item-content .md-tile-content .infra-customer_number {
   color: #01a2a6;
   font-weight: 600;
 }
-/* line 33, ../src/sass/my-list.scss */
+/* line 35, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-customer_number h1,
 md-list.my-list md-item md-item-content .md-tile-content .infra-customer_number h1 {
   margin: 0;
   color: black;
 }
-/* line 36, ../src/sass/my-list.scss */
+/* line 38, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-customer_number h1 i.mdi,
 md-list.my-list md-item md-item-content .md-tile-content .infra-customer_number h1 i.mdi {
   font-size: 1.4em;
 }
-/* line 43, ../src/sass/my-list.scss */
+/* line 45, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-id,
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-domaine,
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-mail,
 md-list.my-list md-item md-item-content .md-tile-content .infra-id,
 md-list.my-list md-item md-item-content .md-tile-content .infra-domaine,
 md-list.my-list md-item md-item-content .md-tile-content .infra-mail {
   display: flex;
 }
-/* line 47, ../src/sass/my-list.scss */
+/* line 49, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-id i.mdi,
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-domaine i.mdi,
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-mail i.mdi,
 md-list.my-list md-item md-item-content .md-tile-content .infra-id i.mdi,
 md-list.my-list md-item md-item-content .md-tile-content .infra-domaine i.mdi,
 md-list.my-list md-item md-item-content .md-tile-content .infra-mail i.mdi {
   margin-top: 18px;
   font-size: 2em;
 }
-/* line 51, ../src/sass/my-list.scss */
+/* line 53, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-id h2,
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-domaine h2,
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-mail h2,
 md-list.my-list md-item md-item-content .md-tile-content .infra-id h2,
 md-list.my-list md-item md-item-content .md-tile-content .infra-domaine h2,
 md-list.my-list md-item md-item-content .md-tile-content .infra-mail h2 {
@@ -11219,7 +11245,10 @@ md-list.my-list md-item md-item-content .md-tile-content .infra-mail h2 {
   font-weight: 400;
   padding-left: 16px;
 }
-/* line 58, ../src/sass/my-list.scss */
+/* line 60, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-id h3,
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-domaine h3,
+md-list.my-list md-item .content-editable md-item-content .md-tile-content .infra-mail h3,
 md-list.my-list md-item md-item-content .md-tile-content .infra-id h3,
 md-list.my-list md-item md-item-content .md-tile-content .infra-domaine h3,
 md-list.my-list md-item md-item-content .md-tile-content .infra-mail h3 {
@@ -11229,12 +11258,33 @@ md-list.my-list md-item md-item-content .md-tile-content .infra-mail h3 {
   padding-left: 16px;
 }
 /* line 70, ../src/sass/my-list.scss */
-md-list.my-list md-item md-item-content.item-content-editable {
+md-list.my-list md-item .content-editable.ng-hide-add.ng-hide-add-active {
+  -webkit-transition: all linear 0s;
+  transition: all linear 0s;
+}
+/* line 74, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear .3s;
+  transition: all linear .3s;
+}
+/* line 79, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable {
+  border: 1px solid gainsboro;
   margin-left: -25px;
+  margin-top: -10px;
   margin-right: -25px;
-  background: white;
-  box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
-  top: 10px;
+  position: relative;
+  box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  overflow: hidden;
+  height: 288px;
+}
+/* line 90, ../src/sass/my-list.scss */
+md-list.my-list md-item .content-editable.ng-hide {
+  margin: 0;
+  z-index: 0;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+  height: 96px;
 }
 
 /* MaterialDesignIcons.com */

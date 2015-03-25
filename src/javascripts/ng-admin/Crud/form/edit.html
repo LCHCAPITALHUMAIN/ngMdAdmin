@@ -1,13 +1,11 @@
-<md-content layout="row" id="edit-view" ng-class="'ng-admin-entity-' + formController.entity.name()">
-    <form layout name="{{ formController.name }}" ng-submit="formController.submitEdition(editForm, $event)">
-        <div ng-include="'ng-admin/Crud/form/edit-attribute.html'" ng-repeat="field in formController.fields track by $index"></div>
+<div id="edit-view" data-ng-class="'ng-admin-entity-' + formController.entity.name()">
+    <md-item-content data-ng-repeat="field in formController.fields track by $index">
 
-        <md-input-container flex>
-            <md-button type="submit" class="md-raised">{{"save.changes" | trans}}</md-button>
-            <md-button class="md-raised" ui-sref="delete({id:entry.identifierValue})">{{"delete" | trans}}</md-button>
-        </md-input-container>
-    </form>
-</md-content>
+        <div ng-include="'ng-admin/Crud/form/edit-attribute.html'" ></div>
+
+    </md-item-content>
+
+</div>
 
 
 
