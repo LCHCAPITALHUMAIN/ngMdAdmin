@@ -9,12 +9,13 @@ md-list.my-list {
     
     md-item {
 
-        .content-editable md-item-content, 
+        
         md-item-content {
             
             background-color: white;
             height: 96px;
             .md-tile-content {
+                display: flex;
                 padding: 10px;
                 -webkit-flex: 2;
                 -ms-flex: 2;
@@ -25,13 +26,22 @@ md-list.my-list {
                 border-right: 1px solid rgb(220,220,220);
                 border-bottom : 1px solid rgb(220,220,220);
                 
+/*                span {
+                    width: 100%;
+                }*/
+                .flex {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                }
+                
                 &.customer_number {
                     -webkit-flex: 1;
                     -ms-flex: 1;
                     flex: 1;
-                    text-align: center;
-                }
-                .infra-customer_number {
+                    justify-content: center;
+                    text-align : center;
+                
                     h1 {
                         margin: 0;
                         color: black;
@@ -42,10 +52,10 @@ md-list.my-list {
                     color: rgb(1, 162, 166);
                     font-weight: 600;
                 }
-                .infra-id, 
-                .infra-domaine, 
-                .infra-mail {
-                    display: flex;
+                &.id, 
+                &.domaine, 
+                &.mail {
+                    
                     i.mdi {
                         margin-top: 18px;
                         font-size: 2em;
@@ -64,36 +74,60 @@ md-list.my-list {
                         padding-left: 16px;
                     }
                 }
+                &.progress {
+                    -webkit-flex: 4;
+                    -ms-flex: 4;
+                    flex: 4;
+                    display: none;
+                    width: 100%;
+                    md-progress-linear {
+                        width: 1000px;
+/*                        height: 15px;
+                        div div {
+                            height: 15px !important;
+                        }*/
+                    }
+                }
             }
         }
+    }
         
-        .content-editable.ng-hide-add.ng-hide-add-active {
-            -webkit-transition: all linear 0s;
-            transition: all linear 0s;
+    .content-editable {
+        .domaine, 
+        .mail{ 
+            display: none !important;
         }
-        .content-editable.ng-hide-remove.ng-hide-remove-active {
-            -webkit-transition: all linear .3s;
-            transition: all linear .3s;
+        .progress {
+            display: flex !important;
         }
-  
-        .content-editable {
-            border: 1px solid rgb(220,220,220);
-            margin-left: -25px;
-            margin-top: -10px;
-            margin-right: -25px;
-            position: relative;
-            box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.2);
-            z-index: 5;
-            overflow: hidden;
-            height: 288px;
-        }
-        .content-editable.ng-hide {
-            margin:0;
-            z-index: 0;
-            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-            height: 96px;
-        }
-        
+    }
+
+    .content-editable.ng-hide-add.ng-hide-add-active {
+        -webkit-transition: all linear 0s;
+        transition: all linear 0s;
+    }
+    .content-editable.ng-hide-remove.ng-hide-remove-active {
+        -webkit-transition: all linear .3s;
+        transition: all linear .3s;
+    }
+
+    .content-editable {
+        border: 1px solid rgb(220,220,220);
+        margin-left: -25px;
+        margin-top: -10px;
+        margin-right: -25px;
+        position: relative;
+        box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+        overflow: hidden;
+        height: 288px;
+    }
+    .content-editable.ng-hide {
+        margin:0;
+        z-index: 0;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+        height: 96px;
     }
 
 }
+
