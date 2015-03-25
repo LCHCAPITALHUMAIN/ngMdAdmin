@@ -8,13 +8,13 @@
     </div>
 </div>-->
 <md-content class="md-padding" ng-controller="LeftCtrl">
-      <md-button ng-click="close()" class="md-primary" hide-gt-md>
+      <md-button data-ng-click="close()" class="md-primary" hide-gt-md="" aria-label="Close">
         Close Sidenav Left
       </md-button>
-      <p hide-md show-gt-md>
+      <p hide-md="" show-gt-md="">
         <ul class="nav" id="side-menu">
-            <li class="entities-repeat" ng-repeat="(key, entity) in sidebarController.entities">
-                <a ng-click="sidebarController.displayList(entity, $event)" ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</a>
+            <li class="entities-repeat" data-ng-repeat="(key, entity) in sidebarController.entities">
+                <a ng-click="sidebarController.displayList(entity, $event)" data-ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</a>
             </li>
         </ul>
       </p>

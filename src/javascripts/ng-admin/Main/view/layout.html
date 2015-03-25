@@ -4,17 +4,17 @@
               md-component-id="left"
               md-is-locked-open="$mdMedia('gt-sm')">
     <md-toolbar class="md-theme-indigo">
-        <md-button ng-click="appController.displayHome()" aria-label="">
-            <img ng-src="{{ appController.applicationName }}" style="max-width:240px" alt=""/>
+        <md-button data-ng-click="appController.displayHome()" aria-label="Home">
+            <img data-ng-src="{{ appController.applicationName }}" style="max-width:240px" alt=""/>
         </md-button>
     </md-toolbar>
     <md-content class="md-default-theme" ng-controller="LeftCtrl" style="overflow: auto">
-      <md-button ng-click="close()" class="md-primary" hide-gt-md>
+      <md-button data-ng-click="close()" class="md-primary" hide-gt-md>
         Close Sidenav Left
       </md-button>
-        <ul class="docs-menu" ng-controller="SidebarController as sidebarController">
-            <li ng-repeat="(key, entity) in sidebarController.entities">
-                <md-button ng-click="sidebarController.displayList(entity, $event)" class="md-button md-default-theme" ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</md-button>
+        <ul class="docs-menu" data-ng-controller="SidebarController as sidebarController">
+            <li data-ng-repeat="(key, entity) in sidebarController.entities">
+                <md-button data-ng-click="sidebarController.displayList(entity, $event)" class="md-button md-default-theme" data-ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</md-button>
             </li>
         </ul>
     </md-content>
