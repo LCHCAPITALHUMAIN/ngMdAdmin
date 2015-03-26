@@ -1,8 +1,9 @@
-<md-sidenav layout="column"
-              style="overflow: hidden; display: flex"
-              class="site-sidenav md-sidenav-left md-whiteframe-z2"
-              md-component-id="left"
-              md-is-locked-open="$mdMedia('gt-sm')">
+<md-sidenav id="sidenav"
+            layout="column"
+            style="overflow: hidden; display: flex"
+            class="site-sidenav md-sidenav-left md-whiteframe-z2"
+            md-component-id="left"
+            md-is-locked-open="$mdMedia('gt-sm')">
     <md-toolbar class="md-theme-indigo">
         <md-button data-ng-click="appController.displayHome()" aria-label="Home">
             <img data-ng-src="{{ appController.applicationName }}" style="max-width:240px" alt=""/>

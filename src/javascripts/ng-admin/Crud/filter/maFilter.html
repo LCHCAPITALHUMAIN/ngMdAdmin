@@ -3,7 +3,7 @@
     <md-content layout="row">
     <md-input-container ng-repeat="field in filters track by $index" ng-class="{'input-group':field.label()}" flex>
         <div ng-switch="field.type()" ng-class="field.getCssClasses(entry)">
-             <label ng-if="field.label() && field.type() != 'boolean'">
+            <label ng-if="field.label() && field.type() != 'boolean'">
                 {{ field.label() }}<span ng-if="field.validation().required">&nbsp;*</span>&nbsp;
             </label>
             

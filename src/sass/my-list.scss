@@ -15,51 +15,64 @@ md-list.my-list {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            justify-content: flex-start;
             
             background-color: white;
-            height: 96px;
+/*            height: 96px;*/
             
             & > div {
                -webkit-flex: 2;
                 -ms-flex: 2;
                 flex: 2; 
             
+                border-right: 1px solid rgb(220,220,220);
+                border-bottom : 1px solid rgb(220,220,220);
             
-            
-                .flex {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
+                .flex-row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                }
+                .flex-col {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
                 }
                 .md-tile-left {
-                    
-                    i.mdi {
-                        width: 48px;
-                        height: 48px;
-                        margin: 16px;
-                        font-size: 48px;
-                    }
+                    padding: 16px;
+                }
+                i.mdi {
+                    width: 48px;
+                    height: 48px;
+                    color: black;
+                    // icon http://www.google.com/design/spec/layout/metrics-keylines.html#metrics-keylines-touch-target-size
+                    // padding: 12px;
+                    // font-size: 24px;
+
+                    // img
+                    padding: 4px;
+                    font-size: 40px;
                 }
                 .md-tile-content {
                     display: block;
                     text-overflow: ellipsis; 
-                    height: 96px;
-                    /*border-right: 1px solid rgb(220,220,220);*/
-                    /*border-bottom : 1px solid rgb(220,220,220);*/
-
                 }    
                 &.customer_number {
                     -webkit-flex: 1;
                     -ms-flex: 1;
                     flex: 1;
-                    justify-content: center;
-                    text-align : center;
-
-                    h3 {
-                        color: black;
-                    }
                     color: rgb(1, 162, 166);
-                    font-weight: 600;
+                    .md-tile-content{
+                        padding: 7px;
+                    }
+                    .md-tile-left {
+                        padding: 0;
+                    }
+                    h3{
+                        margin: 0;
+                        font-weight: 600;
+                    }
                 }
                 &.id, 
                 &.domaine, 
@@ -72,7 +85,8 @@ md-list.my-list {
                     flex: 4;
                     display: none;
                     width: 100%;
-                    md-progress-linear {
+                    .md-tile-content{
+                        height: 80px;
                         width: 1000px;
                     }
                 }
@@ -108,13 +122,13 @@ md-list.my-list {
         box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.2);
         z-index: 5;
         overflow: hidden;
-        height: 288px;
+/*        height: 288px;*/
     }
     .content-editable.ng-hide {
         margin:0;
         z-index: 0;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-        height: 96px;
+/*        height: 96px;*/
     }
 
 }
