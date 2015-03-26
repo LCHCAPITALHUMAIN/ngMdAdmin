@@ -10,44 +10,53 @@ md-list.my-list {
     md-item {
 
         
-        md-item-content {
+        md-item-content{
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             
             background-color: white;
             height: 96px;
-            .md-tile-content {
-                display: flex;
-                padding: 10px;
-                -webkit-flex: 2;
+            
+            & > div {
+               -webkit-flex: 2;
                 -ms-flex: 2;
-                flex: 2;
-                padding: 16px;
-                text-overflow: ellipsis; 
-                height: 96px;
-                border-right: 1px solid rgb(220,220,220);
-                border-bottom : 1px solid rgb(220,220,220);
-                
-/*                span {
-                    width: 100%;
-                }*/
+                flex: 2; 
+            
+            
+            
                 .flex {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
                 }
-                
+                .md-tile-left {
+                    
+                    i.mdi {
+                        width: 48px;
+                        height: 48px;
+                        margin: 16px;
+                        font-size: 48px;
+                    }
+                }
+                .md-tile-content {
+                    display: block;
+                    text-overflow: ellipsis; 
+                    height: 96px;
+                    /*border-right: 1px solid rgb(220,220,220);*/
+                    /*border-bottom : 1px solid rgb(220,220,220);*/
+
+                }    
                 &.customer_number {
                     -webkit-flex: 1;
                     -ms-flex: 1;
                     flex: 1;
                     justify-content: center;
                     text-align : center;
-                
-                    h1 {
-                        margin: 0;
+
+                    h3 {
                         color: black;
-                        i.mdi {
-                            font-size: 1.4em;
-                        }
                     }
                     color: rgb(1, 162, 166);
                     font-weight: 600;
@@ -55,24 +64,7 @@ md-list.my-list {
                 &.id, 
                 &.domaine, 
                 &.mail {
-                    
-                    i.mdi {
-                        margin-top: 18px;
-                        font-size: 2em;
-                    }
-                    h2 {
-                        margin:0;
-                        margin-top: 10px;
-                        font-size: 1.4em;
-                        font-weight: 400;
-                        padding-left: 16px;
-                    }
-                    h3 {
-                        margin:0;
-                        font-size: 1.2em;
-                        font-weight: 100;
-                        padding-left: 16px;
-                    }
+
                 }
                 &.progress {
                     -webkit-flex: 4;
@@ -82,10 +74,6 @@ md-list.my-list {
                     width: 100%;
                     md-progress-linear {
                         width: 1000px;
-/*                        height: 15px;
-                        div div {
-                            height: 15px !important;
-                        }*/
                     }
                 }
             }

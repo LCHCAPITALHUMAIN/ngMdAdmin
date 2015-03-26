@@ -6,7 +6,7 @@
             <div data-ng-hide="activeEdit == entry.identifierValue">
                 <md-item-content  layout="row" layout-align="start center" data-ng-click="datagrid.editRow(entry.identifierValue)" ui-sref="edit({id:entry.identifierValue})">
 
-                    <div class="md-tile-content" data-ng-repeat="field in fields() track by $index" data-ng-class="field.config.name" >
+                    <div data-ng-repeat="field in fields() track by $index" data-ng-class="field.config.name" >
                         <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
                     </div>
 
