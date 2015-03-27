@@ -38,7 +38,7 @@ define(function (require) {
            'datepicker-popup="{{ format }}" is-open="isOpen" close-text="Close" ' +
            'ng-required="v.required" />' +
     '<span class="input-group-btn">' +
-        '<md-button type="button" class="md-button" ng-click="toggleDatePicker($event)"><i class="glyphicon glyphicon-calendar"></i></md-button>' +
+        '<md-button type="button" class="md-button" ng-click="toggleDatePicker($event)" aria-label="DatePicker"><i class="glyphicon glyphicon-calendar"></i></md-button>' +
     '</span>' +
 '</div>'
         };
