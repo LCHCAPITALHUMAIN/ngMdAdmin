@@ -11190,24 +11190,30 @@ md-list.my-list md-item md-item-content > div {
   -ms-flex: 2;
   flex: 2;
 }
-/* line 31, ../src/sass/my-list.scss */
+/* line 30, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div .flex-row {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-/* line 36, ../src/sass/my-list.scss */
+/* line 35, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div .flex-col {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-/* line 42, ../src/sass/my-list.scss */
+/* line 41, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div .md-tile-left {
   padding: 16px;
 }
-/* line 45, ../src/sass/my-list.scss */
+/* line 44, ../src/sass/my-list.scss */
+md-list.my-list md-item md-item-content > div h2, md-list.my-list md-item md-item-content > div h3, md-list.my-list md-item md-item-content > div h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 49, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div i.mdi {
   width: 48px;
   height: 48px;
@@ -11215,32 +11221,31 @@ md-list.my-list md-item md-item-content > div i.mdi {
   padding: 4px;
   font-size: 40px;
 }
-/* line 57, ../src/sass/my-list.scss */
+/* line 61, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div .md-tile-content {
   display: block;
-  text-overflow: ellipsis;
 }
-/* line 61, ../src/sass/my-list.scss */
+/* line 64, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div.customer_number {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   color: #01a2a6;
 }
-/* line 66, ../src/sass/my-list.scss */
+/* line 69, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div.customer_number .md-tile-content {
   padding: 7px;
 }
-/* line 69, ../src/sass/my-list.scss */
+/* line 72, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div.customer_number .md-tile-left {
   padding: 0;
 }
-/* line 72, ../src/sass/my-list.scss */
+/* line 75, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div.customer_number h3 {
   margin: 0;
   font-weight: 600;
 }
-/* line 82, ../src/sass/my-list.scss */
+/* line 85, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div.progress {
   -webkit-flex: 4;
   -ms-flex: 4;
@@ -11248,31 +11253,31 @@ md-list.my-list md-item md-item-content > div.progress {
   display: none;
   width: 100%;
 }
-/* line 88, ../src/sass/my-list.scss */
+/* line 91, ../src/sass/my-list.scss */
 md-list.my-list md-item md-item-content > div.progress .md-tile-content {
   height: 80px;
   width: 1000px;
 }
-/* line 98, ../src/sass/my-list.scss */
+/* line 101, ../src/sass/my-list.scss */
 md-list.my-list .content-editable .domaine,
 md-list.my-list .content-editable .mail {
   display: none !important;
 }
-/* line 102, ../src/sass/my-list.scss */
+/* line 105, ../src/sass/my-list.scss */
 md-list.my-list .content-editable .progress {
   display: flex !important;
 }
-/* line 107, ../src/sass/my-list.scss */
+/* line 110, ../src/sass/my-list.scss */
 md-list.my-list .content-editable.ng-hide-add.ng-hide-add-active {
   -webkit-transition: all linear 0s;
   transition: all linear 0s;
 }
-/* line 111, ../src/sass/my-list.scss */
+/* line 114, ../src/sass/my-list.scss */
 md-list.my-list .content-editable.ng-hide-remove.ng-hide-remove-active {
   -webkit-transition: all linear .2s;
   transition: all linear .2s;
 }
-/* line 116, ../src/sass/my-list.scss */
+/* line 119, ../src/sass/my-list.scss */
 md-list.my-list .content-editable {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -11283,11 +11288,50 @@ md-list.my-list .content-editable {
   z-index: 5;
   overflow: hidden;
 }
-/* line 127, ../src/sass/my-list.scss */
+/* line 130, ../src/sass/my-list.scss */
 md-list.my-list .content-editable.ng-hide {
   margin: 0;
   z-index: 0;
   box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+/* line 1, ../src/sass/my-filter.scss */
+#q-container {
+  width: 100%;
+}
+/* line 4, ../src/sass/my-filter.scss */
+#q-container form md-content {
+  width: 100%;
+}
+/* line 8, ../src/sass/my-filter.scss */
+#q-container form md-content md-input-container {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+/* line 13, ../src/sass/my-filter.scss */
+#q-container form md-content md-input-container > div {
+  width: 100%;
+}
+/* line 16, ../src/sass/my-filter.scss */
+#q-container form md-content md-input-container > div #q {
+  color: white;
+  border-color: white;
+  width: 100%;
+  text-align: right;
+  padding-left: 24px;
+}
+/* line 26, ../src/sass/my-filter.scss */
+#q-container form md-content md-input-container > button {
+  margin-right: -24px;
+  width: 24px;
+}
+
+/* line 1, ../src/sass/my-pagination.scss */
+#pagination {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 24px;
 }
 
 /* MaterialDesignIcons.com */
