@@ -2,17 +2,16 @@ $shadowIn : 0 -1px 0 rgb(229, 229, 229), 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px 
 $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
 
 .my-list-container {
-    margin: 40px;
+    margin: auto;
     overflow: visible;
+    max-width: 1200px; 
 }
 
 md-list.my-list {
-    
     padding: 8px 0px 8px 0px;
     
     md-item {
 
-        
         md-item-content{
             
             display: flex;
@@ -23,15 +22,11 @@ md-list.my-list {
             background-color: white;
             box-shadow: $shadowIn;
                 
-/*            height: 96px;*/
-            
             & > div {
                -webkit-flex: 2;
                 -ms-flex: 2;
                 flex: 2; 
             
-                border-right: 1px solid rgb(220,220,220);
-                border-bottom : 1px solid rgb(220,220,220);
             
                 .flex-row {
                     display: flex;
@@ -119,8 +114,6 @@ md-list.my-list {
     }
 
     .content-editable {
-        border: 1px solid rgb(220,220,220);
-        
         margin-top: 50px;
         margin-bottom: 50px;
         margin-left: -20px;        
