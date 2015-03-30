@@ -1,0 +1,33 @@
+#q-container {
+    width: 100%;
+
+    form md-content {
+        
+        width: 100%;
+    
+        md-input-container{
+            -webkit-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+            
+            &>div {
+                width: 100%;
+                
+                #q {
+                    color: white;
+                    border-color: white;
+                    width: 100%;
+                    text-align:right;
+                    padding-left: 24px;
+                }
+            }
+
+
+            &>button {
+                margin-right: -24px;
+                width: 24px;
+            }
+        }
+    }
+}
+

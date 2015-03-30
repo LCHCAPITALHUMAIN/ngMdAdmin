@@ -27,7 +27,6 @@ md-list.my-list {
                 -ms-flex: 2;
                 flex: 2; 
             
-            
                 .flex-row {
                     display: flex;
                     flex-direction: row;
@@ -41,6 +40,11 @@ md-list.my-list {
                 }
                 .md-tile-left {
                     padding: 16px;
+                }
+                h2, h3, h4 {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 i.mdi {
                     width: 48px;
@@ -56,7 +60,6 @@ md-list.my-list {
                 }
                 .md-tile-content {
                     display: block;
-                    text-overflow: ellipsis; 
                 }    
                 &.customer_number {
                     -webkit-flex: 1;
