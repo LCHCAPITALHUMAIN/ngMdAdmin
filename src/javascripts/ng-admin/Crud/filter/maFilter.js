@@ -18,7 +18,7 @@ define(function (require) {
         };
     }
 
-    maFilterDirective.$inject = [];
+    maFilterDirective.$inject = ['$timeout'];
 
     return maFilterDirective;
 });
