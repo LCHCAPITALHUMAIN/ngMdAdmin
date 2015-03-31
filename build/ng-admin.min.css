@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,700,300);
+/* Globales */
+/* MaterialDesignIcons.com */
 /*!
  * Angular Material Design
  * https://github.com/angular/material
@@ -11069,28 +11071,30 @@ a {
   position: absolute;
   z-index: 20;
   font-size: 30px;
-  top: 33px;
-  transform: scale(0.88, 0.88);
+  right: 0;
+  bottom: 0;
+  padding: 23px;
+  /*transform:scale(.88,.88);*/
 }
 
-/* line 7638, ../src/sass/ng-md-admin.scss */
+/* line 7640, ../src/sass/ng-md-admin.scss */
 .md-breadcrumb {
   padding-left: 88px;
 }
 
-/* line 7642, ../src/sass/ng-md-admin.scss */
+/* line 7644, ../src/sass/ng-md-admin.scss */
 .md-table {
   min-width: 100%;
   border-collapse: collapse;
 }
 
-/* line 7647, ../src/sass/ng-md-admin.scss */
+/* line 7649, ../src/sass/ng-md-admin.scss */
 .md-table tbody tr:hover, .md-table tbody tr:focus {
   cursor: pointer;
   background-color: rgba(63, 81, 181, 0.2);
 }
 
-/* line 7652, ../src/sass/ng-md-admin.scss */
+/* line 7654, ../src/sass/ng-md-admin.scss */
 .md-table-header {
   border-bottom: 1px solid #e6e6e6;
   color: #828282;
@@ -11098,39 +11102,39 @@ a {
   padding: 16px 16px 16px 0;
 }
 
-/* line 7659, ../src/sass/ng-md-admin.scss */
+/* line 7661, ../src/sass/ng-md-admin.scss */
 .md-table-header a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 7664, ../src/sass/ng-md-admin.scss */
+/* line 7666, ../src/sass/ng-md-admin.scss */
 .md-table-caret {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 7669, ../src/sass/ng-md-admin.scss */
+/* line 7671, ../src/sass/ng-md-admin.scss */
 .md-table-content {
   padding: 16px 16px 16px 0;
   height: 72px;
 }
 
-/* line 7674, ../src/sass/ng-md-admin.scss */
+/* line 7676, ../src/sass/ng-md-admin.scss */
 .md-table-td-more {
   max-width: 72px;
   width: 72px;
   padding: 16px;
 }
 
-/* line 7680, ../src/sass/ng-md-admin.scss */
+/* line 7682, ../src/sass/ng-md-admin.scss */
 .md-table-thumbs {
   max-width: 104px;
   width: 104px;
   padding: 16px 32px;
 }
 
-/* line 7686, ../src/sass/ng-md-admin.scss */
+/* line 7688, ../src/sass/ng-md-admin.scss */
 .md-table-thumbs div {
   overflow: hidden;
   width: 40px;
@@ -11142,40 +11146,44 @@ a {
   -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* line 7697, ../src/sass/ng-md-admin.scss */
+/* line 7699, ../src/sass/ng-md-admin.scss */
 .md-table-footer {
   height: 40px;
 }
 
-/* line 7701, ../src/sass/ng-md-admin.scss */
+/* line 7703, ../src/sass/ng-md-admin.scss */
 .md-table-count-info {
   line-height: 40px;
 }
 
-/* line 7705, ../src/sass/ng-md-admin.scss */
+/* line 7707, ../src/sass/ng-md-admin.scss */
 .md-table-footer-item {
   width: 40px;
   height: 40px;
   vertical-align: middle;
 }
 
-/* line 7711, ../src/sass/ng-md-admin.scss */
+/* line 7713, ../src/sass/ng-md-admin.scss */
 md-toolbar.md-default-theme .md-button {
   color: rgba(255, 255, 255, 0.87);
 }
 
-/* line 4, ../src/sass/my-list.scss */
+/* line 4, ../src/sass/_list.scss */
 .my-list-container {
   margin: auto;
   overflow: visible;
   max-width: 1200px;
 }
 
-/* line 10, ../src/sass/my-list.scss */
+/* line 10, ../src/sass/_list.scss */
 md-list.my-list {
   padding: 8px 0px 8px 0px;
 }
-/* line 15, ../src/sass/my-list.scss */
+/* line 14, ../src/sass/_list.scss */
+md-list.my-list md-item {
+  cursor: pointer;
+}
+/* line 17, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content {
   display: flex;
   flex-direction: row;
@@ -11184,36 +11192,36 @@ md-list.my-list md-item md-item-content {
   background-color: white;
   box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
-/* line 25, ../src/sass/my-list.scss */
+/* line 27, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div {
   -webkit-flex: 2;
   -ms-flex: 2;
   flex: 2;
 }
-/* line 30, ../src/sass/my-list.scss */
+/* line 32, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div .flex-row {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-/* line 35, ../src/sass/my-list.scss */
+/* line 37, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div .flex-col {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-/* line 41, ../src/sass/my-list.scss */
+/* line 43, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div .md-tile-left {
   padding: 16px;
 }
-/* line 44, ../src/sass/my-list.scss */
+/* line 46, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div h2, md-list.my-list md-item md-item-content > div h3, md-list.my-list md-item md-item-content > div h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 49, ../src/sass/my-list.scss */
+/* line 51, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div i.mdi {
   width: 48px;
   height: 48px;
@@ -11221,31 +11229,31 @@ md-list.my-list md-item md-item-content > div i.mdi {
   padding: 4px;
   font-size: 40px;
 }
-/* line 61, ../src/sass/my-list.scss */
+/* line 63, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div .md-tile-content {
   display: block;
 }
-/* line 64, ../src/sass/my-list.scss */
+/* line 66, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div.customer_number {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   color: #01a2a6;
 }
-/* line 69, ../src/sass/my-list.scss */
+/* line 71, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div.customer_number .md-tile-content {
   padding: 7px;
 }
-/* line 72, ../src/sass/my-list.scss */
+/* line 74, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div.customer_number .md-tile-left {
   padding: 0;
 }
-/* line 75, ../src/sass/my-list.scss */
+/* line 77, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div.customer_number h3 {
   margin: 0;
   font-weight: 600;
 }
-/* line 85, ../src/sass/my-list.scss */
+/* line 87, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div.progress {
   -webkit-flex: 4;
   -ms-flex: 4;
@@ -11253,31 +11261,31 @@ md-list.my-list md-item md-item-content > div.progress {
   display: none;
   width: 100%;
 }
-/* line 91, ../src/sass/my-list.scss */
+/* line 93, ../src/sass/_list.scss */
 md-list.my-list md-item md-item-content > div.progress .md-tile-content {
   height: 80px;
   width: 1000px;
 }
-/* line 101, ../src/sass/my-list.scss */
+/* line 103, ../src/sass/_list.scss */
 md-list.my-list .content-editable .domaine,
 md-list.my-list .content-editable .mail {
   display: none !important;
 }
-/* line 105, ../src/sass/my-list.scss */
+/* line 107, ../src/sass/_list.scss */
 md-list.my-list .content-editable .progress {
   display: flex !important;
 }
-/* line 110, ../src/sass/my-list.scss */
+/* line 112, ../src/sass/_list.scss */
 md-list.my-list .content-editable.ng-hide-add.ng-hide-add-active {
   -webkit-transition: all linear 0s;
   transition: all linear 0s;
 }
-/* line 114, ../src/sass/my-list.scss */
+/* line 116, ../src/sass/_list.scss */
 md-list.my-list .content-editable.ng-hide-remove.ng-hide-remove-active {
   -webkit-transition: all linear .2s;
   transition: all linear .2s;
 }
-/* line 119, ../src/sass/my-list.scss */
+/* line 121, ../src/sass/_list.scss */
 md-list.my-list .content-editable {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -11288,32 +11296,32 @@ md-list.my-list .content-editable {
   z-index: 5;
   overflow: hidden;
 }
-/* line 130, ../src/sass/my-list.scss */
+/* line 132, ../src/sass/_list.scss */
 md-list.my-list .content-editable.ng-hide {
   margin: 0;
   z-index: 0;
   box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
 
-/* line 1, ../src/sass/my-filter.scss */
+/* line 1, ../src/sass/_filter.scss */
 #q-container {
   width: 100%;
 }
-/* line 4, ../src/sass/my-filter.scss */
+/* line 4, ../src/sass/_filter.scss */
 #q-container form md-content {
   width: 100%;
 }
-/* line 8, ../src/sass/my-filter.scss */
+/* line 8, ../src/sass/_filter.scss */
 #q-container form md-content md-input-container {
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
 }
-/* line 13, ../src/sass/my-filter.scss */
+/* line 13, ../src/sass/_filter.scss */
 #q-container form md-content md-input-container > div {
   width: 100%;
 }
-/* line 16, ../src/sass/my-filter.scss */
+/* line 16, ../src/sass/_filter.scss */
 #q-container form md-content md-input-container > div #q {
   color: white;
   border-color: white;
@@ -11321,20 +11329,19 @@ md-list.my-list .content-editable.ng-hide {
   text-align: right;
   padding-left: 24px;
 }
-/* line 26, ../src/sass/my-filter.scss */
+/* line 26, ../src/sass/_filter.scss */
 #q-container form md-content md-input-container > button {
   margin-right: -24px;
   width: 24px;
 }
 
-/* line 1, ../src/sass/my-pagination.scss */
+/* line 1, ../src/sass/_pagination.scss */
 #pagination {
   max-width: 1200px;
   margin: auto;
   margin-top: 24px;
 }
 
-/* MaterialDesignIcons.com */
 @font-face {
   font-family: 'MaterialDesignIcons';
   src: url("../assets/fonts/materialdesignicons-webfont.eot?v=0.9.72");

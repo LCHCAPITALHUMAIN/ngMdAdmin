@@ -4,14 +4,16 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
 .my-list-container {
     margin: auto;
     overflow: visible;
-    max-width: 1200px; 
+    max-width: $container-max-width; 
 }
 
 md-list.my-list {
     padding: 8px 0px 8px 0px;
     
+    
     md-item {
-
+        cursor: pointer;
+        
         md-item-content{
             
             display: flex;

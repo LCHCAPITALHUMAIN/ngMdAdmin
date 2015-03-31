@@ -7631,8 +7631,10 @@ md-content.demo-source-container > hljs > pre > code.highlight {
   position:absolute;
   z-index:20;
   font-size:30px;
-  top:33px;
-  transform:scale(.88,.88);
+  right:0;
+  bottom:0;
+  padding:23px;
+  /*transform:scale(.88,.88);*/
 }
 
 .md-breadcrumb {
