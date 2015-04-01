@@ -4,7 +4,7 @@
         <md-item data-ng-repeat="entry in entries track by $index">
             
             <div data-ng-hide="activeEdit == entry.identifierValue">
-                <md-item-content layout="row" layout-align="start center" data-ng-click="datagrid.editRow(entry.identifierValue)" ui-sref="edit({id:entry.identifierValue})">
+                <md-item-content class="my-row" layout="row" layout-align="start center" data-ng-click="datagrid.editRow(entry.identifierValue)" ui-sref="edit({id:entry.identifierValue})">
 
                     <div data-ng-repeat="field in fields() track by $index" data-ng-class="field.config.name" >
                         <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>
@@ -14,7 +14,7 @@
             </div>  
             
             <div data-ng-show="activeEdit == entry.identifierValue" class="content-editable">
-                <md-item-content layout="row" layout-align="start center" data-ng-click="datagrid.editRow(entry.identifierValue)" ui-sref="edit({id:entry.identifierValue})">
+                <md-item-content class="my-row" layout="row" layout-align="start center" data-ng-click="datagrid.editRow(entry.identifierValue)" ui-sref="edit({id:entry.identifierValue})">
 
                     <div data-ng-repeat="field in fields() track by $index" data-ng-class="field.config.name" >
                         <ma-column field="::field" entry="::entry" entity="::entity"></ma-column>

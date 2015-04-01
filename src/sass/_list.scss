@@ -12,8 +12,7 @@ md-list.my-list {
     
     
     md-item {
-        cursor: pointer;
-        
+
         md-item-content{
             
             display: flex;
@@ -23,7 +22,14 @@ md-list.my-list {
             
             background-color: white;
             box-shadow: $shadowIn;
+            
+            &.my-row {
+                cursor: pointer;
+            }
+            &.my-edit-row {
                 
+            }
+               
             & > div {
                -webkit-flex: 2;
                 -ms-flex: 2;
@@ -63,7 +69,7 @@ md-list.my-list {
                 .md-tile-content {
                     display: block;
                 }    
-                &.customer_number {
+                &.customer {
                     -webkit-flex: 1;
                     -ms-flex: 1;
                     flex: 1;
@@ -79,7 +85,7 @@ md-list.my-list {
                         font-weight: 600;
                     }
                 }
-                &.id, 
+                &.site, 
                 &.domaine, 
                 &.mail {
 

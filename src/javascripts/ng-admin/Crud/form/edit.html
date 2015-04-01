@@ -1,14 +1,8 @@
 <div id="edit-view" data-ng-class="'ng-admin-entity-' + formController.entity.name()">
-    <md-item-content data-ng-repeat="field in formController.fields track by $index">
+    <md-item-content class="my-edit-row" data-ng-repeat="field in formController.fields track by $index">
 
         <div ng-include="'ng-admin/Crud/form/edit-attribute.html'" ></div>
-        <!--<span class="flex"><span><i class="mdi mdi-web"></i></span><span><h2>Domaine :{{ entry.values.domaine }}</h2><h3>server-dns1.proxy.technology</h3></span></span>-->
         
-        
-<!--        <md-select placeholder="Pick" ng-model="someVal">
-            <md-option value="1">One</md-option>
-            <md-option value="2">Two</md-option>
-        </md-select>-->
     </md-item-content>
 
 </div>
