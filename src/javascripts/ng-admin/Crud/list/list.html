@@ -4,8 +4,8 @@
     </ma-view-actions>
 </div>
 <md-toolbar class="md-default-theme">
-    <div class="md-toolbar-tools" tabindex="0">
-      <md-button data-ng-click="toggleLeft()" hide-gt-md>Toggle left</md-button>
+    <div class="md-toolbar-tools" tabindex="-1">
+      <md-button data-ng-click="toggleLeft()" hide-gt-md="" tabindex="-1">Toggle left</md-button>
 
         <div layout="row" flex="" class="fill-height">
 <!--            
@@ -46,6 +46,7 @@
         infinite="listController.infinitePagination"
         next-page="listController.nextPageCallback"
         per-page="listController.itemsPerPage"
-        total-items="{{ listController.totalItems }}">
+        total-items="{{ listController.totalItems }}"
+        tabindex="-1" >
     </ma-datagrid-pagination>
 </md-content>

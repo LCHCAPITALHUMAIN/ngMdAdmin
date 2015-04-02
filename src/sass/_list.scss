@@ -7,11 +7,23 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
     max-width: $container-max-width; 
 }
 
-md-list.my-list {
+#datagrid > md-list.my-list {
     padding: 8px 0px 8px 0px;
     
     
-    md-item {
+    &>md-item {
+        
+        &>div>md-item-content:focus::after, 
+        &>div.content-editable>md-item-content::after {
+            background: rgb(63, 81, 181);
+            bottom: 0;
+            content: '';
+            display: block;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 2px;
+        } 
 
         md-item-content{
             
@@ -23,6 +35,15 @@ md-list.my-list {
             background-color: white;
             box-shadow: $shadowIn;
             
+            @media (max-width: 960px) {
+
+            }
+            @media (min-width: 961px) and (max-width: 1200px) {
+
+            }
+            @media (min-width: 1201px) {
+
+            }
             &.my-row {
                 cursor: pointer;
             }

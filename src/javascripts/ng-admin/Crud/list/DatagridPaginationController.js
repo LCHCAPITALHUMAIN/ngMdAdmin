@@ -69,7 +69,7 @@ define(function () {
         this.$location.search('page', number);
         this.$anchorScroll(0);
     };
-
+    
     DatagridPaginationController.$inject = ['$scope', '$location', '$anchorScroll'];
 
     return DatagridPaginationController;
