@@ -25,25 +25,22 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
             width: 2px;
         } 
 
-        md-item-content{
+        div>md-item-content{
             
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            justify-content: flex-start;
+            display: block;
+            @media (max-width: 600px) {
+                height: 240px;
+            }
+            @media (min-width: 601px) and (max-width: 1200px) {
+                height: 160px;
+            }
+            @media (min-width: 1201px) {
+                height: 80px;
+            }
             
             background-color: white;
             box-shadow: $shadowIn;
             
-            @media (max-width: 960px) {
-
-            }
-            @media (min-width: 961px) and (max-width: 1200px) {
-
-            }
-            @media (min-width: 1201px) {
-
-            }
             &.my-row {
                 cursor: pointer;
             }
@@ -52,10 +49,9 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
             }
                
             & > div {
-               -webkit-flex: 2;
-                -ms-flex: 2;
-                flex: 2; 
-            
+
+                position: absolute;
+                
                 .flex-row {
                     display: flex;
                     flex-direction: row;
@@ -89,11 +85,10 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                 }
                 .md-tile-content {
                     display: block;
-                }    
+                }   
+                
+                
                 &.customer {
-                    -webkit-flex: 1;
-                    -ms-flex: 1;
-                    flex: 1;
                     color: rgb(1, 162, 166);
                     .md-tile-content{
                         padding: 7px;
@@ -106,60 +101,193 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                         font-weight: 600;
                     }
                 }
-                &.site, 
-                &.domaine, 
-                &.mail {
-
-                }
+                
                 &.progress {
-                    -webkit-flex: 4;
-                    -ms-flex: 4;
-                    flex: 4;
                     display: none;
-                    width: 100%;
                     .md-tile-content{
-                        height: 80px;
                         width: 1000px;
                     }
                 }
+                @media (max-width: 600px) {
+                    &.customer {
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 25%;
+                        padding: 80px 0;
+                    }
+                    &.site{
+                        top: 0;
+                        left: 25%;
+                        height: calc(100% / 3);
+                        width: 75%;
+                    } 
+                    &.domain {
+                        top: calc(100% / 3);
+                        left: 25%;
+                        height: calc(100% / 3);
+                        width: 75%;
+                    } 
+                    &.mail {
+                        top: calc(200% / 3);
+                        left: 25%;
+                        height: calc(100% / 3);
+                        width: 75%;
+                    }
+
+                }
+                @media (min-width: 601px) and (max-width: 1200px) {
+                    &.customer {
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 20%;
+                        padding: 40px 0;
+                    }
+                    &.site{
+                        top: 0;
+                        left: 20%;
+                        height: 50%;
+                        width: 80%;
+                    } 
+                    &.domain {
+                        top: 50%;
+                        left: 20%;
+                        height: 50%;
+                        width: 40%;
+                    } 
+                    &.mail {
+                        top: 50%;
+                        left: 60%;
+                        height: 50%;
+                        width: 40%;
+                    }
+                }
+                @media (min-width: 1201px) {
+                    &.customer {
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: calc(100% / 7);
+                    }
+                    &.site{
+                        top: 0;
+                        left: calc(100% / 7);
+                        height: 100%;
+                        width: calc(200% / 7);
+                    } 
+                    &.domain {
+                        top: 0;
+                        left: calc(300% / 7);
+                        height: 100%;
+                        width: calc(200% / 7);
+                    } 
+                    &.mail {
+                        top: 0;
+                        left: calc(500% / 7);
+                        height: 100%;
+                        width: calc(200% / 7);
+                    }
+                }
+            
             }
         }
-    }
-        
-    .content-editable {
-        .domaine, 
-        .mail{ 
-            display: none !important;
+    
+        div.content-editable>md-item-content {
+            @media (max-width: 600px) {
+                height: 160px;    
+            }
+            @media (min-width: 601px) and (max-width: 1200px) {
+                height: 80px;
+            }
+            @media (min-width: 1201px) {
+                height: 80px;
+            }
+            & > div {
+                
+                &.domain, 
+                &.mail{ 
+                    display: none !important;
+                }
+                &.progress {
+                    display: flex !important;
+                }
+                
+                @media (max-width: 600px) {
+                    &.customer {
+                        display: none !important;
+                    }
+                    &.site{
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 50%;
+                    } 
+                    &.progress {
+                        top: 50%;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                @media (min-width: 601px) and (max-width: 1200px) {
+                    &.customer {
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 20%;
+                        padding: 0;
+                    }
+                    &.site{
+                        top: 0;
+                        left: 20%;
+                        height: 100%;
+                        width: 30%;
+                    } 
+                    &.progress {
+                        top: 0;
+                        left: 50%;
+                        height: 100%;
+                        width: 50%;
+                    }
+                }
+                @media (min-width: 1201px) {
+                    &.progress {
+                        top: 0;
+                        left: calc(300% / 7);
+                        height: 100%;
+                        width: calc(400% / 7);
+                    }
+                }
+                
+            }
         }
-        .progress {
-            display: flex !important;
+
+        .content-editable.ng-hide-add.ng-hide-add-active {
+            -webkit-transition: all linear 0s;
+            transition: all linear 0s;
         }
-    }
+        .content-editable.ng-hide-remove.ng-hide-remove-active {
+            -webkit-transition: all linear .2s;
+            transition: all linear .2s;
+        }
 
-    .content-editable.ng-hide-add.ng-hide-add-active {
-        -webkit-transition: all linear 0s;
-        transition: all linear 0s;
-    }
-    .content-editable.ng-hide-remove.ng-hide-remove-active {
-        -webkit-transition: all linear .2s;
-        transition: all linear .2s;
-    }
+        .content-editable {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: -20px;        
+            margin-right: -20px;
 
-    .content-editable {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-left: -20px;        
-        margin-right: -20px;
-        
-        position: relative;
-        box-shadow: $shadowOut;
-        z-index: 5;
-        overflow: hidden;
-    }
-    .content-editable.ng-hide {
-        margin:0;
-        z-index: 0;
-        box-shadow: $shadowIn;
+            position: relative;
+            box-shadow: $shadowOut;
+            z-index: 5;
+            overflow: hidden;
+        }
+        .content-editable.ng-hide {
+            margin:0;
+            z-index: 0;
+            box-shadow: $shadowIn;
+        }
     }
 
 }
