@@ -15,7 +15,7 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
         
         &>div>md-item-content:focus::after, 
         &>div.content-editable>md-item-content::after {
-            background: rgb(63, 81, 181);
+            background: $kraken-blue;
             bottom: 0;
             content: '';
             display: block;
@@ -49,7 +49,7 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
             }
                
             & > div {
-
+                transition: all 400ms ease-out 50ms; 
                 position: absolute;
                 
                 .flex-row {
@@ -86,10 +86,12 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                 .md-tile-content {
                     display: block;
                 }   
-                
+                .count {
+                    color: $kraken-blue-green;
+                }
                 
                 &.customer {
-                    color: rgb(1, 162, 166);
+                    color: $kraken-blue-green;
                     .md-tile-content{
                         padding: 7px;
                     }
@@ -119,19 +121,19 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                     &.site{
                         top: 0;
                         left: 25%;
-                        height: calc(100% / 3);
+                        height: calc(100%/3);
                         width: 75%;
                     } 
                     &.domain {
-                        top: calc(100% / 3);
+                        top: calc(100%/3);
                         left: 25%;
-                        height: calc(100% / 3);
+                        height: calc(100%/3);
                         width: 75%;
                     } 
                     &.mail {
-                        top: calc(200% / 3);
+                        top: calc(200%/3);
                         left: 25%;
-                        height: calc(100% / 3);
+                        height: calc(100%/3);
                         width: 75%;
                     }
 
@@ -168,25 +170,25 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                         top: 0;
                         left: 0;
                         height: 100%;
-                        width: calc(100% / 7);
+                        width: calc(100%/7);
                     }
                     &.site{
                         top: 0;
-                        left: calc(100% / 7);
+                        left: calc(100%/7);
                         height: 100%;
-                        width: calc(200% / 7);
+                        width: calc(200%/7);
                     } 
                     &.domain {
                         top: 0;
-                        left: calc(300% / 7);
+                        left: calc(300%/7);
                         height: 100%;
-                        width: calc(200% / 7);
+                        width: calc(200%/7);
                     } 
                     &.mail {
                         top: 0;
-                        left: calc(500% / 7);
+                        left: calc(500%/7);
                         height: 100%;
-                        width: calc(200% / 7);
+                        width: calc(200%/7);
                     }
                 }
             
