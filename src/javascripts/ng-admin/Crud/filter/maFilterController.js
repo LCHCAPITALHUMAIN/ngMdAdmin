@@ -37,7 +37,7 @@ define(function () {
             fieldName,
             field,
             i,
-            obj = this;
+            self = this;
         
         this.$timeout(function() {
             
@@ -45,17 +45,17 @@ define(function () {
                 field = filters[i];
                 fieldName = field.name();
 
-                if (obj.values[fieldName]) {
-                    values[fieldName] = obj.values[fieldName];
+                if (self.values[fieldName]) {
+                    values[fieldName] = self.values[fieldName];
 
                     if (field.type() === 'date') {
-                        values[fieldName] = obj.$filter('date')(values[fieldName], field.format());
+                        values[fieldName] = self.$filter('date')(values[fieldName], field.format());
                     }
                 }
             }
 
-            obj.$stateParams.search = values;
-            obj.$state.go(obj.$state.current, obj.$stateParams, { reload: true, inherit: false, notify: true });
+            self.$stateParams.search = values;
+            self.$state.go(self.$state.current, self.$stateParams, { reload: true, inherit: false, notify: true });
         },2000);
     };
 

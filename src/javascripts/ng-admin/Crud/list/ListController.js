@@ -21,7 +21,7 @@ define(function () {
         this.entries = data.entries;
         this.fields = this.$filter('orderElement')(view.fields());
         this.listActions = view.listActions();
-        this.toggleSearch = false;
+        this.toggleSearch = (this.$location.search().search && Object.keys(this.$location.search().search).length > 2);
         this.totalItems = this.data.totalItems;
         this.itemsPerPage = view.perPage();
         this.infinitePagination = view.infinitePagination();
