@@ -3730,8 +3730,6 @@ md-content {
     overflow-y: hidden; }
   md-content.md-padding {
     padding: 8px; }
-  md-content.md-padding-large {
-    padding: 40px; }
 
 @media (min-width: 600px) {
   md-content.md-padding {
@@ -6837,6 +6835,12 @@ md-toolbar {
     margin-left: auto; }
   .md-toolbar-tools .md-button {
     font-size: 14px; }
+    .md-toolbar-tools .mdi {
+        font-size: 24px;
+    }
+    .md-toolbar-tools .btn-margin-right{
+        margin-right: 16px;
+    }
 
 md-tooltip {
   position: absolute;

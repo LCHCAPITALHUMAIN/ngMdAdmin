@@ -10,9 +10,9 @@
         </md-button>
     </md-toolbar>
     <md-content class="md-default-theme" data-ng-controller="LeftCtrl">
-      <md-button data-ng-click="close()" class="md-primary" hide-gt-md="" tabindex="-1">
+<!--      <md-button data-ng-click="close()" class="md-primary" hide-gt-md="" tabindex="-1">
         Close Sidenav Left
-      </md-button>
+      </md-button>-->
         <ul class="docs-menu" data-ng-controller="SidebarController as sidebarController">
             <li data-ng-repeat="(key, entity) in sidebarController.entities">
                 <md-button data-ng-click="sidebarController.displayList(entity, $event)" class="md-button md-default-theme" data-ng-class="{'active': sidebarController.isActive(entity)}"><span ng-bind-html="sidebarController.getIconForEntity(entity)"></span> {{ entity.menuView().title() || entity.label() }}</md-button>

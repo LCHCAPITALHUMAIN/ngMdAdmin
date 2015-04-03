@@ -1,0 +1,14 @@
+#main-content {
+    -webkit-transition: all 400ms ease-out 50ms; 
+    transition: all 400ms ease-out 50ms;
+    
+    @media (max-width: $media-size-sm) {
+        padding: 0;
+    }
+    @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
+        padding: 40px;
+    }
+    @media (min-width: $media-size-lg+1) {
+        padding: 40px;
+    }
+}

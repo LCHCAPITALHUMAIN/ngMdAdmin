@@ -5,7 +5,9 @@
 </div>
 <md-toolbar class="md-default-theme">
     <div class="md-toolbar-tools" tabindex="-1" data-ng-controller="LeftCtrl">
-      <md-button data-ng-click="toggleLeft()" hide-gt-md="" tabindex="-1">Toggle left</md-button>
+      <md-button data-ng-click="toggleLeft()" hide-gt-md="" tabindex="-1" class="btn-margin-right" aria-label="Toggle">
+          <i class="mdi mdi-menu"></i> 
+      </md-button>
 
         <div layout="row" flex="" class="fill-height">
 <!--            
@@ -31,7 +33,7 @@
     </div>
 </md-toolbar>
 
-<md-content id="main-content" flex="" class="md-padding-large">
+<md-content id="main-content" flex="">
 
 <div data-ng-class="'ng-admin-entity-' + listController.entity.name()">
         <ma-datagrid name="{{ listController.view.name() }}"
