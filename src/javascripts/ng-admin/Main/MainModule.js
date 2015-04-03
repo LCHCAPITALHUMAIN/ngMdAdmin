@@ -25,7 +25,10 @@ define(function (require) {
     
     MainModule.controller('LeftCtrl', function($scope, $timeout, $mdSidenav, $log) {
         $scope.close = function() {
-          $mdSidenav('left').close();
+            $mdSidenav('left').close();
+        };
+        $scope.toggleLeft = function() {
+            $mdSidenav('left').toggle();
         };
     })
 
