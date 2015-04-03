@@ -2,4 +2,15 @@
     max-width: $container-max-width;
     margin: auto;
     margin-top: 24px;
+    
+    @media (max-width: $media-size-sm) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
+
+    }
+    @media (min-width: $media-size-lg+1) {
+
+    }
 }

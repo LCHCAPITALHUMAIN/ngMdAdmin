@@ -4,11 +4,14 @@
     
     @media (max-width: $media-size-sm) {
         padding: 0;
+        padding-bottom: 80px;
     }
     @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
         padding: 40px;
+        padding-bottom: 80px;
     }
     @media (min-width: $media-size-lg+1) {
         padding: 40px;
+        padding-bottom: 80px;
     }
 }

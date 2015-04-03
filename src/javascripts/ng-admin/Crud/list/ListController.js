@@ -26,7 +26,7 @@ define(function () {
         this.itemsPerPage = view.perPage();
         this.infinitePagination = view.infinitePagination();
         this.nextPageCallback = this.nextPage.bind(this);
-
+        
         $scope.$on('$destroy', this.destroy.bind(this));
     };
 

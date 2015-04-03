@@ -31,10 +31,10 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
             @media (max-width: $media-size-sm) {
                 height: 240px;
             }
-            @media (min-width: $media-size-sm +1) and (max-width: $media-size-lg) {
+            @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
                 height: 160px;
             }
-            @media (min-width: $media-size-lg +1) {
+            @media (min-width: $media-size-lg+1) {
                 height: 80px;
             }
             
@@ -139,7 +139,7 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                     }
 
                 }
-                @media (min-width: $media-size-sm +1) and (max-width: $media-size-lg) {
+                @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
                     &.customer {
                         top: 0;
                         left: 0;
@@ -166,7 +166,7 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                         width: 40%;
                     }
                 }
-                @media (min-width: $media-size-lg +1) {
+                @media (min-width: $media-size-lg+1) {
                     &.customer {
                         top: 0;
                         left: 0;
@@ -200,10 +200,10 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
             @media (max-width: $media-size-sm) {
                 height: 160px;    
             }
-            @media (min-width: $media-size-sm +1) and (max-width: $media-size-lg) {
+            @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
                 height: 80px;
             }
-            @media (min-width: $media-size-lg +1) {
+            @media (min-width: $media-size-lg+1) {
                 height: 80px;
             }
             & > div {
@@ -233,7 +233,7 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                         width: 100%;
                     }
                 }
-                @media (min-width: $media-size-sm +1) and (max-width: $media-size-lg) {
+                @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
                     &.customer {
                         top: 0;
                         left: 0;
@@ -254,7 +254,7 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                         width: 50%;
                     }
                 }
-                @media (min-width: $media-size-lg +1) {
+                @media (min-width: $media-size-lg+1) {
                     &.progress {
                         top: 0;
                         left: calc(300% / 7);
@@ -281,13 +281,13 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                 margin-top: 25px;
                 margin-bottom: 25px;   
             }
-            @media (min-width: $media-size-sm +1) and (max-width: $media-size-lg) {
+            @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
                 margin-top: 50px;
                 margin-bottom: 50px;
                 margin-left: -20px;        
                 margin-right: -20px;
             }
-            @media (min-width: $media-size-lg +1) {
+            @media (min-width: $media-size-lg+1) {
                 margin-top: 50px;
                 margin-bottom: 50px;
                 margin-left: -20px;        
