@@ -80,9 +80,6 @@ $edit-height-lg: 80px;
     padding: 8px 0px 8px 0px;
     
     &>md-item {
-        overflow: visible;
-        
-                
         
         &>div>md-item-content:focus::after, 
         &>div.content-editable>md-item-content::after {
@@ -271,8 +268,8 @@ $edit-height-lg: 80px;
         div.content-editable.ng-hide-remove #edit-view { 
             -webkit-animation-name: slidein;
             animation-name: slidein;
-            -webkit-animation-duration: .5s;
-            animation-duration: .5s;
+            -webkit-animation-duration: 450ms;
+            animation-duration: 450ms;
             z-index: 0;
         }
         div.content-editable.ng-hide-add #edit-view,
