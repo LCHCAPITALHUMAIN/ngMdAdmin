@@ -1,22 +1,49 @@
 $shadowIn : 0 -1px 0 rgb(229, 229, 229), 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
 
-@keyframes slidein {
-    from {
-      margin-top: -15%;
+$content-height-sm: 240px;
+$content-height-md: 160px;
+$content-height-lg: 80px;
+
+$content-edit-height-sm: 160px;
+$content-edit-height-md: 80px;
+$content-edit-height-lg: 80px;
+
+$edit-height-sm: 80px;
+$edit-height-md: 80px;
+$edit-height-lg: 80px;
+
+@media (max-width: $media-size-sm) {
+    @keyframes slidein {
+        from { margin-top: -2*$edit-height-sm; }
+        to { margin-top: 0; }
     }
-    to {
-      margin-top: 0%;
+    @-webkit-keyframes slidein {
+        from { margin-top: -2*$edit-height-sm; }
+        to { margin-top: 0; }
     }
-  }
-@-webkit-keyframes slidein {
-    from {
-      margin-top: -15%;
+}
+@media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
+    @keyframes slidein {
+        from { margin-top: -2*$edit-height-md; }
+        to { margin-top: 0; }
     }
-    to {
-      margin-top: 0%;
+    @-webkit-keyframes slidein {
+        from { margin-top: -2*$edit-height-md; }
+        to { margin-top: 0; }
     }
-  }
+}
+@media (min-width: $media-size-lg+1) {
+    @keyframes slidein {
+        from { margin-top: -2*$edit-height-lg; }
+        to { margin-top: 0; }
+    }
+    @-webkit-keyframes slidein {
+        from { margin-top: -2*$edit-height-lg; }
+        to { margin-top: 0; }
+    }
+}
+
 
 
 .my-list-container {
@@ -34,8 +61,8 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
         #edit-view { 
             -webkit-animation-name: slidein;
             animation-name: slidein;
-            -webkit-animation-duration: 400ms;
-            animation-duration: 400ms;
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
             z-index: 0;
             overflow: hidden;
         }
@@ -57,13 +84,13 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
             
             display: block;
             @media (max-width: $media-size-sm) {
-                height: 240px;
+                height: $content-height-sm;
             }
             @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
-                height: 160px;
+                height: $content-height-md;
             }
             @media (min-width: $media-size-lg+1) {
-                height: 80px;
+                height: $content-height-lg;
             }
             
             background-color: white;
@@ -227,13 +254,13 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
     
         div.content-editable>md-item-content {
             @media (max-width: $media-size-sm) {
-                height: 160px;    
+                height: $content-edit-height-sm;
             }
             @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
-                height: 80px;
+                height: $content-edit-height-md;
             }
             @media (min-width: $media-size-lg+1) {
-                height: 80px;
+                height: $content-edit-height-lg;
             }
             & > div {
                 
@@ -293,6 +320,17 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
                 }
                 
             }
+        }
+        div.content-editable #edit-view>md-item-content {
+            @media (max-width: $media-size-sm) {
+                height: $edit-height-sm;
+            }
+            @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
+                height: $edit-height-md;
+            }
+            @media (min-width: $media-size-lg+1) {
+                height: $edit-height-lg;
+            }           
         }
 
         .content-editable.ng-hide-add.ng-hide-add-active {
