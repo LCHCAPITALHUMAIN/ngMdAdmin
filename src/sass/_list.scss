@@ -22,6 +22,14 @@ $edit-height-lg: 80px;
         from { margin-top: -2*$edit-height-sm; }
         to { margin-top: 0; }
     }
+    @keyframes slideout {
+        from { margin-top: 0; }
+        to { margin-top: -2*$edit-height-sm; }
+    }
+    @-webkit-keyframes slideout {
+        from { margin-top: 0; }
+        to { margin-top: -2*$edit-height-sm; }
+    }
 }
 @media (min-width: $media-size-sm+1) and (max-width: $media-size-lg) {
     @keyframes slidein {
@@ -32,6 +40,14 @@ $edit-height-lg: 80px;
         from { margin-top: -2*$edit-height-md; }
         to { margin-top: 0; }
     }
+    @keyframes slideout {
+        from { margin-top: 0; }
+        to { margin-top: -2*$edit-height-md; }
+    }
+    @-webkit-keyframes slideout {
+        from { margin-top: 0; }
+        to { margin-top: -2*$edit-height-md; }
+    }
 }
 @media (min-width: $media-size-lg+1) {
     @keyframes slidein {
@@ -41,6 +57,14 @@ $edit-height-lg: 80px;
     @-webkit-keyframes slidein {
         from { margin-top: -2*$edit-height-lg; }
         to { margin-top: 0; }
+    }
+    @keyframes slideout {
+        from { margin-top: 0; }
+        to { margin-top: -2*$edit-height-lg; }
+    }
+    @-webkit-keyframes slideout {
+        from { margin-top: 0; }
+        to { margin-top: -2*$edit-height-lg; }
     }
 }
 
@@ -58,15 +82,7 @@ $edit-height-lg: 80px;
     &>md-item {
         overflow: visible;
         
-        #edit-view { 
-            -webkit-animation-name: slidein;
-            animation-name: slidein;
-            -webkit-animation-duration: .5s;
-            animation-duration: .5s;
-            z-index: 0;
-            overflow: hidden;
-        }
-        
+                
         
         &>div>md-item-content:focus::after, 
         &>div.content-editable>md-item-content::after {
@@ -251,7 +267,24 @@ $edit-height-lg: 80px;
             
             }
         }
-    
+       
+        div.content-editable.ng-hide-remove #edit-view { 
+            -webkit-animation-name: slidein;
+            animation-name: slidein;
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            z-index: 0;
+        }
+        div.content-editable.ng-hide-add #edit-view,
+        div.content-editable.ng-hide-add-active #edit-view{ 
+/*            -webkit-animation-name: slideout;
+            animation-name: slideout;
+            -webkit-animation-duration: .5s !important;
+            animation-duration: .5s !important;
+            z-index: 0;
+            display: block !important;*/
+        }
+        
         div.content-editable>md-item-content {
             @media (max-width: $media-size-sm) {
                 height: $content-edit-height-sm;
