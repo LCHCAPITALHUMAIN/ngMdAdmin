@@ -1,6 +1,24 @@
 $shadowIn : 0 -1px 0 rgb(229, 229, 229), 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
 
+@keyframes slidein {
+    from {
+      margin-top: -15%;
+    }
+    to {
+      margin-top: 0%;
+    }
+  }
+@-webkit-keyframes slidein {
+    from {
+      margin-top: -15%;
+    }
+    to {
+      margin-top: 0%;
+    }
+  }
+
+
 .my-list-container {
     margin: auto;
     overflow: visible;
@@ -10,8 +28,18 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
 #datagrid > md-list.my-list {
     padding: 8px 0px 8px 0px;
     
-    
     &>md-item {
+        overflow: visible;
+        
+        #edit-view { 
+            -webkit-animation-name: slidein;
+            animation-name: slidein;
+            -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
         
         &>div>md-item-content:focus::after, 
         &>div.content-editable>md-item-content::after {
@@ -43,9 +71,10 @@ $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
             
             &.my-row {
                 cursor: pointer;
+                z-index: 1;
             }
             &.my-edit-row {
-                
+
             }
                
             & > div {
