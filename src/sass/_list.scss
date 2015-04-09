@@ -1,6 +1,10 @@
 $shadowIn : 0 -1px 0 rgb(229, 229, 229), 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 $shadowOut : 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
 
+$anim-items: all .4s ease-out;
+$anim-edit: slidein .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$anim-list: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+
 $content-height-sm: 240px;
 $content-height-md: 160px;
 $content-height-lg: 80px;
@@ -9,9 +13,9 @@ $content-edit-height-sm: 160px;
 $content-edit-height-md: 80px;
 $content-edit-height-lg: 80px;
 
-$edit-height-sm: 80px;
-$edit-height-md: 80px;
-$edit-height-lg: 80px;
+$edit-height-sm: 240px;
+$edit-height-md: 200px;
+$edit-height-lg: 136px;
 
 @media (max-width: $media-size-sm) {
     @keyframes slidein {
@@ -118,8 +122,9 @@ $edit-height-lg: 80px;
             }
                
             & > div {
-                -webkit-transition: all 400ms ease-out 50ms; 
-                transition: all 400ms ease-out 50ms; 
+                /*animation for content items*/
+                -webkit-transition: $anim-items;
+                transition: $anim-items;
                 position: absolute;
                 
                 .flex-row {
@@ -264,22 +269,27 @@ $edit-height-lg: 80px;
             
             }
         }
-       
+        
+        /*anim list item*/
+        div.content-editable.ng-hide-remove.ng-hide-remove-active {
+            -webkit-transition: $anim-list; 
+            transition: $anim-list; 
+        }
+        div.content-editable.ng-hide-add.ng-hide-add-active {
+            -webkit-transition: all linear 0s;
+            transition: all linear 0s;
+            /*TODO after listview fix*/
+        }
+        
+        /*anim edit item*/
         div.content-editable.ng-hide-remove #edit-view { 
-            -webkit-animation-name: slidein;
-            animation-name: slidein;
-            -webkit-animation-duration: 450ms;
-            animation-duration: 450ms;
+            -webkit-animation: $anim-edit;
+            animation: $anim-edit;
             z-index: 0;
         }
         div.content-editable.ng-hide-add #edit-view,
         div.content-editable.ng-hide-add-active #edit-view{ 
-/*            -webkit-animation-name: slideout;
-            animation-name: slideout;
-            -webkit-animation-duration: .5s !important;
-            animation-duration: .5s !important;
-            z-index: 0;
-            display: block !important;*/
+            /*TODO after listview fix*/
         }
         
         div.content-editable>md-item-content {
@@ -361,16 +371,6 @@ $edit-height-lg: 80px;
             @media (min-width: $media-size-lg+1) {
                 height: $edit-height-lg;
             }           
-        }
-
-        .content-editable.ng-hide-add.ng-hide-add-active {
-            -webkit-transition: all linear 0s;
-            transition: all linear 0s;
-        }
-        .content-editable.ng-hide-remove.ng-hide-remove-active {
-            -webkit-transition: all 200ms ease-out 25ms; 
-            transition: all 200ms ease-out 25ms; 
-            
         }
 
         .content-editable {
