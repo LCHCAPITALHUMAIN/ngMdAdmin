@@ -1,0 +1,56 @@
+.timeline {
+    
+    .md-tile-content {
+        
+        margin-top: 43px;
+        
+        .marker {
+            background: rgb(255, 255, 255);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+            padding-top: 5px;
+            position: absolute;
+            top: 10px;
+            left: 33%;
+            right: 0;
+            width: 33%;
+            height: 43px;
+            
+            h4 {
+                text-align: center;
+                font-size: 16px;
+            }
+            span {
+                position: absolute;
+                bottom: 2px;
+                font-size: 12px;
+                &.date-from {
+                    left: 2px;
+                }
+                &.date-to {
+                    right: 2px;
+                }
+            }
+        }
+        .marker:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 18px 0 0 18px;
+            border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(255, 255, 255);
+            box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15);
+            position: absolute;
+            bottom: -9px;
+            left: 50%;
+            margin-left: -9px;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }  
+
+        
+    }
+    
+    
+    
+}
